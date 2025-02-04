@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SetTransactionStatus___Sequence" this:SetTransactionStatus___Sequence.in_TransactionItem="[Nothing]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c="clr-namespace:Credentials;assembly=Credentials" xmlns:l="clr-namespace:Logging;assembly=Logging" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mg="clr-namespace:Microsoft.Graph;assembly=Microsoft.Graph" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:Pop_Ups;assembly=Pop Ups" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System" xmlns:sn="clr-namespace:System.Net;assembly=System" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uma="clr-namespace:UiPath.MicrosoftOffice365.Activities;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365" xmlns:us="clr-namespace:UiPathTeam.SharePoint;assembly=UiPathTeam.SharePoint" xmlns:usa="clr-namespace:UiPathTeam.SharePoint.Activities;assembly=UiPathTeam.SharePoint.Activities" xmlns:usal="clr-namespace:UiPathTeam.SharePoint.Activities.Libraries;assembly=UiPathTeam.SharePoint.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SetTransactionStatus___Sequence" this:SetTransactionStatus___Sequence.in_TransactionItem="[Nothing]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c="clr-namespace:Credentials;assembly=Credentials" xmlns:l="clr-namespace:Logging;assembly=Logging" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:Pop_Ups;assembly=Pop Ups" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System" xmlns:sn="clr-namespace:System.Net;assembly=System" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uma="clr-namespace:UiPath.MicrosoftOffice365.Activities;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365" xmlns:us="clr-namespace:UiPathTeam.SharePoint;assembly=UiPathTeam.SharePoint" xmlns:usa="clr-namespace:UiPathTeam.SharePoint.Activities;assembly=UiPathTeam.SharePoint.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_arrCaseID" Type="InArgument(s:String[])" />
     <x:Property Name="in_arrExitPoint" Type="InArgument(s:Int32[])" />
@@ -17,7 +17,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,1562</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>808,1562</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SetTransactionStatus___Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="47">
@@ -144,11 +144,16 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <c:Get_Credential DisplayName="Get Client ID/Secret" sap:VirtualizedContainerService.HintSize="756,24.8" IN_strCredentialName="[io_Config(&quot;MailboxCredTarget&quot;).ToString]" IN_strRequestMessage="Please enter the Exchange Server Client ID &amp; Secret." IN_strRequestTitle="Exchange Credentials Required" sap2010:WorkflowViewState.IdRef="Get_Credential_2" OUT_credNetworkCredential="[credExchangeCredentials]" />
-    <uma:Office365ApplicationScope CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ContinueOnError="{x:Null}" OAuth2Username="{x:Null}" Password="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" ApplicationId="[credExchangeCredentials.UserName]" ApplicationSecret="[credExchangeCredentials.Password]" AuthenticationType="ApplicationIdAndSecret" DisplayName="Microsoft Office 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="756,1320.8" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" Services="Mail" Tenant="[io_Config(&quot;TenantID&quot;).ToString]">
+    <uma:Office365ApplicationScope Account="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" EmailAddress="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" ApplicationId="[credExchangeCredentials.UserName]" ApplicationSecret="[credExchangeCredentials.Password]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DisplayName="Microsoft Office 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="756,1320.8" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" Services="Mail" TenantId="[io_Config(&quot;TenantID&quot;).ToString]" UseConnectionService="False">
+      <uma:Office365ApplicationScope.AuthenticationScopes>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+          <InArgument x:TypeArguments="x:String">https://graph.microsoft.com/.default</InArgument>
+        </scg:List>
+      </uma:Office365ApplicationScope.AuthenticationScopes>
       <uma:Office365ApplicationScope.Body>
-        <ActivityAction x:TypeArguments="mg:GraphServiceClient">
+        <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="ParentScope" />
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
           </ActivityAction.Argument>
           <Flowchart sap2010:Annotation.AnnotationText="Set and log the transaction's status along with extra log fields. &#xA;There can be three possible statuses: Success, Business Exception and System Exception.&#xA;&#xA;Business Rule Exception characterizes an irregular situation according to the process's rules and prevents the transaction to be processed. The transaction is not retried in this case, since the result will be the same until the problem that causes the exception is solved.&#xA;For example, it can be considered a BusinessRuleException if a process expects to read an email's attachment, but the sender didn't attach any file. In this case, immediate retries of the transaction will not yield a different result.&#xA;&#xA;On the other hand, system exceptions are characterized by exceptions whose types are different than BusinessRuleException. When this kind of exception happens, the transaction item can be retried after closing and reopening the applications involved in the process. The rationale behind this is that the exception was caused by a problem in the applications, which might be solved by restarting them.&#xA;&#xA;If Orchestrator queues are the source of transactions, the Set Transaction Status activity is used to update the status. In addition, the retry mechanism is also implemented by Orchestrator.&#xA;&#xA;If Orchestrator queues are not used, the status can be set, for example, by writing to a specific column in a spreadsheet. In such cases, the retry mechanism is covered by the framework and the number of retries is defined in the configuration file.&#xA;&#xA;At the end, io_TransactionNumber is incremented, which makes the framework get the next transaction to be processed." DisplayName="Set Transaction Status" sap:VirtualizedContainerService.HintSize="722,1234" sap2010:WorkflowViewState.IdRef="Flowchart_2">
             <sap:WorkflowViewStateService.ViewState>
@@ -257,7 +262,7 @@
                       <ui:RetryScope DisplayName="Retry Scope - move to complete" sap:VirtualizedContainerService.HintSize="450,313.6" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
                         <ui:RetryScope.ActivityBody>
                           <ActivityAction>
-                            <umam:MoveMail Account="[io_Config(&quot;AccountName&quot;).ToString]" DestinationFolderName="[io_Config(&quot;Completed&quot;).ToString]" DisplayName="Move Mail to &quot;Completed&quot;" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="MoveMail_1" Message="[in_TransactionItem]" />
+                            <umam:MoveMail ContinueOnError="{x:Null}" Account="[io_Config(&quot;AccountName&quot;).ToString]" AuthScopesInvalid="False" DestinationFolderName="[io_Config(&quot;Completed&quot;).ToString]" DisplayName="Move Mail to &quot;Completed&quot;" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="MoveMail_1" Message="[in_TransactionItem]" />
                           </ActivityAction>
                         </ui:RetryScope.ActivityBody>
                         <ui:RetryScope.Condition>
@@ -339,7 +344,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">330,703.333333333333 330,733.333333333333 210,733.333333333333 210,755.6</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence sap2010:Annotation.AnnotationText="If a BussinessRuleException is thrown during the process, the transaction item's status is updated as Failed (Exception Type: Business).&#xA;" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="712,2764.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                      <Sequence sap2010:Annotation.AnnotationText="If a BussinessRuleException is thrown during the process, the transaction item's status is updated as Failed (Exception Type: Business).&#xA;" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="200,194" sap2010:WorkflowViewState.IdRef="Sequence_20">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -347,7 +352,7 @@
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log business exception with additional logging fields" sap:VirtualizedContainerService.HintSize="650,2592.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                        <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log business exception with additional logging fields" sap:VirtualizedContainerService.HintSize="778.8,2779.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -355,14 +360,14 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:AddLogFields DisplayName="Add transaction log fields (Business Exception)" sap:VirtualizedContainerService.HintSize="588,24.8" sap2010:WorkflowViewState.IdRef="AddLogFields_5">
+                          <ui:AddLogFields DisplayName="Add transaction log fields (Business Exception)" sap:VirtualizedContainerService.HintSize="716.8,24.8" sap2010:WorkflowViewState.IdRef="AddLogFields_5">
                             <ui:AddLogFields.Fields>
                               <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">BusinessException</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionNumber">[io_TransactionNumber.ToString]</InArgument>
                             </ui:AddLogFields.Fields>
                           </ui:AddLogFields>
-                          <ui:LogMessage DisplayName="Log Message (Business Exception)" sap:VirtualizedContainerService.HintSize="588,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[in_BusinessException.Message]" />
-                          <ui:RemoveLogFields DisplayName="Remove transaction log fields (Business Exception)" sap:VirtualizedContainerService.HintSize="588,24.8" sap2010:WorkflowViewState.IdRef="RemoveLogFields_5">
+                          <ui:LogMessage DisplayName="Log Message (Business Exception)" sap:VirtualizedContainerService.HintSize="716.8,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[in_BusinessException.Message]" />
+                          <ui:RemoveLogFields DisplayName="Remove transaction log fields (Business Exception)" sap:VirtualizedContainerService.HintSize="716.8,24.8" sap2010:WorkflowViewState.IdRef="RemoveLogFields_5">
                             <ui:RemoveLogFields.Fields>
                               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
                                 <InArgument x:TypeArguments="x:String">logF_TransactionStatus</InArgument>
@@ -373,7 +378,7 @@
                               </scg:List>
                             </ui:RemoveLogFields.Fields>
                           </ui:RemoveLogFields>
-                          <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="588,377.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="716.8,377.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -399,7 +404,7 @@
                               </l:LogTransaction.IN_strMiscNotes>
                             </l:LogTransaction>
                           </Sequence>
-                          <ui:RetryScope DisplayName="Retry Scope - move to review BRE" sap:VirtualizedContainerService.HintSize="588,742" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:05">
+                          <ui:RetryScope DisplayName="Retry Scope - move to review BRE" sap:VirtualizedContainerService.HintSize="716.8,742" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:05">
                             <ui:RetryScope.ActivityBody>
                               <ActivityAction>
                                 <Sequence sap:VirtualizedContainerService.HintSize="546,564.4" sap2010:WorkflowViewState.IdRef="Sequence_35">
@@ -410,7 +415,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <If Condition="[in_BusinessException.Message.Contains(&quot;multiple locations&quot;)]" DisplayName="If multi location exception" sap:VirtualizedContainerService.HintSize="484,277.2" sap2010:WorkflowViewState.IdRef="If_6">
                                     <If.Then>
-                                      <umam:SetMailCategories Account="[io_Config(&quot;AccountName&quot;).ToString]" Categories="[{&quot;Multi location&quot;}]" DisplayName="Set Mail Categories" sap:VirtualizedContainerService.HintSize="334,86.4" sap2010:WorkflowViewState.IdRef="SetMailCategories_1" Message="[in_TransactionItem]" />
+                                      <umam:SetMailCategories ContinueOnError="{x:Null}" Account="[io_Config(&quot;AccountName&quot;).ToString]" AuthScopesInvalid="False" Categories="[{&quot;Multi location&quot;}]" DisplayName="Set Mail Categories" sap:VirtualizedContainerService.HintSize="334,86.4" sap2010:WorkflowViewState.IdRef="SetMailCategories_1" Message="[in_TransactionItem]" />
                                     </If.Then>
                                     <If.Else>
                                       <Sequence sap2010:WorkflowViewState.IdRef="Sequence_36">
@@ -422,7 +427,7 @@
                                       </Sequence>
                                     </If.Else>
                                   </If>
-                                  <umam:MoveMail Account="[io_Config(&quot;AccountName&quot;).ToString]" DestinationFolderName="[io_config(&quot;Review&quot;).ToString]" DisplayName="Move Mail to &quot;Review&quot;" sap:VirtualizedContainerService.HintSize="484,136" sap2010:WorkflowViewState.IdRef="MoveMail_2" Message="[in_TransactionItem]" />
+                                  <umam:MoveMail ContinueOnError="{x:Null}" Account="[io_Config(&quot;AccountName&quot;).ToString]" AuthScopesInvalid="False" DestinationFolderName="[io_config(&quot;Review&quot;).ToString]" DisplayName="Move Mail to &quot;Review&quot;" sap:VirtualizedContainerService.HintSize="484,136" sap2010:WorkflowViewState.IdRef="MoveMail_2" Message="[in_TransactionItem]" />
                                 </Sequence>
                               </ActivityAction>
                             </ui:RetryScope.ActivityBody>
@@ -430,80 +435,97 @@
                               <ActivityFunc x:TypeArguments="x:Boolean" />
                             </ui:RetryScope.Condition>
                           </ui:RetryScope>
-                          <If Condition="[io_Config(&quot;UploadPath&quot;).ToString&lt;&gt;&quot;&quot;]" DisplayName="If attachment was successfully retrieved" sap:VirtualizedContainerService.HintSize="588,908" sap2010:WorkflowViewState.IdRef="If_3">
-                            <If.Then>
-                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="533.6,716" sap2010:WorkflowViewState.IdRef="TryCatch_7">
-                                <TryCatch.Try>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="496,482.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <usa:SharepointApplicationScope AzureApplicationID="{x:Null}" ClientContext="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" UserName="{x:Null}" AzureAppPermissions="None" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="434,249.2" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_3" PlatformType="Online" QueryGrouping="False" ResetCredentials="False" SharePointInstanceType="WebLogin" URL="[io_Config(&quot;SharepointURL&quot;).ToString]">
-                                      <usa:SharepointApplicationScope.Body>
-                                        <ActivityAction x:TypeArguments="us:SharePointContextInfo">
-                                          <ActivityAction.Argument>
-                                            <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
-                                          </ActivityAction.Argument>
-                                          <usal:UploadFile AttachmentsAction="{x:Null}" PropertiesToAdd="{x:Null}" RelativeUrlHintText="{x:Null}" AllowOperationsOnASPXFiles="False" AllowOverwrite="True" CheckInFileAfterCreation="True" CheckOutFileBeforeOverwrite="False" ChooseFile="True" DisplayName="Upload excel version of JSON" sap:VirtualizedContainerService.HintSize="271.2,105.6" sap2010:WorkflowViewState.IdRef="UploadFile_4" LocalPath="[io_Config(&quot;UploadPath&quot;).ToString]" LocalPathHintText="The current local path of the file" RelativeUrl="[io_Config(&quot;ExceptionSharepoint&quot;).ToString]" ShowAttachFiles="False" ShowCAMLQuery="False" ShowCAMLWarning="False" ShowGroupDescription="False" ShowGroupName="False" ShowLibraryName="False" ShowListName="False" ShowLocalPath="True" ShowMove="False" ShowPermissionDropdown="False" ShowPropertiesDictionary="False" ShowRelativeUrl="True" ShowRename="False" ShowUserName="False" />
-                                        </ActivityAction>
-                                      </usa:SharepointApplicationScope.Body>
-                                    </usa:SharepointApplicationScope>
-                                    <Assign DisplayName="Upload successful" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_18">
-                                      <Assign.To>
-                                        <OutArgument x:TypeArguments="x:Boolean">[boolUpload]</OutArgument>
-                                      </Assign.To>
-                                      <Assign.Value>
-                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                      </Assign.Value>
-                                    </Assign>
-                                  </Sequence>
-                                </TryCatch.Try>
-                                <TryCatch.Catches>
-                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="499.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_7">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ActivityAction x:TypeArguments="s:Exception">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                      </ActivityAction.Argument>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="450,305.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Warn" Message="[&quot;Sharepoint upload failed: &quot;+exception.Message]" />
-                                        <Assign DisplayName="Upload unsuccessful" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_17">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:Boolean">[boolUpload]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </Catch>
-                                </TryCatch.Catches>
-                              </TryCatch>
-                            </If.Then>
-                            <If.Else>
-                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_27">
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="716.8,1094.8">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="681.2,1016.4">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
+                                <If Condition="[io_Config(&quot;UploadPath&quot;).ToString&lt;&gt;&quot;&quot;]" DisplayName="If attachment was successfully retrieved" sap:VirtualizedContainerService.HintSize="619.2,905.2" sap2010:WorkflowViewState.IdRef="If_3">
+                                  <If.Then>
+                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="583.6,714.4" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                                      <TryCatch.Try>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="546,481.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <usa:SharepointApplicationScope AzureApplicationID="{x:Null}" ClientContext="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" UserName="{x:Null}" AzureAppPermissions="None" DisplayName="Sharepoint application scope (SharepointApplicationScope)" sap:VirtualizedContainerService.HintSize="484,247.6" PlatformType="Online" QueryGrouping="False" ResetCredentials="False" SharePointInstanceType="WebLogin" URL="[io_Config(&quot;SharepointURL&quot;).ToString]">
+                                            <usa:SharepointApplicationScope.Body>
+                                              <ActivityAction x:TypeArguments="us:SharePointContextInfo">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
+                                                </ActivityAction.Argument>
+                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,104.4">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </usa:SharepointApplicationScope.Body>
+                                          </usa:SharepointApplicationScope>
+                                          <Assign DisplayName="Upload successful" sap:VirtualizedContainerService.HintSize="484,82.4" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Boolean">[boolUpload]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </TryCatch.Try>
+                                      <TryCatch.Catches>
+                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="549.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ActivityAction x:TypeArguments="s:Exception">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                            </ActivityAction.Argument>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="496,328" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Warn" Message="[&quot;Sharepoint upload failed: &quot;+exception.Message]" />
+                                              <Assign DisplayName="Upload unsuccessful" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Boolean">[boolUpload]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </Catch>
+                                      </TryCatch.Catches>
+                                    </TryCatch>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
                               </Sequence>
-                            </If.Else>
-                          </If>
-                          <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Business Exception Form" sap:VirtualizedContainerService.HintSize="588,24.8" IN_CSS_filepath="[&quot;/file://&quot; + System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Generic\Exception.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Business Exception Encountered&lt;/h1&gt;&lt;P&gt;A Business Exception has occured during processing of '&quot;+in_BusinessException.Source+&quot;'.&lt;BR&gt;&lt;BR&gt; Error Message: &quot;+in_BusinessException.Message.Replace(Environment.NewLine,&quot;&lt;br&gt;&quot;)+&quot;&lt;BR&gt;&lt;BR&gt;More details can be found within: &quot;+in_strWorkLogFilepath+&quot;&lt;/P&gt;&lt;BR&gt;&quot;+&#xD;&#xA;If(boolUpload,&#xD;&#xA;&#x9;&quot;&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The remainder of this SAM registration will need to be processed manually. Email attachments containing registration data can be found in the following Sharepoint path:&lt;br&gt;&quot;+io_Config(&quot;SharepointURL&quot;).ToString+&quot;/&quot;+io_Config(&quot;ExceptionSharepoint&quot;).ToString+&quot;&lt;/p&gt;&quot;,&#xD;&#xA;&#x9;&quot;&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The remainder of this SAM registration will need to be processed manually. The email attachment containing registration data was unsuccessful in being uploaded to Sharepoint. Please find this attachment in the following path on your device:&lt;br&gt;&quot;+io_Config(&quot;LocalDataPath&quot;).ToString+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;&#x9;&quot;&lt;p&gt;Alternatively, please seek the following email:&lt;br&gt;&quot;+&#xD;&#xA;&#x9;&quot;&lt;strong&gt;Mailbox:&lt;/strong&gt;&amp;ensp;&quot;+io_Config(&quot;AccountName&quot;).ToString+&quot;&lt;br&gt;&quot;+&#xD;&#xA;&#x9;&quot;&lt;strong&gt;Folder:&lt;/strong&gt;&amp;ensp;&quot;+io_Config(&quot;Review&quot;).ToString+&quot;&lt;br&gt;&quot;+&#xD;&#xA;&#x9;&quot;&lt;strong&gt;Subject:&lt;/strong&gt;&amp;ensp;&quot;+in_TransactionItem.Subject+&quot;&lt;/p&gt;&quot;)]" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{850,450}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_3" />
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
+                          <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Business Exception Form" sap:VirtualizedContainerService.HintSize="716.8,24.8" IN_CSS_filepath="[&quot;/file://&quot; + System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Generic\Exception.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Business Exception Encountered&lt;/h1&gt;&lt;P&gt;A Business Exception has occured during processing of '&quot;+in_BusinessException.Source+&quot;'.&lt;BR&gt;&lt;BR&gt; Error Message: &quot;+in_BusinessException.Message.Replace(Environment.NewLine,&quot;&lt;br&gt;&quot;)+&quot;&lt;BR&gt;&lt;BR&gt;More details can be found within: &quot;+in_strWorkLogFilepath+&quot;&lt;/P&gt;&lt;BR&gt;&quot;+&#xA;If(boolUpload,&#xA;&#x9;&quot;&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The remainder of this SAM registration will need to be processed manually. Email attachments containing registration data can be found in the following Sharepoint path:&lt;br&gt;&quot;+io_Config(&quot;SharepointURL&quot;).ToString+&quot;/&quot;+io_Config(&quot;ExceptionSharepoint&quot;).ToString+&quot;&lt;/p&gt;&quot;,&#xA;&#x9;&quot;&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The remainder of this SAM registration will need to be processed manually. The email attachment containing registration data was unsuccessful in being uploaded to Sharepoint. Please find this attachment in the following path on your device:&lt;br&gt;&quot;+io_Config(&quot;LocalDataPath&quot;).ToString+&quot;&lt;/p&gt;&quot;+&#xA;&#x9;&quot;&lt;p&gt;Alternatively, please seek the following email:&lt;br&gt;&quot;+&#xA;&#x9;&quot;&lt;strong&gt;Mailbox:&lt;/strong&gt;&amp;ensp;&quot;+io_Config(&quot;AccountName&quot;).ToString+&quot;&lt;br&gt;&quot;+&#xA;&#x9;&quot;&lt;strong&gt;Folder:&lt;/strong&gt;&amp;ensp;&quot;+io_Config(&quot;Review&quot;).ToString+&quot;&lt;br&gt;&quot;+&#xA;&#x9;&quot;&lt;strong&gt;Subject:&lt;/strong&gt;&amp;ensp;&quot;+in_TransactionItem.Subject+&quot;&lt;/p&gt;&quot;)]" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{850,450}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_3" />
                         </Sequence>
                       </Sequence>
                       <FlowStep.Next>
@@ -531,7 +553,7 @@
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign DisplayName="Assign QueryRetry" sap:VirtualizedContainerService.HintSize="593.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_12">
+                        <Assign DisplayName="Assign QueryRetry" sap:VirtualizedContainerService.HintSize="716.8,82.4" sap2010:WorkflowViewState.IdRef="Assign_12">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[QueueRetry]</OutArgument>
                           </Assign.To>
@@ -539,13 +561,13 @@
                             <InArgument x:TypeArguments="x:Boolean">[in_TransactionItem isNot Nothing AndAlso (in_TransactionItem.GetType is GetType(Uipath.Core.QueueItem))]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:AddLogFields DisplayName="Add transaction log fields (System Exception)" sap:VirtualizedContainerService.HintSize="593.6,24.8" sap2010:WorkflowViewState.IdRef="AddLogFields_6">
+                        <ui:AddLogFields DisplayName="Add transaction log fields (System Exception)" sap:VirtualizedContainerService.HintSize="716.8,24.8" sap2010:WorkflowViewState.IdRef="AddLogFields_6">
                           <ui:AddLogFields.Fields>
                             <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">ApplicationException</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionNumber">[io_TransactionNumber.ToString]</InArgument>
                           </ui:AddLogFields.Fields>
                         </ui:AddLogFields>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RetryCurrentTransaction workflow" sap:VirtualizedContainerService.HintSize="593.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\RetryCurrentTransaction.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RetryCurrentTransaction workflow" sap:VirtualizedContainerService.HintSize="716.8,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\RetryCurrentTransaction.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[io_Config]</InArgument>
                             <InOutArgument x:TypeArguments="x:Int32" x:Key="io_RetryNumber">[io_RetryNumber]</InOutArgument>
@@ -554,7 +576,7 @@
                             <InArgument x:TypeArguments="x:Boolean" x:Key="in_QueueRetry">[QueueRetry]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <ui:RemoveLogFields DisplayName="Remove transaction log fields (System Exception)" sap:VirtualizedContainerService.HintSize="593.6,24.8" sap2010:WorkflowViewState.IdRef="RemoveLogFields_6">
+                        <ui:RemoveLogFields DisplayName="Remove transaction log fields (System Exception)" sap:VirtualizedContainerService.HintSize="716.8,24.8" sap2010:WorkflowViewState.IdRef="RemoveLogFields_6">
                           <ui:RemoveLogFields.Fields>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
                               <InArgument x:TypeArguments="x:String">logF_TransactionStatus</InArgument>
@@ -565,7 +587,7 @@
                             </scg:List>
                           </ui:RemoveLogFields.Fields>
                         </ui:RemoveLogFields>
-                        <TryCatch sap2010:Annotation.AnnotationText="Take a screenshot of the current state of the screen to facilitate debugging." DisplayName="Try taking screenshot" sap:VirtualizedContainerService.HintSize="593.6,392" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                        <TryCatch sap2010:Annotation.AnnotationText="Take a screenshot of the current state of the screen to facilitate debugging." DisplayName="Try taking screenshot" sap:VirtualizedContainerService.HintSize="716.8,392" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -598,7 +620,7 @@
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <Sequence DisplayName="Evaluate Consecutive System Exceptions" sap:VirtualizedContainerService.HintSize="593.6,864" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <Sequence DisplayName="Evaluate Consecutive System Exceptions" sap:VirtualizedContainerService.HintSize="716.8,864" sap2010:WorkflowViewState.IdRef="Sequence_22">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -648,7 +670,7 @@
                             </If.Then>
                           </If>
                         </Sequence>
-                        <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="593.6,377.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="716.8,377.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -662,91 +684,108 @@
                           <l:Log_Case DisplayName="Log Case" sap:VirtualizedContainerService.HintSize="388,24.8" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strNotes="[strLogNote]" IN_strOutcome="System Exception" IN_strOutcomeMessage="[in_SystemException.Message]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strWorkpackageName="[io_Config(&quot;logF_BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_6" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]" />
                           <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="388,24.8" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[in_arrExitPoint(0)]" IN_strFileName="[io_Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" IN_strMiscNotes="[strLogNote]" IN_strOutcome="System Exception" IN_strOutcomeNotes="[in_SystemException.Message]" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_6" />
                         </Sequence>
-                        <ui:RetryScope DisplayName="Retry Scope - move to review SE" sap:VirtualizedContainerService.HintSize="593.6,313.6" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3" RetryInterval="00:00:05">
+                        <ui:RetryScope DisplayName="Retry Scope - move to review SE" sap:VirtualizedContainerService.HintSize="716.8,313.6" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3" RetryInterval="00:00:05">
                           <ui:RetryScope.ActivityBody>
                             <ActivityAction>
-                              <umam:MoveMail Account="[io_Config(&quot;AccountName&quot;).ToString]" DestinationFolderName="[io_config(&quot;Review&quot;).ToString]" DisplayName="Move Mail to &quot;Review&quot;" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="MoveMail_3" Message="[in_TransactionItem]" />
+                              <umam:MoveMail ContinueOnError="{x:Null}" Account="[io_Config(&quot;AccountName&quot;).ToString]" AuthScopesInvalid="False" DestinationFolderName="[io_config(&quot;Review&quot;).ToString]" DisplayName="Move Mail to &quot;Review&quot;" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="MoveMail_3" Message="[in_TransactionItem]" />
                             </ActivityAction>
                           </ui:RetryScope.ActivityBody>
                           <ui:RetryScope.Condition>
                             <ActivityFunc x:TypeArguments="x:Boolean" />
                           </ui:RetryScope.Condition>
                         </ui:RetryScope>
-                        <If Condition="[io_Config(&quot;UploadPath&quot;).ToString&lt;&gt;&quot;&quot;]" DisplayName="If attachment was successfully retrieved" sap:VirtualizedContainerService.HintSize="593.6,908" sap2010:WorkflowViewState.IdRef="If_5">
-                          <If.Then>
-                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="533.6,716" sap2010:WorkflowViewState.IdRef="TryCatch_8">
-                              <TryCatch.Try>
-                                <Sequence DisplayName="Upload to sharepoint" sap:VirtualizedContainerService.HintSize="496,482.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <usa:SharepointApplicationScope AzureApplicationID="{x:Null}" ClientContext="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" UserName="{x:Null}" AzureAppPermissions="None" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="434,249.2" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_4" PlatformType="Online" QueryGrouping="False" ResetCredentials="False" SharePointInstanceType="WebLogin" URL="[io_Config(&quot;SharepointURL&quot;).ToString]">
-                                    <usa:SharepointApplicationScope.Body>
-                                      <ActivityAction x:TypeArguments="us:SharePointContextInfo">
-                                        <ActivityAction.Argument>
-                                          <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
-                                        </ActivityAction.Argument>
-                                        <usal:UploadFile AttachmentsAction="{x:Null}" PropertiesToAdd="{x:Null}" RelativeUrlHintText="{x:Null}" AllowOperationsOnASPXFiles="False" AllowOverwrite="True" CheckInFileAfterCreation="True" CheckOutFileBeforeOverwrite="False" ChooseFile="True" DisplayName="Upload excel version of JSON" sap:VirtualizedContainerService.HintSize="271.2,105.6" sap2010:WorkflowViewState.IdRef="UploadFile_5" LocalPath="[io_Config(&quot;UploadPath&quot;).ToString]" LocalPathHintText="The current local path of the file" RelativeUrl="[io_Config(&quot;ExceptionSharepoint&quot;).ToString]" ShowAttachFiles="False" ShowCAMLQuery="False" ShowCAMLWarning="False" ShowGroupDescription="False" ShowGroupName="False" ShowLibraryName="False" ShowListName="False" ShowLocalPath="True" ShowMove="False" ShowPermissionDropdown="False" ShowPropertiesDictionary="False" ShowRelativeUrl="True" ShowRename="False" ShowUserName="False" />
-                                      </ActivityAction>
-                                    </usa:SharepointApplicationScope.Body>
-                                  </usa:SharepointApplicationScope>
-                                  <Assign DisplayName="Upload successful" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_19">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:Boolean">[boolUpload]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                </Sequence>
-                              </TryCatch.Try>
-                              <TryCatch.Catches>
-                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="499.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_8">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ActivityAction x:TypeArguments="s:Exception">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                    </ActivityAction.Argument>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="450,305.2" sap2010:WorkflowViewState.IdRef="Sequence_33">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Warn" Message="[&quot;Sharepoint upload failed: &quot;+exception.Message]" />
-                                      <Assign DisplayName="Upload unsuccessful" sap:VirtualizedContainerService.HintSize="334,59.6" sap2010:WorkflowViewState.IdRef="Assign_20">
-                                        <Assign.To>
-                                          <OutArgument x:TypeArguments="x:Boolean">[boolUpload]</OutArgument>
-                                        </Assign.To>
-                                        <Assign.Value>
-                                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                                        </Assign.Value>
-                                      </Assign>
-                                    </Sequence>
-                                  </ActivityAction>
-                                </Catch>
-                              </TryCatch.Catches>
-                            </TryCatch>
-                          </If.Then>
-                          <If.Else>
-                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_34">
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="716.8,1094.8">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="681.2,1016.4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[io_Config(&quot;UploadPath&quot;).ToString&lt;&gt;&quot;&quot;]" DisplayName="If attachment was successfully retrieved" sap:VirtualizedContainerService.HintSize="619.2,905.2" sap2010:WorkflowViewState.IdRef="If_5">
+                                <If.Then>
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="583.6,714.4" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                                    <TryCatch.Try>
+                                      <Sequence DisplayName="Upload to sharepoint" sap:VirtualizedContainerService.HintSize="546,481.2" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <usa:SharepointApplicationScope AzureApplicationID="{x:Null}" ClientContext="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" UserName="{x:Null}" AzureAppPermissions="None" DisplayName="Sharepoint application scope (SharepointApplicationScope)" sap:VirtualizedContainerService.HintSize="484,247.6" PlatformType="Online" QueryGrouping="False" ResetCredentials="False" SharePointInstanceType="WebLogin" URL="[io_Config(&quot;SharepointURL&quot;).ToString]">
+                                          <usa:SharepointApplicationScope.Body>
+                                            <ActivityAction x:TypeArguments="us:SharePointContextInfo">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,104.4">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </usa:SharepointApplicationScope.Body>
+                                        </usa:SharepointApplicationScope>
+                                        <Assign DisplayName="Upload successful" sap:VirtualizedContainerService.HintSize="484,82.4" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">[boolUpload]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </TryCatch.Try>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="549.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_8">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="s:Exception">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="496,328" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Warn" Message="[&quot;Sharepoint upload failed: &quot;+exception.Message]" />
+                                            <Assign DisplayName="Upload unsuccessful" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Boolean">[boolUpload]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
                             </Sequence>
-                          </If.Else>
-                        </If>
-                        <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="System Exception Form" sap:VirtualizedContainerService.HintSize="593.6,24.8" IN_CSS_filepath="[&quot;/file://&quot; + System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Generic\Exception.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;System Exception Encountered&lt;/h1&gt;&lt;P&gt;A System Exception has occured during processing.&lt;BR&gt;&lt;BR&gt;More details can be found within: &quot;+in_strWorkLogFilepath+&quot;&lt;/P&gt;&lt;BR&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The remainder of this SAM registration will need to be processed manually.&lt;br&gt;&quot;+&#xA;&quot;Please &lt;strong&gt;End Research&lt;/strong&gt; on the currently open task In SAM.&lt;br&gt;&quot;+ &#xA;&quot;&lt;strong&gt;Once this pop-up Is dismissed, the robot will close SAM, regardless of any unfinished tasks&lt;/strong&gt;&lt;/p&gt;&quot;+&#xA;If(boolUpload,&#xA;&#x9;&quot;&lt;p&gt;Email attachments containing registration data can be found In the following Sharepoint path:&lt;br&gt;&quot;+io_Config(&quot;SharepointURL&quot;).ToString+&quot;/&quot;+io_Config(&quot;ExceptionSharepoint&quot;).ToString+&quot;&lt;/p&gt;&quot;,&#xA;&#x9;&quot;&lt;p&gt;The email attachment containing registration data was unsuccessful in being uploaded to Sharepoint. Please find this attachment in the following path on your device:&lt;br&gt;&quot;+io_Config(&quot;LocalDataPath&quot;).ToString+&quot;&lt;/p&gt;&quot;+&#xA;&#x9;&quot;&lt;p&gt;Alternatively, please seek the following email:&lt;br&gt;&quot;+&#xA;&#x9;&quot;&lt;strong&gt;Mailbox:&lt;/strong&gt;&amp;ensp;&quot;+io_Config(&quot;AccountName&quot;).ToString+&quot;&lt;br&gt;&quot;+&#xA;&#x9;&quot;&lt;strong&gt;Folder:&lt;/strong&gt;&amp;ensp;&quot;+io_Config(&quot;Review&quot;).ToString+&quot;&lt;br&gt;&quot;+&#xA;&#x9;&quot;&lt;strong&gt;Subject:&lt;/strong&gt;&amp;ensp;&quot;+in_TransactionItem.Subject+&quot;&lt;/p&gt;&quot;)]" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{600,500}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_4" />
-                        <TryCatch sap2010:Annotation.AnnotationText="Close all applications before returning to the Initialization state and opening them again.&#xA;If applications cannot be closed, kill their respective processes." DisplayName="Try closing applications" sap:VirtualizedContainerService.HintSize="549.2,406.8" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                          </ui:CommentOut.Body>
+                        </ui:CommentOut>
+                        <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="System Exception Form" sap:VirtualizedContainerService.HintSize="716.8,24.8" IN_CSS_filepath="[&quot;/file://&quot; + System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Generic\Exception.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;System Exception Encountered&lt;/h1&gt;&lt;P&gt;A System Exception has occured during processing.&lt;BR&gt;&lt;BR&gt;More details can be found within: &quot;+in_strWorkLogFilepath+&quot;&lt;/P&gt;&lt;BR&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The remainder of this SAM registration will need to be processed manually.&lt;br&gt;&quot;+&#xA;&quot;Please &lt;strong&gt;End Research&lt;/strong&gt; on the currently open task In SAM.&lt;br&gt;&quot;+ &#xA;&quot;&lt;strong&gt;Once this pop-up Is dismissed, the robot will close SAM, regardless of any unfinished tasks&lt;/strong&gt;&lt;/p&gt;&quot;+&#xA;If(boolUpload,&#xA;&#x9;&quot;&lt;p&gt;Email attachments containing registration data can be found In the following Sharepoint path:&lt;br&gt;&quot;+io_Config(&quot;SharepointURL&quot;).ToString+&quot;/&quot;+io_Config(&quot;ExceptionSharepoint&quot;).ToString+&quot;&lt;/p&gt;&quot;,&#xA;&#x9;&quot;&lt;p&gt;The email attachment containing registration data was unsuccessful in being uploaded to Sharepoint. Please find this attachment in the following path on your device:&lt;br&gt;&quot;+io_Config(&quot;LocalDataPath&quot;).ToString+&quot;&lt;/p&gt;&quot;+&#xA;&#x9;&quot;&lt;p&gt;Alternatively, please seek the following email:&lt;br&gt;&quot;+&#xA;&#x9;&quot;&lt;strong&gt;Mailbox:&lt;/strong&gt;&amp;ensp;&quot;+io_Config(&quot;AccountName&quot;).ToString+&quot;&lt;br&gt;&quot;+&#xA;&#x9;&quot;&lt;strong&gt;Folder:&lt;/strong&gt;&amp;ensp;&quot;+io_Config(&quot;Review&quot;).ToString+&quot;&lt;br&gt;&quot;+&#xA;&#x9;&quot;&lt;strong&gt;Subject:&lt;/strong&gt;&amp;ensp;&quot;+in_TransactionItem.Subject+&quot;&lt;/p&gt;&quot;)]" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{600,500}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_4" />
+                        <TryCatch sap2010:Annotation.AnnotationText="Close all applications before returning to the Initialization state and opening them again.&#xA;If applications cannot be closed, kill their respective processes." DisplayName="Try closing applications" sap:VirtualizedContainerService.HintSize="716.8,408.4" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -755,7 +794,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="334,113.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="365.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="IN_Config">[io_Config]</InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
@@ -773,7 +812,7 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Close applications" sap:VirtualizedContainerService.HintSize="480,564.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                <Sequence DisplayName="Close applications" sap:VirtualizedContainerService.HintSize="500,584" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -830,6 +869,13 @@
           </Flowchart>
         </ActivityAction>
       </uma:Office365ApplicationScope.Body>
+      <uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
+        <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="{x:Null}">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
     </uma:Office365ApplicationScope>
   </Sequence>
 </Activity>
