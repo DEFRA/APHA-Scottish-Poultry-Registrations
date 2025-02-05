@@ -12,6 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "TransactionItemFilePath&StateMachine_1",
+        "TransactionItemFile&Sequence_68",
+        "TransactionItemEmail&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -26,7 +29,6 @@
         "swProcessingTimer&StateMachine_1",
         "intConSysEx&StateMachine_1",
         "Credentials&StateMachine_1",
-        "TransactionItem&StateMachine_1",
         "strUserFolder&Sequence_72",
         "arrFilePath&Sequence_82",
         "listConfigFilepaths&Sequence_82",
@@ -42,6 +44,96 @@
         "strOutcomeMessage&Sequence_85"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Transaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_arrExitPoint",
+        "io_swProcessingTimer",
+        "io_Config",
+        "io_arrCaseID",
+        "in_TransactionItemEmail",
+        "in_TransactionItemFilePath"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus - original.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_13",
+        "strLogNote&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arrCaseID",
+        "in_arrExitPoint",
+        "in_BusinessException",
+        "in_dateCaseStartTime",
+        "in_strWorkLogFilepath",
+        "in_swProcessingTimer",
+        "in_SystemException",
+        "in_TransactionItem",
+        "io_Config",
+        "io_intConSysEx",
+        "io_RetryNumber",
+        "io_TransactionNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "credExchangeCredentials&Sequence_26",
+        "boolUpload&Sequence_26",
+        "QueueRetry&Sequence_25",
+        "strLogNote&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arrCaseID",
+        "in_arrExitPoint",
+        "in_BusinessException",
+        "in_dateCaseStartTime",
+        "in_strWorkLogFilepath",
+        "in_swProcessingTimer",
+        "in_SystemException",
+        "in_TransactionItem",
+        "io_Config",
+        "io_intConSysEx",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "IN_strFileType"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData - email.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "mailInProgressMessage&Sequence_1",
+        "mailCurrentMessage&Sequence_1",
+        "credADCredentials&Sequence_1",
+        "credExchangeCredentials&Sequence_1",
+        "intToProcessIndex&Sequence_1",
+        "boolInProgressMoveSuccessful&Sequence_1",
+        "listMailMessages&Sequence_16",
+        "intRetryCount&Sequence_15"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_boolLastTransaction",
+        "in_strProcessType",
+        "in_boolContinue"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
