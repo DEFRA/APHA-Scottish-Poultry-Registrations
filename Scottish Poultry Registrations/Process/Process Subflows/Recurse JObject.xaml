@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>701.6,1168.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,1231.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Recurse_JObject_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -85,17 +85,18 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Recurse_JObject" sap:VirtualizedContainerService.HintSize="711.6,1143.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Recurse_JObject" sap:VirtualizedContainerService.HintSize="731.6,1166.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[IO_dtTable is nothing]" sap:VirtualizedContainerService.HintSize="669.6,250.4" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[IO_dtTable is nothing]" sap:VirtualizedContainerService.HintSize="669.6,252" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <ui:BuildDataTable DataTable="[IO_dtTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,59.2" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;source&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;key&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;source&gt;source&lt;/source&gt;&#xA;    &lt;key&gt;key&lt;/key&gt;&#xA;    &lt;value&gt;value&lt;/value&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+        <ui:BuildDataTable DataTable="[IO_dtTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;source&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;key&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;source&gt;source&lt;/source&gt;&#xA;    &lt;key&gt;key&lt;/key&gt;&#xA;    &lt;value&gt;value&lt;/value&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
       </If.Then>
       <If.Else>
         <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
@@ -107,13 +108,13 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:ForEach x:TypeArguments="njl:JProperty" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="669.6,760.8" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[IN_jObj]">
+    <ui:ForEach x:TypeArguments="njl:JProperty" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="669.6,763.2" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[IN_jObj]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="njl:JProperty">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="njl:JProperty" Name="item" />
           </ActivityAction.Argument>
-          <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+          <Flowchart sap:VirtualizedContainerService.HintSize="634,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -132,10 +133,10 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">280,523.8</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52.4</av:Size>
+                      <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Unexpected value type of JProperty: &quot;+item.Value.Type.ToString]">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Unexpected value type of JProperty: &quot;+item.Value.Type.ToString]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -148,23 +149,24 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">105,217.6</av:Point>
                   <av:Size x:Key="ShapeSize">70,87.2</av:Size>
-                  <av:PointCollection x:Key="StringConnector">175,261.2 510,261.2 510,340 480,340</av:PointCollection>
-                  <av:PointCollection x:Key="ObjectConnector">175,239.4 205,239.4 205,180 280,180</av:PointCollection>
-                  <av:PointCollection x:Key="Default">122.5,304.8 122.5,550 280,550</av:PointCollection>
-                  <av:PointCollection x:Key="ArrayConnector">157.5,217.6 157.5,100 280,100</av:PointCollection>
-                  <av:PointCollection x:Key="IntegerConnector">157.5,304.8 157.5,340 280,340</av:PointCollection>
-                  <av:PointCollection x:Key="BooleanConnector">140,304.8 140,404.4 380,404.4 380,374.4</av:PointCollection>
+                  <av:PointCollection x:Key="StringConnector">175,261.2 510,261.2 510,347.4 480,347.4</av:PointCollection>
+                  <av:PointCollection x:Key="ObjectConnector">175,239.4 205,239.4 205,187.4 280,187.4</av:PointCollection>
+                  <av:PointCollection x:Key="Default">105,283 75.0000000000001,283 75.0000000000001,550.4 280,550.4</av:PointCollection>
+                  <av:PointCollection x:Key="ArrayConnector">157.5,217.6 157.5,107.4 280,107.4</av:PointCollection>
+                  <av:PointCollection x:Key="IntegerConnector">157.5,304.8 157.5,347.4 280,347.4</av:PointCollection>
+                  <av:PointCollection x:Key="BooleanConnector">140,304.8 140,419.2 380,419.2 380,389.2</av:PointCollection>
                   <av:PointCollection x:Key="DateConnector">175,283 380,283 380,305.6</av:PointCollection>
+                  <av:PointCollection x:Key="NullConnector">122.5,304.8 122.5,419.2 380,419.2 380,389.2</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowStep x:Key="Array" x:Name="__ReferenceID3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">280,65.6</av:Point>
-                    <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                    <av:Size x:Key="ShapeSize">200,83.6</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Array" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Array" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Int32" Name="counter" />
                     <Variable x:TypeArguments="x:String" Name="strArrayType" />
@@ -216,10 +218,10 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">280,145.6</av:Point>
-                    <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                    <av:Size x:Key="ShapeSize">200,83.6</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Object" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Object" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="dtTemp" />
                   </Sequence.Variables>
@@ -246,21 +248,22 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">280,305.6</av:Point>
-                    <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                    <av:Size x:Key="ShapeSize">200,83.6</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Value" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Value" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{IN_strSource,item.Name,item.Value.ToString}]" DataTable="[IO_dtTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,189.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{IN_strSource,item.Name,item.Value.ToString}]" DataTable="[IO_dtTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                 </Sequence>
               </FlowStep>
               <x:Reference>__ReferenceID0<x:Key>Boolean</x:Key></x:Reference>
               <x:Reference>__ReferenceID0<x:Key>String</x:Key></x:Reference>
               <x:Reference>__ReferenceID0<x:Key>Date</x:Key></x:Reference>
+              <x:Reference>__ReferenceID0<x:Key>Null</x:Key></x:Reference>
             </FlowSwitch>
             <x:Reference>__ReferenceID1</x:Reference>
             <x:Reference>__ReferenceID2</x:Reference>

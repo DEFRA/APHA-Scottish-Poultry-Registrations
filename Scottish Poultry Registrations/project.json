@@ -50,7 +50,22 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d3976ba5-74c5-43f5-9517-1849bd89b9eb",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Read JSON.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "81c77098-bffd-4274-9a0c-39ed9686d504",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 JSON to Dictionaries.xaml"
+      }
+    ],
     "modernBehavior": false,
     "saveToCloud": false
   },

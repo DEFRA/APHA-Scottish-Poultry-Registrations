@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "browserSAM&Sequence_17",
         "TransactionItemFilePath&StateMachine_1",
         "TransactionItemFile&Sequence_68",
         "TransactionItemEmail&StateMachine_1",
@@ -50,7 +51,17 @@
     {
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "dictDefaults&Flowchart_1",
+        "dtLocations&Flowchart_1",
+        "dtBirdDetails&Flowchart_1",
+        "dictOccupier&Flowchart_1",
+        "dictKeeperDetails&Flowchart_1",
+        "dtJSON&Flowchart_1",
+        "boolTabsOpen&Sequence_3",
+        "ieAttachments&Sequence_1",
+        "browserSAM&Flowchart_1"
+      ],
       "ArgumentsSectionElementsOrder": [
         "io_arrExitPoint",
         "io_swProcessingTimer",
@@ -87,7 +98,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Framework/SetTransactionStatus.xaml",
+      "Path": "Framework/SetTransactionStatus - email.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "credExchangeCredentials&Sequence_26",
@@ -107,8 +118,7 @@
         "io_Config",
         "io_intConSysEx",
         "io_RetryNumber",
-        "io_TransactionNumber",
-        "IN_strFileType"
+        "io_TransactionNumber"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
@@ -134,6 +144,101 @@
         "in_strProcessType",
         "in_boolContinue"
       ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/tc01 Read JSON.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtTable&Sequence_1",
+        "strJSONPath&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Recurse JObject.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "counter&Sequence_3",
+        "strArrayType&Sequence_3",
+        "dtTemp&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IN_jObj",
+        "IN_strSource",
+        "IO_dtTable"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/JSON to Dictionaries.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtAdditionalDetails&Sequence_1",
+        "intDetailCount&Sequence_25",
+        "dtStock&Sequence_26",
+        "dtDetailsNonStocking&Sequence_25",
+        "dtFullAdditionalDetails&Sequence_25",
+        "dtFullLocations&Sequence_25",
+        "dtFullBirdDetails&Sequence_25",
+        "dtBirdsNonAddress&Sequence_25",
+        "intBirdCount&Sequence_25",
+        "listLocationsRow&Sequence_26",
+        "dtAddress&Sequence_26",
+        "listBirdsRow&Sequence_26",
+        "dtFullJSON&Sequence_1",
+        "dtKeeperDetails&Sequence_1",
+        "dtOccupier&Sequence_1",
+        "dtDefaults&Sequence_1",
+        "dtKeeperAddress&Sequence_2",
+        "strKeeperAddress&Sequence_2",
+        "dtOccupierAddress&Sequence_6",
+        "strOccupierAddress&Sequence_6",
+        "dtFullLocations&Sequence_9",
+        "intAddressCount&Sequence_9",
+        "listLocationsRow&Sequence_12",
+        "dtAddress&Sequence_12",
+        "dtFullLocations&Sequence_14",
+        "dtFullBirdDetails&Sequence_14",
+        "dtBirdsNonAddress&Sequence_14",
+        "intBirdCount&Sequence_14",
+        "listLocationsRow&Sequence_13",
+        "dtAddress&Sequence_13",
+        "listBirdsRow&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IN_strJSONPath",
+        "OUT_dictKeeperDetails",
+        "OUT_dictOccupier",
+        "OUT_dtBirdDetails",
+        "OUT_dtLocations",
+        "OUT_dictDefaults"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/tc01 JSON to Dictionaries.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strJSONPath&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "jobjRegistration&Sequence_1",
+        "strJSON&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }

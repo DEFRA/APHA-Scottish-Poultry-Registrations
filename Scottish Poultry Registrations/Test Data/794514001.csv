@@ -1,0 +1,146 @@
+﻿source,key,value
+source,key,value
+Default,JsonVersion,1.0
+Default,JsonVersionDate,2025-02-05
+Default,OnlineFormId,51858dcb-7021-4fde-a69f-48a6a6c92ba8
+Default,RegFormCreatedDate,2024-09-02
+Default,Registration_Type,Update
+Default,Registration_under_50_Birds,Yes
+Default,RegistrationEmail,sime.macgillivray@gmail.com
+KeeperDetails,Title,Mr.
+KeeperDetails,Surname,MacGillivray
+KeeperDetails,Forename,Simon
+KeeperDetails/Address,LocationName,71  CULLODEN ROAD
+KeeperDetails/Address,AddressLine1,71  CULLODEN ROAD
+KeeperDetails/Address,AddressLine2," BALLOCH"
+KeeperDetails/Address,TownOrCity," INVERNESS"
+KeeperDetails/Address,County,HIGHLAND
+KeeperDetails/Address,PostCode,IV2 7HH
+KeeperDetails/Address,Country,SCOTLAND
+KeeperDetails,TelephoneNumber,(01463) 791 805
+KeeperDetails,MobileNumber,(07776) 417457
+KeeperDetails,Email,sime.macgillivray@gmail.com
+Occupier,TradingName,
+Occupier,Title,Mr.
+Occupier,Surname,MacGillivray
+Occupier,Forename,Simon
+Occupier,OccupierDescription,You are a hobbyist/pet owner
+Occupier/Address,LocationName,71  CULLODEN ROAD
+Occupier/Address,AddressLine1,71  CULLODEN ROAD
+Occupier/Address,AddressLine2," BALLOCH"
+Occupier/Address,TownOrCity," INVERNESS"
+Occupier/Address,County,HIGHLAND
+Occupier/Address,PostCode,IV2 7HH
+Occupier/Address,Country,SCOTLAND
+Occupier,TelephoneNumber,(01463) 791 805
+Occupier,MobileNumber,(07776) 417457
+Occupier,Email,sime.macgillivray@gmail.com
+Locations0,LocationName,71 CULLODEN ROAD
+Locations0,AddressLine1,71 CULLODEN ROAD
+Locations0,AddressLine2,
+Locations0,TownOrCity," INVERNESS"
+Locations0,County,HIGHLAND
+Locations0,Postcode,IV2 7HH
+Locations0,Country,SCOTLAND
+Locations0,Cph,79/451/4001
+Locations0,GridReference,NH 73658 46704
+Locations0,LocationType,0
+Locations0,SelectedSpecies,"Ducks,Chickens,Pheasants"
+GroupedDetails0/BirdDetails0,Species,Ducks
+GroupedDetails0/BirdDetails0,NumberOfBirds,8
+GroupedDetails0/BirdDetails0,KeptForReason,Backyard Flock
+GroupedDetails0/BirdDetails0,KeptForPurpose,Hobby
+GroupedDetails0/BirdDetails0/WhereKeptLocation,LocationName,71 CULLODEN ROAD
+GroupedDetails0/BirdDetails0/WhereKeptLocation,AddressLine1,71 CULLODEN ROAD
+GroupedDetails0/BirdDetails0/WhereKeptLocation,AddressLine2,
+GroupedDetails0/BirdDetails0/WhereKeptLocation,TownOrCity," INVERNESS"
+GroupedDetails0/BirdDetails0/WhereKeptLocation,County,HIGHLAND
+GroupedDetails0/BirdDetails0/WhereKeptLocation,Postcode," IV2 7HH"
+GroupedDetails0/BirdDetails0/WhereKeptLocation,Country,SCOTLAND
+GroupedDetails0/BirdDetails0/WhereKeptLocation,Cph,79/451/4001
+GroupedDetails0/BirdDetails0/WhereKeptLocation,GridReference,NH 73658 46704
+GroupedDetails0/BirdDetails0/WhereKeptLocation,LocationType,0
+GroupedDetails0/BirdDetails0/WhereKeptLocation,SelectedSpecies,"Ducks,Chickens,Pheasants"
+GroupedDetails0/BirdDetails1,Species,Chickens
+GroupedDetails0/BirdDetails1,NumberOfBirds,1
+GroupedDetails0/BirdDetails1,KeptForReason,Backyard Flock
+GroupedDetails0/BirdDetails1,KeptForPurpose,Hobby
+GroupedDetails0/BirdDetails1/WhereKeptLocation,LocationName,71 CULLODEN ROAD
+GroupedDetails0/BirdDetails1/WhereKeptLocation,AddressLine1,71 CULLODEN ROAD
+GroupedDetails0/BirdDetails1/WhereKeptLocation,AddressLine2,
+GroupedDetails0/BirdDetails1/WhereKeptLocation,TownOrCity," INVERNESS"
+GroupedDetails0/BirdDetails1/WhereKeptLocation,County,HIGHLAND
+GroupedDetails0/BirdDetails1/WhereKeptLocation,Postcode," IV2 7HH"
+GroupedDetails0/BirdDetails1/WhereKeptLocation,Country,SCOTLAND
+GroupedDetails0/BirdDetails1/WhereKeptLocation,Cph,79/451/4001
+GroupedDetails0/BirdDetails1/WhereKeptLocation,GridReference,NH 73658 46704
+GroupedDetails0/BirdDetails1/WhereKeptLocation,LocationType,0
+GroupedDetails0/BirdDetails1/WhereKeptLocation,SelectedSpecies,"Ducks,Chickens,Pheasants"
+GroupedDetails0/BirdDetails2,Species,Pheasants
+GroupedDetails0/BirdDetails2,NumberOfBirds,1
+GroupedDetails0/BirdDetails2,KeptForReason,Backyard Flock
+GroupedDetails0/BirdDetails2,KeptForPurpose,Hobby
+GroupedDetails0/BirdDetails2/WhereKeptLocation,LocationName,71 CULLODEN ROAD
+GroupedDetails0/BirdDetails2/WhereKeptLocation,AddressLine1,71 CULLODEN ROAD
+GroupedDetails0/BirdDetails2/WhereKeptLocation,AddressLine2,
+GroupedDetails0/BirdDetails2/WhereKeptLocation,TownOrCity," INVERNESS"
+GroupedDetails0/BirdDetails2/WhereKeptLocation,County,HIGHLAND
+GroupedDetails0/BirdDetails2/WhereKeptLocation,Postcode," IV2 7HH"
+GroupedDetails0/BirdDetails2/WhereKeptLocation,Country,SCOTLAND
+GroupedDetails0/BirdDetails2/WhereKeptLocation,Cph,79/451/4001
+GroupedDetails0/BirdDetails2/WhereKeptLocation,GridReference,NH 73658 46704
+GroupedDetails0/BirdDetails2/WhereKeptLocation,LocationType,0
+GroupedDetails0/BirdDetails2/WhereKeptLocation,SelectedSpecies,"Ducks,Chickens,Pheasants"
+GroupedDetails0/AdditionalDetails0,Husbandry_System,NONE
+GroupedDetails0/AdditionalDetails0,Farm_Management_System,NONE
+GroupedDetails0/AdditionalDetails0,Do_the_Bird_have_access_to_open_air,NONE
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,All_Year,NONE
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,January,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,February,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,March,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,April,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,May,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,June,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,July,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,August,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,September,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,October,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,November,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,December,
+GroupedDetails0/AdditionalDetails1,Husbandry_System,NONE
+GroupedDetails0/AdditionalDetails1,Farm_Management_System,NONE
+GroupedDetails0/AdditionalDetails1,Do_the_Bird_have_access_to_open_air,NONE
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,All_Year,NONE
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,January,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,February,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,March,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,April,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,May,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,June,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,July,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,August,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,September,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,October,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,November,
+GroupedDetails0/AdditionalDetails1/Stocking_arrangements,December,
+GroupedDetails0/AdditionalDetails2,Husbandry_System,NONE
+GroupedDetails0/AdditionalDetails2,Farm_Management_System,NONE
+GroupedDetails0/AdditionalDetails2,Do_the_Bird_have_access_to_open_air,NONE
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,All_Year,NONE
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,January,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,February,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,March,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,April,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,May,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,June,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,July,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,August,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,September,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,October,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,November,
+GroupedDetails0/AdditionalDetails2/Stocking_arrangements,December,
+Default,isOwner,
+Default,isKeeper,
+Default,atHome,
+Declaration,SignedByName,Simon MacGillivray
+Declaration,DateSigned,2025-02-05 13:59:15
