@@ -52,12 +52,22 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strOccupierID&Sequence_51",
+        "boolKeeperCreated&Flowchart_1",
+        "listTaskIDs&Flowchart_1",
+        "dtContactMethods&Sequence_42",
+        "strKeeperID&Sequence_37",
+        "strBirdDetails&Flowchart_1",
+        "strLocations&Flowchart_1",
+        "strOccupier&Flowchart_1",
+        "strKeeperDetails&Flowchart_1",
+        "strRegBasis&Sequence_29",
+        "dtContactMethods&Sequence_29",
+        "boolOccupierIsKeeper&Flowchart_1",
+        "intNumberSearch&Sequence_19",
+        "arrPhoneNumbers&Sequence_19",
         "intNoOfRecords&Sequence_7",
-        "strBirdDetails&Sequence_8",
-        "strLocations&Sequence_8",
         "strDefaults&Sequence_8",
-        "strOccupier&Sequence_8",
-        "strKeeperDetails&Sequence_8",
         "dictDefaults&Flowchart_1",
         "dtLocations&Flowchart_1",
         "dtBirdDetails&Flowchart_1",
@@ -241,6 +251,8 @@
       "Path": "sequence.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "arrResults&Sequence_1",
+        "credsTest&Sequence_1",
         "jobjRegistration&Sequence_1",
         "strJSON&Sequence_1"
       ],
@@ -259,6 +271,45 @@
         "IN_UiBrowser",
         "IN_strFirstName",
         "IN_strSurname"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dict2&Sequence_2",
+        "dict1&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Search Customer Phone.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strNoOfRecords&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "OUT_NoOfRecords",
+        "IN_UiBrowser",
+        "IN_strPhoneNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GlobalExceptionHandler.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "answer&Sequence_1",
+        "retry&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "errorInfo",
+        "result"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
