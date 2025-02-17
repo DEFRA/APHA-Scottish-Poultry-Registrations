@@ -103,6 +103,30 @@
           }
         }
       },
+      "CPH.Viewer.Reusable.Components/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Pop.Ups": "1.0.3",
+          "UiPath.System.Activities": "21.10.3",
+          "UiPath.UIAutomation.Activities": "20.4.2"
+        },
+        "compile": {
+          "lib/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/CPH Viewer Reusable Components.dll": {},
+          "lib/net45/CPH Viewer Reusable Components_Expressions_39221522.dll": {},
+          "lib/net45/CPH Viewer Reusable Components_Expressions_57899668.dll": {},
+          "lib/net45/CPH Viewer Reusable Components_Expressions_62961510.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "CredentialManagement/1.0.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -4328,6 +4352,30 @@
           }
         }
       },
+      "CPH.Viewer.Reusable.Components/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Pop.Ups": "1.0.3",
+          "UiPath.System.Activities": "21.10.3",
+          "UiPath.UIAutomation.Activities": "20.4.2"
+        },
+        "compile": {
+          "lib/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/CPH Viewer Reusable Components.dll": {},
+          "lib/net45/CPH Viewer Reusable Components_Expressions_39221522.dll": {},
+          "lib/net45/CPH Viewer Reusable Components_Expressions_57899668.dll": {},
+          "lib/net45/CPH Viewer Reusable Components_Expressions_62961510.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "CredentialManagement/1.0.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -8465,6 +8513,38 @@
         "lib/netstandard2.0/ClosedXML.dll",
         "lib/netstandard2.0/ClosedXML.xml",
         "nuget-logo.png"
+      ]
+    },
+    "CPH.Viewer.Reusable.Components/1.0.2": {
+      "sha512": "Z851zCyOQitobiJaO0i1ZUQrA4VHt1FUmFgzi+2jt5HJNb0mwZj9QlZvqomjg5f5Rw9GYhbJObkaEEYjUtn3VA==",
+      "type": "package",
+      "path": "cph.viewer.reusable.components/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        "contentFiles/any/any/.objects/.metadata",
+        "contentFiles/any/any/.objects/.type",
+        "cph.viewer.reusable.components.1.0.2.nupkg.sha512",
+        "cph.viewer.reusable.components.nuspec",
+        "lib/net45/.project/design.json",
+        "lib/net45/.settings/Design/settings-5190454b.json",
+        "lib/net45/.settings/Design/settings-a1b2dac1.json",
+        "lib/net45/.settings/Design/settings-afad0842.json",
+        "lib/net45/.settings/Release/settings-1a5b880a.json",
+        "lib/net45/.settings/Release/settings-5190454b.json",
+        "lib/net45/.settings/Release/settings-590bb27b.json",
+        "lib/net45/.settings/Release/settings-9e9290da.json",
+        "lib/net45/.settings/Release/settings-a1b2dac1.json",
+        "lib/net45/.settings/Release/settings-afad0842.json",
+        "lib/net45/CPH Viewer Reusable Components.dll",
+        "lib/net45/CPH Viewer Reusable Components_Expressions_39221522.dll",
+        "lib/net45/CPH Viewer Reusable Components_Expressions_57899668.dll",
+        "lib/net45/CPH Viewer Reusable Components_Expressions_62961510.dll",
+        "lib/net45/Edge/Clear Map Markers.xaml",
+        "lib/net45/Edge/Get CP Number.xaml",
+        "lib/net45/Edge/Get Map Reference.xaml",
+        "lib/net45/bindings.json",
+        "lib/net45/bindings_v2.json",
+        "lib/net45/project.json"
       ]
     },
     "CredentialManagement/1.0.2": {
@@ -13885,6 +13965,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
+      "CPH.Viewer.Reusable.Components >= 1.0.2 <= 1.0.2",
       "Logging >= 1.0.16 <= 1.0.16",
       "Pop.Ups >= 1.0.3 <= 1.0.3",
       "SAM.Reuseable.Components >= 1.0.26 <= 1.0.26",
@@ -13913,6 +13994,11 @@
     "frameworks": {
       "net461": {
         "dependencies": {
+          "CPH.Viewer.Reusable.Components": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.2, 1.0.2]"
+          },
           "Logging": {
             "include": "Runtime",
             "target": "Package",

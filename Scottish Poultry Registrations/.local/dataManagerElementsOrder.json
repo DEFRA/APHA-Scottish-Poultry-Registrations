@@ -12,6 +12,8 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtSAMMapping&StateMachine_1",
+        "strSAMMapping&Sequence_92",
         "browserSAM&Sequence_17",
         "TransactionItemFilePath&StateMachine_1",
         "TransactionItemFile&Sequence_68",
@@ -52,6 +54,20 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strLocationID&Sequence_76",
+        "intRowItem&Sequence_63",
+        "rowLocation&Flowchart_1",
+        "strLocationCurrent&Sequence_63",
+        "dictAdditionalIdentifiers&Sequence_62",
+        "dtMapRefs&Sequence_62",
+        "arrRefSplit&Sequence_72",
+        "strShortGridRef&Sequence_72",
+        "arrFullGridRef&Sequence_72",
+        "browserCPH&Sequence_72",
+        "boolAdditionalDetails&Flowchart_1",
+        "intUnitCounter&Flowchart_1",
+        "intLocationCounter&Flowchart_1",
+        "arrOccDesc&Sequence_57",
         "strOccupierID&Sequence_51",
         "boolKeeperCreated&Flowchart_1",
         "listTaskIDs&Flowchart_1",
@@ -79,6 +95,7 @@
         "browserSAM&Flowchart_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_dtSAMMapping",
         "io_arrExitPoint",
         "io_swProcessingTimer",
         "io_Config",
@@ -310,6 +327,20 @@
       "ArgumentsSectionElementsOrder": [
         "errorInfo",
         "result"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Add CPH to Customer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "boolChecked&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IN_browsSAM",
+        "IN_strCustomerID",
+        "IN_strCPH"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
