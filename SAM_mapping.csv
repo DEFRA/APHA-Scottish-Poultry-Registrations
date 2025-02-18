@@ -1,7 +1,36 @@
-﻿BusinessActivity_Form,BusinessActivity_SAM
-You are a farmer,Farmer
-You are a crofter,Crofter
-You are a hobbyist/pet owner,Hobbyist
-You are a zoo or wildlife park,Zoo/Wildlife Park Operator
-You are a rescue/rehabilitation Centre,Rescue/Rehabilitation Centre Operator
-"You are a kept bird company e.g. poultry, game birds, birds of prey etc",Poultry Company
+﻿BusinessActivity_Form,BusinessActivity_SAM,County_Form,County_SAM
+You are a farmer,Farmer,Aberdeen City,Aberdeen City
+You are a crofter,Crofter,ABERDEENSHIRE,Aberdeenshire
+You are a hobbyist/pet owner,Hobbyist,ANGUS,Angus
+You are a zoo or wildlife park,Zoo/Wildlife Park Operator,ARGYLL AND BUTE,Argyll and Bute
+You are a rescue/rehabilitation Centre,Rescue/Rehabilitation Centre Operator,CITY OF ABERDEEN,Aberdeen City
+"You are a kept bird company e.g. poultry, game birds, birds of prey etc",Poultry Company,CITY OF DUNDEE,Dundee City
+,,CITY OF EDINBURGH,Edinburgh City
+,,CITY OF GLASGOW,Glasgow City
+,,CLACKMANNANSHIRE,Clackmannanshire
+,,DUMFRIES AND GALLOWAY,Dumfries and Galloway
+,,Dundee City,Dundee City
+,,EAST AYRSHIRE,East Ayrshire
+,,EAST DUNBARTONSHIRE,East Dunbartonshire
+,,EAST LOTHIAN,East Lothian
+,,EAST RENFREWSHIRE,East Renfrewshire
+,,Edinburgh City,Edinburgh City
+,,FALKIRK,Falkirk
+,,FIFE,Fife
+,,Glasgow City,Glasgow City
+,,HIGHLAND,Highland
+,,INVERCLYDE,Inverclyde
+,,MIDLOTHIAN,Midlothian
+,,MORAY,Moray
+,,NORTH AYRSHIRE,North Ayrshire
+,,NORTH LANARKSHIRE,North Lanarkshire
+,,ORKNEY ISLANDS,Orkney Islands
+,,PERTH AND KINROSS,Perth and Kinross
+,,RENFREWSHIRE,Renfrewshire
+,,SCOTTISH BORDERS,Scottish Borders
+,,SOUTH AYRSHIRE,South Ayrshire
+,,SOUTH LANARKSHIRE,South Lanarkshire
+,,STIRLING,Stirling
+,,WEST DUNBARTONSHIRE,West Dunbartonshire
+,,WEST LOTHIAN,West Lothian
+,,WESTERN ISLES,Western Isles

@@ -1,20 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GlobalExceptionHandler" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uico="http://schemas.uipath.com/workflow/activities/contracts" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GlobalExceptionHandler" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uico="http://schemas.uipath.com/workflow/activities/contracts" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="errorInfo" Type="InArgument(uico:ExceptionHandlerArgs)">
-      <x:Property.Attributes>
-        <RequiredArgumentAttribute />
-      </x:Property.Attributes>
-    </x:Property>
-    <x:Property Name="result" Type="OutArgument(uico:ErrorAction)">
-      <x:Property.Attributes>
-        <RequiredArgumentAttribute />
-      </x:Property.Attributes>
-    </x:Property>
+    <x:Property Name="errorInfo" Type="InArgument(uico:ExceptionHandlerArgs)" />
+    <x:Property Name="result" Type="OutArgument(uico:ErrorAction)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>715,990</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,1508.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GlobalHandler_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -42,6 +34,14 @@
       <x:String>UiPath.Activities.Contracts</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -49,6 +49,7 @@
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -76,12 +77,24 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPathTeam.SharePoint</AssemblyReference>
+      <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="DISABLED BY DEFAULT: To enable, right click GlobalExceptionHandler.xaml in the Project panel on the left, and select &quot;Set as Global Handler&quot;&#xA;&#xA;This sequence steps in during execution when the project encounters an unmanaged error.&#xA;&#xA;Important: Arguments 'errorInfo' and 'result' should not be removed." DisplayName="Global Exception Handler" sap:VirtualizedContainerService.HintSize="725,965" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="ONLY USING THIS FOR WHEN CLICK ACTIVITIES IN SAM FAIL DUE TO &quot;TARGET IS DISABLED&quot; OR &quot;UIELEMENT NO LONGER VALID&quot; EXCEPTIONS." DisplayName="Global Exception Handler" sap:VirtualizedContainerService.HintSize="1036.4,1443.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="answer" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="retry" />
+      <Variable x:TypeArguments="x:String" Name="strRetryable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtRetryable" />
+      <Variable x:TypeArguments="x:Boolean" Name="boolRetryable" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -89,23 +102,37 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Error" sap:VirtualizedContainerService.HintSize="683,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Exception processing: '&quot;+errorInfo.ActivityInfo.Name+&quot;'. Exception encountered: &quot;+errorInfo.Exception.ToString]" />
-    <If sap2010:Annotation.AnnotationText="Choose the action to be taken after the Global Exception Handler steps in: &#xA;&#xA;Continue - The exception is re-thrown.&#xA;&#xA;Ignore - The exception is ignored, and the execution continues from the next activity.&#xA;&#xA;Retry - The activity which threw the exception is retried.&#xA;&#xA;Abort - The execution stops after running the current handler." Condition="[errorInfo.RetryCount &lt; 3 AND NOT (errorInfo.Exception.GetType.ToString = &quot;UiPath.Core.BusinessRuleException&quot;)]" DisplayName="Choose Next Behaviour" sap:VirtualizedContainerService.HintSize="683,640" sap2010:WorkflowViewState.IdRef="If_1">
+    <ucas:ReadStorageText TimeoutMS="{x:Null}" DisplayName="Read Storage Text - retryable activities" FolderPath="APHA Root/Poultry Registrations" sap:VirtualizedContainerService.HintSize="974.4,135.6" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="RetryableActivities.csv" Result="[strRetryable]" StorageBucketName="Poultry Registrations" />
+    <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="True" DataTable="[dtRetryable]" DisplayName="Generate Data Table - retryable activities" sap:VirtualizedContainerService.HintSize="974.4,204" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[strRetryable]" UseColumnHeader="True" />
+    <Assign sap2010:Annotation.AnnotationText="This ensures that the retry mechanism isn't triggered for exceptions on container activities such as Browser Scope." DisplayName="Retry activity?" sap:VirtualizedContainerService.HintSize="974.4,127.2" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">[boolRetryable]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">[dtRetryable.Select("Activity='"+errorInfo.ActivityInfo.TypeName+"'").Count&lt;&gt;0]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <If sap2010:Annotation.AnnotationText="Choose the action to be taken after the Global Exception Handler steps in: &#xA;&#xA;Continue - The exception is re-thrown.&#xA;&#xA;Ignore - The exception is ignored, and the execution continues from the next activity.&#xA;&#xA;Retry - The activity which threw the exception is retried.&#xA;&#xA;Abort - The execution stops after running the current handler." Condition="[errorInfo.RetryCount &lt; 3 AND NOT (errorInfo.Exception.GetType.ToString = &quot;UiPath.Core.BusinessRuleException&quot;) and boolRetryable and (errorInfo.Exception.Message.Contains(&quot;target element is disabled&quot;) or errorInfo.Exception.Message.Contains(&quot;UiElement is no longer valid&quot;))]" DisplayName="Choose Next Behaviour" sap:VirtualizedContainerService.HintSize="974.4,714" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,345" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Retry activity" sap:VirtualizedContainerService.HintSize="496,392.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Error" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Retry Num: &quot;+errorInfo.RetryCount.ToString+&quot; - '&quot;+errorInfo.ActivityInfo.Name+&quot;'&quot;]" />
-          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+          <ui:LogMessage DisplayName="Log Error - retry attempt" sap:VirtualizedContainerService.HintSize="434,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Retry Num: &quot;+errorInfo.RetryCount.ToString+&quot; - '&quot;+errorInfo.ActivityInfo.Name+&quot;'&quot;]" />
+          <Delay DisplayName="Delay between retries" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,24.8" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <Assign DisplayName="Set result to retry" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
             <Assign.To>
               <OutArgument x:TypeArguments="uico:ErrorAction">[result]</OutArgument>
             </Assign.To>
@@ -116,7 +143,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign DisplayName="Set result to continue i.e. rethrow exception" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_6">
           <Assign.To>
             <OutArgument x:TypeArguments="uico:ErrorAction">[result]</OutArgument>
           </Assign.To>
