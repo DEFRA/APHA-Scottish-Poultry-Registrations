@@ -54,6 +54,9 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dictAdditionalIdentifiersUnit&Sequence_65",
+        "rowUnit&Sequence_65",
+        "listColumnNames&Sequence_100",
         "browserSAM&Flowchart_1",
         "dtJSON&Flowchart_1",
         "dictKeeperDetails&Flowchart_1",
@@ -359,17 +362,6 @@
         "errorInfo",
         "result"
       ],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Sequence.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "strTest&Sequence_1",
-        "strTitle&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     },
