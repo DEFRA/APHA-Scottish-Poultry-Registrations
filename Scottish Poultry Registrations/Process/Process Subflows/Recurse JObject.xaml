@@ -1,0 +1,282 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Recurse_JObject" this:Recurse_JObject.IN_strSource="Default" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="IN_jObj" Type="InArgument(njl:JObject)" />
+    <x:Property Name="IN_strSource" Type="InArgument(x:String)" />
+    <x:Property Name="IO_dtTable" Type="InOutArgument(sd:DataTable)" />
+  </x:Members>
+  <this:Recurse_JObject.IN_jObj>
+    <InArgument x:TypeArguments="njl:JObject" />
+  </this:Recurse_JObject.IN_jObj>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1410,1231.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Recurse_JObject_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPathTeam.SharePoint</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Recurse_JObject" sap:VirtualizedContainerService.HintSize="731.6,1166.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If Condition="[IO_dtTable is nothing]" sap:VirtualizedContainerService.HintSize="669.6,252" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <ui:BuildDataTable DataTable="[IO_dtTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;source&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;key&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;source&gt;source&lt;/source&gt;&#xA;    &lt;key&gt;key&lt;/key&gt;&#xA;    &lt;value&gt;value&lt;/value&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:ForEach x:TypeArguments="njl:JProperty" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="669.6,763.2" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[IN_jObj]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="njl:JProperty">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="njl:JProperty" Name="item" />
+          </ActivityAction.Argument>
+          <Flowchart sap:VirtualizedContainerService.HintSize="634,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <av:Point x:Key="ShapeLocation">110,12.4</av:Point>
+                <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">140,87.6 140,217.6</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Flowchart.StartNode>
+              <x:Reference>__ReferenceID4</x:Reference>
+            </Flowchart.StartNode>
+            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID4" DisplayName="Flow Switch" Expression="[item.value.Type.ToString]" sap:VirtualizedContainerService.HintSize="70,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
+              <FlowSwitch.Default>
+                <FlowStep x:Name="__ReferenceID1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">280,523.8</av:Point>
+                      <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Unexpected value type of JProperty: &quot;+item.Value.Type.ToString]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </FlowStep>
+              </FlowSwitch.Default>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">105,217.6</av:Point>
+                  <av:Size x:Key="ShapeSize">70,87.2</av:Size>
+                  <av:PointCollection x:Key="StringConnector">175,261.2 510,261.2 510,347.4 480,347.4</av:PointCollection>
+                  <av:PointCollection x:Key="ObjectConnector">175,239.4 205,239.4 205,187.4 280,187.4</av:PointCollection>
+                  <av:PointCollection x:Key="Default">105,283 75.0000000000001,283 75.0000000000001,550.4 280,550.4</av:PointCollection>
+                  <av:PointCollection x:Key="ArrayConnector">157.5,217.6 157.5,107.4 280,107.4</av:PointCollection>
+                  <av:PointCollection x:Key="IntegerConnector">157.5,304.8 157.5,347.4 280,347.4</av:PointCollection>
+                  <av:PointCollection x:Key="BooleanConnector">140,304.8 140,419.2 380,419.2 380,389.2</av:PointCollection>
+                  <av:PointCollection x:Key="DateConnector">175,283 380,283 380,305.6</av:PointCollection>
+                  <av:PointCollection x:Key="NullConnector">122.5,304.8 122.5,419.2 380,419.2 380,389.2</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <FlowStep x:Key="Array" x:Name="__ReferenceID3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">280,65.6</av:Point>
+                    <av:Size x:Key="ShapeSize">200,83.6</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Array" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Int32" Name="counter" />
+                    <Variable x:TypeArguments="x:String" Name="strArrayType" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="497.6,59.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[strArrayType]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[item.Value(0).Type.ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[strArrayType]" sap:VirtualizedContainerService.HintSize="497.6,400.4" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                    <Switch.Default>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;Unexpected value type of array: &quot;+item.Value(0).Type.ToString]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                    </Switch.Default>
+                    <ui:ForEach x:TypeArguments="njl:JObject" x:Key="Object" CurrentIndex="[counter]" DisplayName="For Each Array Item" sap:VirtualizedContainerService.HintSize="434,238" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[item.Value]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="njl:JObject">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="njl:JObject" Name="jObj" />
+                          </ActivityAction.Argument>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Recurse JObject workflow" sap:VirtualizedContainerService.HintSize="358,113.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Process\Process Subflows\Recurse JObject.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="njl:JObject" x:Key="IN_jObj">[jObj]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="IN_strSource">[If(IN_strSource&lt;&gt;"Default",IN_strSource+"/","")+item.Name+counter.ToString]</InArgument>
+                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="IO_dtTable">[IO_dtTable]</InOutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                    </ui:ForEach>
+                    <ui:AddDataRow DataRow="{x:Null}" x:Key="String" ArrayRow="[{IN_strSource,item.Name,String.Join(&quot;,&quot;,item.Value.ToObject(of string()))}]" DataTable="[IO_dtTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,189.2" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                  </Switch>
+                </Sequence>
+              </FlowStep>
+              <FlowStep x:Key="Object" x:Name="__ReferenceID2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">280,145.6</av:Point>
+                    <av:Size x:Key="ShapeSize">200,83.6</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Object" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Name="dtTemp" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Recurse JObject workflow" sap:VirtualizedContainerService.HintSize="358,113.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Process\Process Subflows\Recurse JObject.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="njl:JObject" x:Key="IN_jObj">[item.Value.ToObject(of JObject)]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="IN_strSource">[If(IN_strSource&lt;&gt;"Default",IN_strSource+"/","")+item.Name]</InArgument>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="IO_dtTable">[IO_dtTable]</InOutArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </FlowStep>
+              <FlowStep x:Key="Integer" x:Name="__ReferenceID0">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">280,305.6</av:Point>
+                    <av:Size x:Key="ShapeSize">200,83.6</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Value" sap:VirtualizedContainerService.HintSize="450,301.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{IN_strSource,item.Name,item.Value.ToString.Replace(&quot;NONE&quot;,&quot;&quot;)}]" DataTable="[IO_dtTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                </Sequence>
+              </FlowStep>
+              <x:Reference>__ReferenceID0<x:Key>Boolean</x:Key></x:Reference>
+              <x:Reference>__ReferenceID0<x:Key>String</x:Key></x:Reference>
+              <x:Reference>__ReferenceID0<x:Key>Date</x:Key></x:Reference>
+              <x:Reference>__ReferenceID0<x:Key>Null</x:Key></x:Reference>
+            </FlowSwitch>
+            <x:Reference>__ReferenceID1</x:Reference>
+            <x:Reference>__ReferenceID2</x:Reference>
+            <x:Reference>__ReferenceID3</x:Reference>
+            <x:Reference>__ReferenceID0</x:Reference>
+          </Flowchart>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

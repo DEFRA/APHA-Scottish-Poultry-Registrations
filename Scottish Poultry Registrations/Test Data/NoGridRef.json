@@ -1,0 +1,118 @@
+{
+    "JsonVersion": "1.0",
+    "JsonVersionDate": "2025-01-31",
+    "OnlineFormId": "857f1bf0-9b59-490c-b040-fdbeec693b1d",
+    "RegFormCreatedDate": "2025-01-31",
+    "Registration_Type": "New",
+    "Registration_under_50_Birds": "Yes",
+    "RegistrationEmail": "rayparis1779@outlook.com",
+    "KeeperDetails": {
+        "Title": "Mr.",
+        "Surname": "Pariss",
+        "Forename": "Raymondd",
+        "Address": {
+            "LocationName": "44  CAMPVIEW CRESCENT",
+            "AddressLine1": "44  CAMPVIEW CRESCENT",
+            "AddressLine2": " DANDERHALL",
+            "TownOrCity": " DALKEITH",
+            "County": "MIDLOTHIAN",
+            "PostCode": "EH22 1PY",
+            "Country": "SCOTLAND"
+        },
+        "TelephoneNumber": "NONE",
+        "MobileNumber": "(07568) 321207",
+        "Email": "rayparis1779@outlook.com"
+    },
+    "Occupier": {
+        "TradingName": null,
+        "Title": "Mr.",
+        "Surname": "Pariss",
+        "Forename": "Raymondd",
+        "OccupierDescription": "You are a hobbyist/pet owner",
+        "Address": {
+            "LocationName": "44  CAMPVIEW CRESCENT",
+            "AddressLine1": "44  CAMPVIEW CRESCENT",
+            "AddressLine2": " DANDERHALL",
+            "TownOrCity": " DALKEITH",
+            "County": "MIDLOTHIAN",
+            "PostCode": "EH22 1PY",
+            "Country": "SCOTLAND"
+        },
+        "TelephoneNumber": "",
+        "MobileNumber": "(07568) 321207",
+        "Email": ""
+    },
+    "Locations": [
+        {
+            "LocationName": "44  CAMPVIEW CRESCENT",
+            "AddressLine1": "44  CAMPVIEW CRESCENT",
+            "AddressLine2": " DANDERHALL",
+            "TownOrCity": " DALKEITH",
+            "County": "MIDLOTHIAN",
+            "Postcode": "EH22 1PY",
+            "Country": "SCOTLAND",
+            "Cph": "84/572/4888",
+            "GridReference": "",
+            "LocationType": 0,
+            "SelectedSpecies": [
+                "Psittacines"
+            ]
+        }
+    ],
+    "GroupedDetails": [
+        {
+            "BirdDetails": [
+                {
+                    "Species": "Psittacines",
+                    "NumberOfBirds": 15,
+                    "KeptForReason": "Other Captive Birds",
+                    "KeptForPurpose": "Hobby",
+                    "WhereKeptLocation": {
+                        "LocationName": "44  CAMPVIEW CRESCENT",
+                        "AddressLine1": "44  CAMPVIEW CRESCENT",
+                        "AddressLine2": " DANDERHALL",
+                        "TownOrCity": " DALKEITH",
+                        "County": "MIDLOTHIAN",
+                        "Postcode": " EH22 1PY",
+                        "Country": "SCOTLAND",
+                        "Cph": "84/572/4888",
+                        "GridReference": "",
+                        "LocationType": 0,
+                        "SelectedSpecies": [
+                            "Psittacines"
+                        ]
+                    }
+                }
+            ],
+            "AdditionalDetails": [
+                {
+                    "Husbandry_System": "NONE",
+                    "Farm_Management_System": "NONE",
+                    "Do_the_Bird_have_access_to_open_air": "NONE",
+                    "Stocking_arrangements": {
+                        "All_Year": "NONE",
+                        "January": "",
+                        "February": "",
+                        "March": "",
+                        "April": "",
+                        "May": "",
+                        "June": "",
+                        "July": "",
+                        "August": "",
+                        "September": "",
+                        "October": "",
+                        "November": "",
+                        "December": ""
+                    }
+                }
+            ]
+        }
+    ],
+    "isOwner": null,
+    "isKeeper": null,
+    "atHome": null,
+    "Declaration": {
+        "SignedByName": "Mr Raymond Paris",
+        "DateSigned": "2025-01-31 08:56:44"
+    }
+}

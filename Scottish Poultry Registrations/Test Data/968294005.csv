@@ -1,0 +1,84 @@
+﻿source,key,value
+source,key,value
+Default,JsonVersion,1.0
+Default,JsonVersionDate,2025-02-05
+Default,OnlineFormId,74e00971-6505-4ab1-9d61-9bd55c428f38
+Default,RegFormCreatedDate,2024-09-29
+Default,Registration_Type,Update
+Default,Registration_under_50_Birds,Yes
+Default,RegistrationEmail,niamhbowler@outlook.com
+KeeperDetails,Title,Mrs.
+KeeperDetails,Surname,Bowler
+KeeperDetails,Forename,Niamh
+KeeperDetails/Address,LocationName,9  CASSLEY DRIVE
+KeeperDetails/Address,AddressLine1,9  CASSLEY DRIVE
+KeeperDetails/Address,AddressLine2," ROSEHALL"
+KeeperDetails/Address,TownOrCity," LAIRG"
+KeeperDetails/Address,County,HIGHLAND
+KeeperDetails/Address,PostCode,IV27 4BE
+KeeperDetails/Address,Country,SCOTLAND
+KeeperDetails,TelephoneNumber,NONE
+KeeperDetails,MobileNumber,(07709) 181130
+KeeperDetails,Email,niamhbowler@outlook.com
+Occupier,TradingName,
+Occupier,Title,Mrs.
+Occupier,Surname,Bowler
+Occupier,Forename,Niamh
+Occupier,OccupierDescription,You are a hobbyist/pet owner
+Occupier/Address,LocationName,9  CASSLEY DRIVE
+Occupier/Address,AddressLine1,9  CASSLEY DRIVE
+Occupier/Address,AddressLine2," ROSEHALL"
+Occupier/Address,TownOrCity," LAIRG"
+Occupier/Address,County,HIGHLAND
+Occupier/Address,PostCode,IV27 4BE
+Occupier/Address,Country,SCOTLAND
+Occupier,TelephoneNumber,NONE
+Occupier,MobileNumber,(07709) 181130
+Occupier,Email,niamhbowler@outlook.com
+Locations0,LocationName,9  CASSLEY DRIVE
+Locations0,AddressLine1,9  CASSLEY DRIVE
+Locations0,AddressLine2," ROSEHALL"
+Locations0,TownOrCity," LAIRG"
+Locations0,County,HIGHLAND
+Locations0,Postcode,IV27 4BE
+Locations0,Country,SCOTLAND
+Locations0,Cph,96/829/4005
+Locations0,GridReference,NC 47020 02183
+Locations0,LocationType,0
+Locations0,SelectedSpecies,Chickens
+GroupedDetails0/BirdDetails0,Species,Chickens
+GroupedDetails0/BirdDetails0,NumberOfBirds,0
+GroupedDetails0/BirdDetails0,KeptForReason,Backyard Flock
+GroupedDetails0/BirdDetails0,KeptForPurpose,Hobby
+GroupedDetails0/BirdDetails0/WhereKeptLocation,LocationName,9  CASSLEY DRIVE
+GroupedDetails0/BirdDetails0/WhereKeptLocation,AddressLine1,9  CASSLEY DRIVE
+GroupedDetails0/BirdDetails0/WhereKeptLocation,AddressLine2," ROSEHALL"
+GroupedDetails0/BirdDetails0/WhereKeptLocation,TownOrCity," LAIRG"
+GroupedDetails0/BirdDetails0/WhereKeptLocation,County,HIGHLAND
+GroupedDetails0/BirdDetails0/WhereKeptLocation,Postcode," IV27 4BE"
+GroupedDetails0/BirdDetails0/WhereKeptLocation,Country,SCOTLAND
+GroupedDetails0/BirdDetails0/WhereKeptLocation,Cph,96/829/4005
+GroupedDetails0/BirdDetails0/WhereKeptLocation,GridReference,NC 47020 02183
+GroupedDetails0/BirdDetails0/WhereKeptLocation,LocationType,0
+GroupedDetails0/BirdDetails0/WhereKeptLocation,SelectedSpecies,Chickens
+GroupedDetails0/AdditionalDetails0,Husbandry_System,NONE
+GroupedDetails0/AdditionalDetails0,Farm_Management_System,NONE
+GroupedDetails0/AdditionalDetails0,Do_the_Bird_have_access_to_open_air,NONE
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,All_Year,NONE
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,January,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,February,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,March,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,April,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,May,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,June,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,July,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,August,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,September,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,October,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,November,
+GroupedDetails0/AdditionalDetails0/Stocking_arrangements,December,
+Default,isOwner,
+Default,isKeeper,
+Default,atHome,
+Declaration,SignedByName,Niamh bowler
+Declaration,DateSigned,2025-02-05 09:10:56

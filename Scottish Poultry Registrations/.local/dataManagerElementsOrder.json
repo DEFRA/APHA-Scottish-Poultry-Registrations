@@ -12,6 +12,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtSAMMapping&StateMachine_1",
+        "strSAMMapping&Sequence_92",
+        "browserSAM&Sequence_17",
+        "TransactionItemFilePath&StateMachine_1",
+        "TransactionItemFile&Sequence_68",
+        "TransactionItemEmail&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -26,7 +32,6 @@
         "swProcessingTimer&StateMachine_1",
         "intConSysEx&StateMachine_1",
         "Credentials&StateMachine_1",
-        "TransactionItem&StateMachine_1",
         "strUserFolder&Sequence_72",
         "arrFilePath&Sequence_82",
         "listConfigFilepaths&Sequence_82",
@@ -42,6 +47,402 @@
         "strOutcomeMessage&Sequence_85"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Transaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intColIndexAdjusted&Sequence_69",
+        "intColIndex&Sequence_69",
+        "intColIndex&Sequence_66",
+        "strAdditionalDetails&Sequence_69",
+        "arrStockMonths&Sequence_68",
+        "strStockMonths&Sequence_68",
+        "strUnitID&Sequence_108",
+        "rowUnit&Flowchart_1",
+        "intRowItem&Sequence_66",
+        "strUnit&Sequence_66",
+        "dictAdditionalIdentifiersUnit&Sequence_65",
+        "listColumnNames&Sequence_100",
+        "browserSAM&Flowchart_1",
+        "dtJSON&Flowchart_1",
+        "dictKeeperDetails&Flowchart_1",
+        "dictOccupier&Flowchart_1",
+        "dtBirdDetails&Flowchart_1",
+        "dtLocations&Flowchart_1",
+        "dictDefaults&Flowchart_1",
+        "boolOccupierIsKeeper&Flowchart_1",
+        "strKeeperDetails&Flowchart_1",
+        "strOccupier&Flowchart_1",
+        "strLocations&Flowchart_1",
+        "strBirdDetails&Flowchart_1",
+        "listTaskIDs&Flowchart_1",
+        "boolKeeperCreated&Flowchart_1",
+        "intLocationCounter&Flowchart_1",
+        "intUnitCounter&Flowchart_1",
+        "boolAdditionalDetails&Flowchart_1",
+        "rowLocation&Flowchart_1",
+        "ieAttachments&Sequence_1",
+        "listTitles&Sequence_26",
+        "boolDismissed&Sequence_94",
+        "strButtonSelected&Sequence_94",
+        "boolDismiss&Sequence_83",
+        "strButtonSelected&Sequence_83",
+        "arrOccDesc&Sequence_57",
+        "listTitles&Sequence_97",
+        "boolDismissed&Sequence_97",
+        "strButtonSelected&Sequence_97",
+        "boolDismiss&Sequence_87",
+        "strButtonSelected&Sequence_87",
+        "strCounty&Sequence_80",
+        "boolDismiss&Sequence_91",
+        "strButtonSelected&Sequence_91",
+        "strTownOrCity&Sequence_91",
+        "strDefaults&Sequence_8",
+        "boolTabsOpen&Sequence_3",
+        "intNoOfRecords&Sequence_7",
+        "arrPhoneNumbers&Sequence_19",
+        "intNumberSearch&Sequence_19",
+        "strRegBasis&Sequence_29",
+        "dtContactMethods&Sequence_29",
+        "strKeeperID&Sequence_37",
+        "dtContactMethods&Sequence_42",
+        "intCPHCounter&Sequence_45",
+        "strRowNum&Sequence_46",
+        "strOccupierID&Sequence_51",
+        "dtMapRefs&Sequence_62",
+        "dictAdditionalIdentifiers&Sequence_62",
+        "browserCPH&Sequence_72",
+        "arrFullGridRef&Sequence_72",
+        "strShortGridRef&Sequence_72",
+        "arrRefSplit&Sequence_72",
+        "strLocationCurrent&Sequence_63",
+        "intRowItem&Sequence_63",
+        "strLocationID&Sequence_76"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtSAMMapping",
+        "io_arrExitPoint",
+        "io_swProcessingTimer",
+        "io_Config",
+        "io_arrCaseID",
+        "in_TransactionItemEmail",
+        "in_TransactionItemFilePath"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus - original.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_13",
+        "strLogNote&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arrCaseID",
+        "in_arrExitPoint",
+        "in_BusinessException",
+        "in_dateCaseStartTime",
+        "in_strWorkLogFilepath",
+        "in_swProcessingTimer",
+        "in_SystemException",
+        "in_TransactionItem",
+        "io_Config",
+        "io_intConSysEx",
+        "io_RetryNumber",
+        "io_TransactionNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus - email.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "credExchangeCredentials&Sequence_26",
+        "boolUpload&Sequence_26",
+        "QueueRetry&Sequence_25",
+        "strLogNote&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arrCaseID",
+        "in_arrExitPoint",
+        "in_BusinessException",
+        "in_dateCaseStartTime",
+        "in_strWorkLogFilepath",
+        "in_swProcessingTimer",
+        "in_SystemException",
+        "in_TransactionItem",
+        "io_Config",
+        "io_intConSysEx",
+        "io_RetryNumber",
+        "io_TransactionNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData - email.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "mailInProgressMessage&Sequence_1",
+        "mailCurrentMessage&Sequence_1",
+        "credADCredentials&Sequence_1",
+        "credExchangeCredentials&Sequence_1",
+        "intToProcessIndex&Sequence_1",
+        "boolInProgressMoveSuccessful&Sequence_1",
+        "listMailMessages&Sequence_16",
+        "intRetryCount&Sequence_15"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_boolLastTransaction",
+        "in_strProcessType",
+        "in_boolContinue"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/tc01 Read JSON.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtTable&Sequence_1",
+        "strJSONPath&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Recurse JObject.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "counter&Sequence_3",
+        "strArrayType&Sequence_3",
+        "dtTemp&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IN_jObj",
+        "IN_strSource",
+        "IO_dtTable"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/JSON to Dictionaries.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtAdditionalDetails&Sequence_1",
+        "intDetailCount&Sequence_25",
+        "dtStock&Sequence_26",
+        "dtDetailsNonStocking&Sequence_25",
+        "dtFullAdditionalDetails&Sequence_25",
+        "dtFullLocations&Sequence_25",
+        "dtFullBirdDetails&Sequence_25",
+        "dtBirdsNonAddress&Sequence_25",
+        "intBirdCount&Sequence_25",
+        "listLocationsRow&Sequence_26",
+        "dtAddress&Sequence_26",
+        "listBirdsRow&Sequence_26",
+        "dtFullJSON&Sequence_1",
+        "dtKeeperDetails&Sequence_1",
+        "dtOccupier&Sequence_1",
+        "dtDefaults&Sequence_1",
+        "dtKeeperAddress&Sequence_2",
+        "strKeeperAddress&Sequence_2",
+        "dtOccupierAddress&Sequence_6",
+        "strOccupierAddress&Sequence_6",
+        "dtFullLocations&Sequence_9",
+        "intAddressCount&Sequence_9",
+        "listLocationsRow&Sequence_12",
+        "dtAddress&Sequence_12",
+        "dtFullLocations&Sequence_14",
+        "dtFullBirdDetails&Sequence_14",
+        "dtBirdsNonAddress&Sequence_14",
+        "intBirdCount&Sequence_14",
+        "listLocationsRow&Sequence_13",
+        "dtAddress&Sequence_13",
+        "listBirdsRow&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IN_strJSONPath",
+        "OUT_dictKeeperDetails",
+        "OUT_dictOccupier",
+        "OUT_dtBirdDetails",
+        "OUT_dtLocations",
+        "OUT_dictDefaults"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/tc01 JSON to Dictionaries.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strJSONPath&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Search Customer Name.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strNoOfRecords&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "OUT_NoOfRecords",
+        "IN_UiBrowser",
+        "IN_strFirstName",
+        "IN_strSurname"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dict2&Sequence_2",
+        "dict1&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Search Customer Phone.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strNoOfRecords&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "OUT_NoOfRecords",
+        "IN_UiBrowser",
+        "IN_strPhoneNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Add CPH to Customer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "boolChecked&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IN_browsSAM",
+        "IN_strCustomerID",
+        "IN_strCPH"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Datatable to Dictionary.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "IN_dtTable",
+        "OUT_dictTable"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GlobalExceptionHandler.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "answer&Sequence_1",
+        "retry&Sequence_1",
+        "strRetryable&Sequence_1",
+        "dtRetryable&Sequence_1",
+        "boolRetryable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "errorInfo",
+        "result"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Check County v2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "rowCounty&Sequence_1",
+        "strReplacement&Sequence_1",
+        "boolDismissed&Sequence_3",
+        "strButtonSelected&Sequence_3",
+        "listCounties&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IN_dtCounties",
+        "IO_strCounty",
+        "IO_swProcessingTimer",
+        "IN_strAddress",
+        "IN_strAddressSource"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Read JSON.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strJSON&Sequence_1",
+        "jobjApplicationInfo&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IN_strJSONPath",
+        "OUT_dtTable"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtBirdDetails&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus - file.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strReviewPath&Flowchart_1",
+        "intCounter&Flowchart_1",
+        "strCompletedPath&Flowchart_1",
+        "strFileMoveException&Flowchart_1",
+        "QueueRetry&Sequence_13",
+        "strLogNote&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arrCaseID",
+        "in_arrExitPoint",
+        "in_BusinessException",
+        "in_dateCaseStartTime",
+        "in_strWorkLogFilepath",
+        "in_swProcessingTimer",
+        "in_SystemException",
+        "in_TransactionItem",
+        "io_Config",
+        "io_intConSysEx",
+        "io_RetryNumber",
+        "io_TransactionNumber"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
