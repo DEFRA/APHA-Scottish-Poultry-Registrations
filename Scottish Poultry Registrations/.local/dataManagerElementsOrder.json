@@ -54,8 +54,17 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "intColIndexAdjusted&Sequence_69",
+        "intColIndex&Sequence_69",
+        "intColIndex&Sequence_66",
+        "strAdditionalDetails&Sequence_69",
+        "arrStockMonths&Sequence_68",
+        "strStockMonths&Sequence_68",
+        "strUnitID&Sequence_108",
+        "rowUnit&Flowchart_1",
+        "intRowItem&Sequence_66",
+        "strUnit&Sequence_66",
         "dictAdditionalIdentifiersUnit&Sequence_65",
-        "rowUnit&Sequence_65",
         "listColumnNames&Sequence_100",
         "browserSAM&Flowchart_1",
         "dtJSON&Flowchart_1",
@@ -395,6 +404,44 @@
       "ArgumentsSectionElementsOrder": [
         "IN_strJSONPath",
         "OUT_dtTable"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtBirdDetails&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus - file.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strReviewPath&Flowchart_1",
+        "intCounter&Flowchart_1",
+        "strCompletedPath&Flowchart_1",
+        "strFileMoveException&Flowchart_1",
+        "QueueRetry&Sequence_13",
+        "strLogNote&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arrCaseID",
+        "in_arrExitPoint",
+        "in_BusinessException",
+        "in_dateCaseStartTime",
+        "in_strWorkLogFilepath",
+        "in_swProcessingTimer",
+        "in_SystemException",
+        "in_TransactionItem",
+        "io_Config",
+        "io_intConSysEx",
+        "io_RetryNumber",
+        "io_TransactionNumber"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
