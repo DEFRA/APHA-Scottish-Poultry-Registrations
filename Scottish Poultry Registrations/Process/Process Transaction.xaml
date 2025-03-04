@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,3941.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>664,3901.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -254,7 +254,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">330,558.14 330,575.34</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Validate JSON data" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <Sequence DisplayName="Validate JSON data" sap:VirtualizedContainerService.HintSize="705.6,7207.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="scg:List(x:String)" Default="[{&quot;Mr&quot;,&#xA;&quot;Mrs&quot;,&#xA;&quot;Ms&quot;,&#xA;&quot;Miss&quot;,&#xA;&quot;Mx&quot;,&#xA;&quot;Baron&quot;,&#xA;&quot;Baroness&quot;,&#xA;&quot;Captain&quot;,&#xA;&quot;Colonel&quot;,&#xA;&quot;Count&quot;,&#xA;&quot;Countess&quot;,&#xA;&quot;Dame&quot;,&#xA;&quot;Deacon&quot;,&#xA;&quot;Dr&quot;,&#xA;&quot;Duchess&quot;,&#xA;&quot;Duke&quot;,&#xA;&quot;Earl&quot;,&#xA;&quot;Father&quot;,&#xA;&quot;Lady&quot;,&#xA;&quot;Lord&quot;,&#xA;&quot;Lt Colonel&quot;,&#xA;&quot;Major&quot;,&#xA;&quot;Prof&quot;,&#xA;&quot;Rev&quot;,&#xA;&quot;Rt Hon&quot;,&#xA;&quot;Sir&quot;,&#xA;&quot;Viscount&quot;,&#xA;&quot;Viscountess&quot;}.ToList]" Name="listTitles" />
                     </Sequence.Variables>
@@ -264,7 +264,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap2010:Annotation.AnnotationText="This robot is not currently configured to process updates for existing registrations. New registrations should have registration type = new" Condition="[dictDefaults(&quot;Registration_Type&quot;).Trim.ToLower=&quot;update&quot;]" DisplayName="If registration type is &quot;update&quot;" sap:VirtualizedContainerService.HintSize="484,296" sap2010:WorkflowViewState.IdRef="If_12">
+                    <If sap2010:Annotation.AnnotationText="This robot is not currently configured to process updates for existing registrations. New registrations should have registration type = new" Condition="[dictDefaults(&quot;Registration_Type&quot;).Trim.ToLower=&quot;update&quot;]" DisplayName="If registration type is &quot;update&quot;" sap:VirtualizedContainerService.HintSize="643.6,130.8" sap2010:WorkflowViewState.IdRef="If_12">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -285,13 +285,190 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Check if Occupier is Keeper by comparing like-for-like key-values. All KeeperDetails keys have an equivalent Occupier key. Occupier has two additional keys not present in Keeper, hence we loop through KeeperDetails rather than Occupier." DisplayName="For Each KeeperDetails entry" sap:VirtualizedContainerService.HintSize="637.6,180" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[dictKeeperDetails]">
+                    <Sequence sap2010:Annotation.AnnotationText="We do this before other data validation to maintain the other Occupier=Keeper checks" DisplayName="Check for missing Occupier data" sap:VirtualizedContainerService.HintSize="643.6,1494.4" sap2010:WorkflowViewState.IdRef="Sequence_125">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If Condition="[dictOccupier(&quot;Forename&quot;)=&quot;&quot; and dictOccupier(&quot;Surname&quot;)=&quot;&quot;]" DisplayName="If forename and surname null" sap:VirtualizedContainerService.HintSize="515.2,372" sap2010:WorkflowViewState.IdRef="If_36">
+                        <If.Then>
+                          <ui:MultipleAssign DisplayName="Take title, forename and surname from Keeper" sap:VirtualizedContainerService.HintSize="479.6,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_14">
+                            <ui:MultipleAssign.AssignOperations>
+                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_42">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("Forename")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("Forename")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_43">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("Surname")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("Surname")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_44">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("Title")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("Title")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                              </scg:List>
+                            </ui:MultipleAssign.AssignOperations>
+                          </ui:MultipleAssign>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_124">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[dictOccupier(&quot;Address&quot;)=&quot;&quot;]" DisplayName="If address is null" sap:VirtualizedContainerService.HintSize="515.2,528" sap2010:WorkflowViewState.IdRef="If_37">
+                        <If.Then>
+                          <ui:MultipleAssign DisplayName="Take address details from Keeper" sap:VirtualizedContainerService.HintSize="479.6,336" sap2010:WorkflowViewState.IdRef="MultipleAssign_15">
+                            <ui:MultipleAssign.AssignOperations>
+                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_45">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("Address")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("Address")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_46">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("LocationName")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("LocationName")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_47">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("AddressLine1")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("AddressLine1")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_48">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("AddressLine2")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("AddressLine2")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_49">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("TownOrCity")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("TownOrCity")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_50">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("County")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("County")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_51">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("PostCode")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("PostCode")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_52">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("Country")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("Country")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                              </scg:List>
+                            </ui:MultipleAssign.AssignOperations>
+                          </ui:MultipleAssign>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_126">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[dictOccupier(&quot;TelephoneNumber&quot;)=&quot;&quot; and dictOccupier(&quot;MobileNumber&quot;)=&quot;&quot; and dictOccupier(&quot;Email&quot;)=&quot;&quot;]" DisplayName="If contact details are null" sap:VirtualizedContainerService.HintSize="515.2,372" sap2010:WorkflowViewState.IdRef="If_38">
+                        <If.Then>
+                          <ui:MultipleAssign DisplayName="Take contact details from Keeper" sap:VirtualizedContainerService.HintSize="479.6,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_16">
+                            <ui:MultipleAssign.AssignOperations>
+                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_53">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("TelephoneNumber")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("TelephoneNumber")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_54">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("MobileNumber")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("MobileNumber")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_55">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[dictOccupier("Email")]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[dictKeeperDetails("Email")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                              </scg:List>
+                            </ui:MultipleAssign.AssignOperations>
+                          </ui:MultipleAssign>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_127">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Check if Occupier is Keeper by comparing like-for-like key-values. All KeeperDetails keys have an equivalent Occupier key. Occupier has two additional keys not present in Keeper, hence we loop through KeeperDetails rather than Occupier." DisplayName="For Each KeeperDetails entry" sap:VirtualizedContainerService.HintSize="643.6,817.2" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[dictKeeperDetails]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="keyvalue" />
                           </ActivityAction.Argument>
-                          <If sap2010:Annotation.AnnotationText="Ignore contact details as these may not carry through on form output even if Keeper = Occupier" Condition="[dictOccupier(keyvalue.Key)&lt;&gt;keyvalue.Value and not {&quot;TelephoneNumber&quot;,&quot;MobileNumber&quot;,&quot;Email&quot;}.Contains(keyvalue.Key)]" DisplayName="If Occupier and KeeperDetails values not equal for current key" sap:VirtualizedContainerService.HintSize="531.6,629.6" sap2010:WorkflowViewState.IdRef="If_21">
+                          <If sap2010:Annotation.AnnotationText="Ignore contact details as these may only partially carry through on form output even if Keeper = Occupier" Condition="[dictOccupier(keyvalue.Key)&lt;&gt;keyvalue.Value and not {&quot;TelephoneNumber&quot;,&quot;MobileNumber&quot;,&quot;Email&quot;}.Contains(keyvalue.Key)]" DisplayName="If Occupier and KeeperDetails values not equal for current key" sap:VirtualizedContainerService.HintSize="531.6,629.6" sap2010:WorkflowViewState.IdRef="If_21">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -322,12 +499,12 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEach>
-                    <Sequence DisplayName="Validate and manipulate Keeper Details" sap:VirtualizedContainerService.HintSize="637.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                    <Sequence DisplayName="Validate and manipulate Keeper Details" sap:VirtualizedContainerService.HintSize="643.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_56">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -597,14 +774,14 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <Sequence DisplayName="Validate and manipulate Occupier Details" sap:VirtualizedContainerService.HintSize="637.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                    <Sequence DisplayName="Validate and manipulate Occupier Details" sap:VirtualizedContainerService.HintSize="643.6,2957.2" sap2010:WorkflowViewState.IdRef="Sequence_57">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd1:DataRow[]" Name="arrOccDesc" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:MultipleAssign sap2010:Annotation.AnnotationText="Convert Title, Forename, Surname, LocationName, AddressLine1 and AddressLine2 to Title Case. Convert to lower first as title case conversion doesn't work on all caps for some reason.&#xA;&#xA;Convert TownOrCity to upper case.&#xA;&#xA;Also replace slashes with hyphens and remove brackets from LocationName, AddressLine1 and AddressLine2." DisplayName="Occupier name and address cases" sap:VirtualizedContainerService.HintSize="581.6,448" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
@@ -863,7 +1040,7 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <Sequence DisplayName="Validate and manipulate Location details" sap:VirtualizedContainerService.HintSize="637.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                    <Sequence DisplayName="Validate and manipulate Location details" sap:VirtualizedContainerService.HintSize="643.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1031,7 +1208,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEachRow>
                     </Sequence>
-                    <Sequence DisplayName="Validate and manipulate Bird details" sap:VirtualizedContainerService.HintSize="637.6,1166.8" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                    <Sequence DisplayName="Validate and manipulate Bird details" sap:VirtualizedContainerService.HintSize="643.6,1289.2" sap2010:WorkflowViewState.IdRef="Sequence_79">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1039,13 +1216,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="UnitID" DataTable="[dtBirdDetails]" DisplayName="Add Unit ID column" sap:VirtualizedContainerService.HintSize="575.6,190" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtBirdDetails]" DisplayName="For Each unit - validate" sap:VirtualizedContainerService.HintSize="575.6,825.6" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtBirdDetails]" DisplayName="For Each unit - validate" sap:VirtualizedContainerService.HintSize="575.6,948" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd1:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Validate current unit KeptForReason and Species" sap:VirtualizedContainerService.HintSize="541.6,708.8" sap2010:WorkflowViewState.IdRef="Sequence_120">
+                            <Sequence DisplayName="Validate current unit KeptForReason and Species" sap:VirtualizedContainerService.HintSize="541.6,831.2" sap2010:WorkflowViewState.IdRef="Sequence_120">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1108,6 +1285,14 @@
                                 </Assign.To>
                                 <Assign.Value>
                                   <InArgument x:TypeArguments="x:Object">[in_dtSAMMapping.Select("KeptForReason_Form = '"+CurrentRow("KeptForReason").ToString+"'")(0)("KeptForReason_SAM").ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign DisplayName="Replace KeptForPurpose with SAM option" sap:VirtualizedContainerService.HintSize="479.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_45">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[CurrentRow("KeptForPurpose")]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">[in_dtSAMMapping.Select("KeptForPurpose_Form = '"+CurrentRow("KeptForPurpose").ToString+"'")(0)("KeptForPurpose_SAM").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
                             </Sequence>
@@ -1230,7 +1415,7 @@
                                 <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
                               </InvokeMethod.TargetObject>
                             </InvokeMethod>
-                            <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="469.6,24.8" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Please review scraped form info.&lt;/h1&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;The file can be found for reference at the following path on your device:&lt;br&gt;&quot;+io_Config(&quot;LocalData&quot;).ToString+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;If(boolOccupierIsKeeper,&quot;&lt;p&gt;&lt;strong&gt;Assuming Occupier is Keeper&lt;/strong&gt;&lt;/p&gt;&quot;,&quot;&lt;p&gt;&lt;strong&gt;Assuming Keeper and Occupier are different customers&lt;/strong&gt;&lt;/p&gt;&quot;)+&#xD;&#xA;&quot;&lt;p&gt;&lt;strong&gt;Registration Type:&lt;/strong&gt;&amp;ensp;&quot;+dictDefaults(&quot;Registration_Type&quot;)+&quot;&lt;br&gt;&quot;+&#xD;&#xA;&quot;&lt;strong&gt;Under 50 birds:&lt;/strong&gt;&amp;ensp;&quot;+dictDefaults(&quot;Registration_under_50_Birds&quot;)+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;h4&gt;Occupier&lt;/h4&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;&quot;+strOccupier+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;h4&gt;Keeper Details&lt;/h4&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;&quot;+strKeeperDetails+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;h4&gt;Locations&lt;/h4&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;&quot;+strLocations+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;h4&gt;Bird Details&lt;/h4&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;&quot;+strBirdDetails+&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 1" IN_WidthHeight="[{1000,1000}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_2" />
+                            <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="469.6,24.8" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Please review scraped form info.&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;The file can be found for reference at the following path on your device:&lt;br&gt;&quot;+io_Config(&quot;LocalData&quot;).ToString+&quot;&lt;/p&gt;&quot;+&#xA;If(boolOccupierIsKeeper,&quot;&lt;p&gt;&lt;strong&gt;Assuming Occupier is Keeper&lt;/strong&gt;&lt;/p&gt;&quot;,&quot;&lt;p&gt;&lt;strong&gt;Assuming Keeper and Occupier are different customers&lt;/strong&gt;&lt;/p&gt;&quot;)+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Registration Type:&lt;/strong&gt;&amp;ensp;&quot;+dictDefaults(&quot;Registration_Type&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Under 50 birds:&lt;/strong&gt;&amp;ensp;&quot;+dictDefaults(&quot;Registration_under_50_Birds&quot;)+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;h4&gt;Occupier&lt;/h4&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+strOccupier+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;h4&gt;Keeper Details&lt;/h4&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+strKeeperDetails+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;h4&gt;Locations&lt;/h4&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+strLocations+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;h4&gt;Bird Details&lt;/h4&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+strBirdDetails+&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 1" IN_WidthHeight="[{1000,1000}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_2" />
                             <InvokeMethod DisplayName="Start timer - PP1" sap:VirtualizedContainerService.HintSize="469.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Start">
                               <InvokeMethod.TargetObject>
                                 <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
@@ -2506,7 +2691,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                               <av:PointCollection x:Key="ConnectorLocation">323,1679.4 323,1700.2</av:PointCollection>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <Sequence DisplayName="Create Occupier record" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                          <Sequence DisplayName="Create Occupier record" sap:VirtualizedContainerService.HintSize="688,3900" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                                             <Sequence.Variables>
                                                               <Variable x:TypeArguments="sd1:DataTable" Name="dtContactMethods" />
                                                             </Sequence.Variables>
@@ -4001,7 +4186,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                               <av:PointCollection x:Key="ConnectorLocation">410,3311.34 410,3332.14</av:PointCollection>
                                                                                                             </scg:Dictionary>
                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                          <Sequence DisplayName="Create additional details" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                                                                                          <Sequence DisplayName="Create additional details" sap:VirtualizedContainerService.HintSize="617.2,1067.2" sap2010:WorkflowViewState.IdRef="Sequence_68">
                                                                                                             <Sequence.Variables>
                                                                                                               <Variable x:TypeArguments="x:String" Name="strStockMonths" />
                                                                                                               <Variable x:TypeArguments="s:String[]" Name="arrStockMonths" />

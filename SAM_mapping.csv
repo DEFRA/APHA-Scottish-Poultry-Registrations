@@ -1,36 +1,38 @@
-﻿BusinessActivity_Form,BusinessActivity_SAM,divider1,County_Form,County_SAM,divider2,Bird_Form,Bird_SAM,divider3,KeptForReason_Form,KeptForReason_SAM
-You are a farmer,Farmer,,Aberdeen City,Aberdeen City,,Avian Zoo collections (BIAZA Registered),Avian Zoo Collection,,Backyard Flock,Backyard Flock
-You are a crofter,Crofter,,ABERDEENSHIRE,Aberdeenshire,,Aviary birds,Aviary Birds,,Egg Laying,Egg Laying
-You are a hobbyist/pet owner,Hobbyist,,ANGUS,Angus,,Birds of prey,Birds of Prey,,Meat,Meat
-You are a zoo or wildlife park,Zoo/Wildlife Park Operator,,ARGYLL AND BUTE,Argyll and Bute,,Cassowaries,Cassowary,,Other,Other
-You are a rescue/rehabilitation Centre,Rescue/Rehabilitation Centre Operator,,CITY OF ABERDEEN,Aberdeen City,,Chickens,Chicken,,Production of other products,Production of Other Products
-"You are a kept bird company e.g. poultry, game birds, birds of prey etc",Poultry Company,,CITY OF DUNDEE,Dundee City,,Ducks,Duck,,Showing,Showing
-,,,CITY OF EDINBURGH,Edinburgh City,,Emus,Emu,,Table egg production,Table Egg Production
-,,,CITY OF GLASGOW,Glasgow City,,Geese,Goose,,Other Captive Birds,Other Captive Bird
-,,,CLACKMANNANSHIRE,Clackmannanshire,,Guinea fowl,Guinea Fowl,,,
-,,,DUMFRIES AND GALLOWAY,Dumfries and Galloway,,Ostriches,Ostrich,,,
-,,,Dundee City,Dundee City,,Other Birds,Other Birds,,,
-,,,EAST AYRSHIRE,East Ayrshire,,Partridges,Partridges,,,
-,,,EAST DUNBARTONSHIRE,East Dunbartonshire,,Pheasants,Pheasant,,,
-,,,EAST LOTHIAN,East Lothian,,Psittacines,Psittacines,,,
-,,,EAST RENFREWSHIRE,East Renfrewshire,,Quails,Quail,,,
-,,,Edinburgh City,Edinburgh City,,Rheas,Rhea,,,
-,,,FALKIRK,Falkirk,,Turkeys,Turkey,,,
-,,,FIFE,Fife,,,,,,
-,,,Glasgow City,Glasgow City,,,,,,
-,,,HIGHLAND,Highland,,,,,,
-,,,INVERCLYDE,Inverclyde,,,,,,
-,,,MIDLOTHIAN,Midlothian,,,,,,
-,,,MORAY,Moray,,,,,,
-,,,NORTH AYRSHIRE,North Ayrshire,,,,,,
-,,,NORTH LANARKSHIRE,North Lanarkshire,,,,,,
-,,,ORKNEY ISLANDS,Orkney Islands,,,,,,
-,,,PERTH AND KINROSS,Perth and Kinross,,,,,,
-,,,RENFREWSHIRE,Renfrewshire,,,,,,
-,,,SCOTTISH BORDERS,Scottish Borders,,,,,,
-,,,SOUTH AYRSHIRE,South Ayrshire,,,,,,
-,,,SOUTH LANARKSHIRE,South Lanarkshire,,,,,,
-,,,STIRLING,Stirling,,,,,,
-,,,WEST DUNBARTONSHIRE,West Dunbartonshire,,,,,,
-,,,WEST LOTHIAN,West Lothian,,,,,,
-,,,WESTERN ISLES,Western Isles,,,,,,
+﻿BusinessActivity_Form,BusinessActivity_SAM,divider1,County_Form,County_SAM,divider2,Bird_Form,Bird_SAM,divider3,KeptForReason_Form,KeptForReason_SAM,divider4,KeptForPurpose_Form,KeptForPurpose_SAM
+You are a farmer,Farmer,,Aberdeen City,Aberdeen City,,Avian Zoo collections (BIAZA Registered),Avian Zoo Collection,,Backyard Flock,Backyard Flock,,Egg layers,Egg layers
+You are a crofter,Crofter,,ABERDEENSHIRE,Aberdeenshire,,Aviary birds,Aviary Birds,,Egg Laying,Egg Laying,,Hobby,Hobby
+You are a hobbyist/pet owner,Hobbyist,,ANGUS,Angus,,Birds of prey,Birds of Prey,,Meat,Meat,,Showing,Showing
+You are a zoo or wildlife park,Zoo/Wildlife Park Operator,,ARGYLL AND BUTE,Argyll and Bute,,Cassowaries,Cassowary,,Other,Other,,Reared for meat,Reared for meat
+You are a rescue/rehabilitation Centre,Rescue/Rehabilitation Centre Operator,,CITY OF ABERDEEN,Aberdeen City,,Chickens,Chicken,,Production of other products,Production of Other Products,,Breeding for egg laying great-grandparent stock,Breeding for egg laying-great grandparent stock
+"You are a kept bird company e.g. poultry, game birds, birds of prey etc",Poultry Company,,CITY OF DUNDEE,Dundee City,,Ducks,Duck,,Showing,Showing,,Breeding for egg laying,Breeding for egg laying
+,,,CITY OF EDINBURGH,Edinburgh City,,Emus,Emu,,Table egg production,Table Egg Production,,Breeding for egg laying grandparent stock,Breeding for egg laying-grandparent stock
+,,,CITY OF GLASGOW,Glasgow City,,Geese,Goose,,Other Captive Birds,Other Captive Bird,,Breeding for egg laying parent stock,Breeding for egg laying-parent stock
+,,,CLACKMANNANSHIRE,Clackmannanshire,,Guinea fowl,Guinea Fowl,,Not Applicable,Not Applicable,,Growing pullets to point of lay,Growing pullets up to point of lay
+,,,DUMFRIES AND GALLOWAY,Dumfries and Galloway,,Ostriches,Ostrich,,Shooting,Shooting,,Poults,Poults
+,,,Dundee City,Dundee City,,Other Birds,Other Birds,,Mixed Backyard Flock,Mixed Backyard Flock,,Birds in laying flock,Birds in laying flock
+,,,EAST AYRSHIRE,East Ayrshire,,Partridges,Partridges,,Racing,Racing,,Breeding for meat great-grandparent stock,Breeding for meat-great grandparent stock
+,,,EAST DUNBARTONSHIRE,East Dunbartonshire,,Pheasants,Pheasant,,,,,Breeding for meat grandparent stock,Breeding for meat-grandparent stock
+,,,EAST LOTHIAN,East Lothian,,Pigeons,Pigeon,,,,,Breeding for meat parent stock,Breeding for meat-parent stock
+,,,EAST RENFREWSHIRE,East Renfrewshire,,Psittacines,Psittacines,,,,,Breeding for meat,Breeding for meat
+,,,Edinburgh City,Edinburgh City,,Quails,Quail,,,,,Other,Other
+,,,FALKIRK,Falkirk,,Rheas,Rhea,,,,,"Breeding for other products (feathers, skin etc)","Breeding for other products (Feathers, skin etc)"
+,,,FIFE,Fife,,Turkeys,Turkey,,,,,"Reared for other products (feathers, skin etc)","Reared for other products (Feathers, skin etc)"
+,,,Glasgow City,Glasgow City,,,,,,,,Breeding for Showing,Breeding for showing
+,,,HIGHLAND,Highland,,,,,,,,Reared for Showing,Reared for showing
+,,,INVERCLYDE,Inverclyde,,,,,,,,Not Applicable,Not Applicable
+,,,MIDLOTHIAN,Midlothian,,,,,,,,Reared for other products,"Reared for other products (Feathers, skin etc)"
+,,,MORAY,Moray,,,,,,,,"Breeding for other products (features, skin etc)","Breeding for other products (Feathers, skin etc)"
+,,,NORTH AYRSHIRE,North Ayrshire,,,,,,,,Breeding,Breeding
+,,,NORTH LANARKSHIRE,North Lanarkshire,,,,,,,,Display,Display
+,,,ORKNEY ISLANDS,Orkney Islands,,,,,,,,Hunting/Pest Control,Hunting/Pest Control
+,,,PERTH AND KINROSS,Perth and Kinross,,,,,,,,Rescue,Rescue
+,,,RENFREWSHIRE,Renfrewshire,,,,,,,,Breeding for shooting,Breeding for shooting
+,,,SCOTTISH BORDERS,Scottish Borders,,,,,,,,Reared for shooting,Rearing for shooting
+,,,SOUTH AYRSHIRE,South Ayrshire,,,,,,,,Releasing for shooting,Releasing for shooting
+,,,SOUTH LANARKSHIRE,South Lanarkshire,,,,,,,,Hunting/Pest control ,Hunting/Pest Control
+,,,STIRLING,Stirling,,,,,,,,Rearing for shooting,Rearing for shooting
+,,,WEST DUNBARTONSHIRE,West Dunbartonshire,,,,,,,,Breeding for racing,Breeding for racing
+,,,WEST LOTHIAN,West Lothian,,,,,,,,Reared for racing,Reared for racing
+,,,WESTERN ISLES,Western Isles,,,,,,,,Releasing for racing,Releasing for racing
+,,,,,,,,,,,,Releasing for racing EU/NI,Releasing for racing in EU/NI
+,,,,,,,,,,,,Hunting/Pest control rescue,Hunting/Pest Control
