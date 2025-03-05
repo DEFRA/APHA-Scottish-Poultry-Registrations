@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>664,3901.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1104,3941.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -123,8 +123,8 @@
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
-      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
   <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="674,3876.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -254,7 +254,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">330,558.14 330,575.34</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Validate JSON data" sap:VirtualizedContainerService.HintSize="705.6,7207.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <Sequence DisplayName="Validate JSON data" sap:VirtualizedContainerService.HintSize="654,2148" sap2010:WorkflowViewState.IdRef="Sequence_26">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="scg:List(x:String)" Default="[{&quot;Mr&quot;,&#xA;&quot;Mrs&quot;,&#xA;&quot;Ms&quot;,&#xA;&quot;Miss&quot;,&#xA;&quot;Mx&quot;,&#xA;&quot;Baron&quot;,&#xA;&quot;Baroness&quot;,&#xA;&quot;Captain&quot;,&#xA;&quot;Colonel&quot;,&#xA;&quot;Count&quot;,&#xA;&quot;Countess&quot;,&#xA;&quot;Dame&quot;,&#xA;&quot;Deacon&quot;,&#xA;&quot;Dr&quot;,&#xA;&quot;Duchess&quot;,&#xA;&quot;Duke&quot;,&#xA;&quot;Earl&quot;,&#xA;&quot;Father&quot;,&#xA;&quot;Lady&quot;,&#xA;&quot;Lord&quot;,&#xA;&quot;Lt Colonel&quot;,&#xA;&quot;Major&quot;,&#xA;&quot;Prof&quot;,&#xA;&quot;Rev&quot;,&#xA;&quot;Rt Hon&quot;,&#xA;&quot;Sir&quot;,&#xA;&quot;Viscount&quot;,&#xA;&quot;Viscountess&quot;}.ToList]" Name="listTitles" />
                     </Sequence.Variables>
@@ -264,12 +264,12 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap2010:Annotation.AnnotationText="This robot is not currently configured to process updates for existing registrations. New registrations should have registration type = new" Condition="[dictDefaults(&quot;Registration_Type&quot;).Trim.ToLower=&quot;update&quot;]" DisplayName="If registration type is &quot;update&quot;" sap:VirtualizedContainerService.HintSize="643.6,130.8" sap2010:WorkflowViewState.IdRef="If_12">
+                    <If sap2010:Annotation.AnnotationText="This robot is not currently configured to process updates for existing registrations. New registrations should have registration type = new" Condition="[dictDefaults(&quot;Registration_Type&quot;).Trim.ToLower=&quot;update&quot;]" DisplayName="If registration type is &quot;update&quot;" sap:VirtualizedContainerService.HintSize="592,130.8" sap2010:WorkflowViewState.IdRef="If_12">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
@@ -285,7 +285,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <Sequence sap2010:Annotation.AnnotationText="We do this before other data validation to maintain the other Occupier=Keeper checks" DisplayName="Check for missing Occupier data" sap:VirtualizedContainerService.HintSize="643.6,1494.4" sap2010:WorkflowViewState.IdRef="Sequence_125">
+                    <Sequence sap2010:Annotation.AnnotationText="We do this before other data validation to maintain the other Occupier=Keeper checks" DisplayName="Check for missing Occupier data" sap:VirtualizedContainerService.HintSize="592,128.4" sap2010:WorkflowViewState.IdRef="Sequence_125">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -462,53 +462,132 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Check if Occupier is Keeper by comparing like-for-like key-values. All KeeperDetails keys have an equivalent Occupier key. Occupier has two additional keys not present in Keeper, hence we loop through KeeperDetails rather than Occupier." DisplayName="For Each KeeperDetails entry" sap:VirtualizedContainerService.HintSize="643.6,817.2" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[dictKeeperDetails]">
-                      <ui:ForEach.Body>
-                        <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="keyvalue" />
-                          </ActivityAction.Argument>
-                          <If sap2010:Annotation.AnnotationText="Ignore contact details as these may only partially carry through on form output even if Keeper = Occupier" Condition="[dictOccupier(keyvalue.Key)&lt;&gt;keyvalue.Value and not {&quot;TelephoneNumber&quot;,&quot;MobileNumber&quot;,&quot;Email&quot;}.Contains(keyvalue.Key)]" DisplayName="If Occupier and KeeperDetails values not equal for current key" sap:VirtualizedContainerService.HintSize="531.6,629.6" sap2010:WorkflowViewState.IdRef="If_21">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="592,53.2" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="629.2,926" sap2010:WorkflowViewState.IdRef="Sequence_128">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Check if Occupier is Keeper by comparing like-for-like key-values. All KeeperDetails keys have an equivalent Occupier key. Occupier has two additional keys not present in Keeper, hence we loop through KeeperDetails rather than Occupier." DisplayName="For Each KeeperDetails entry" sap:VirtualizedContainerService.HintSize="567.2,814.8" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[dictKeeperDetails]">
+                            <ui:ForEach.Body>
+                              <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="keyvalue" />
+                                </ActivityAction.Argument>
+                                <If sap2010:Annotation.AnnotationText="Ignore contact details as these may only partially carry through on form output even if Keeper = Occupier" Condition="[dictOccupier(keyvalue.Key)&lt;&gt;keyvalue.Value and not {&quot;TelephoneNumber&quot;,&quot;MobileNumber&quot;,&quot;Email&quot;}.Contains(keyvalue.Key)]" DisplayName="If Occupier and KeeperDetails values not equal for current key" sap:VirtualizedContainerService.HintSize="531.6,628.4" sap2010:WorkflowViewState.IdRef="If_21">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If.Then>
+                                    <Sequence DisplayName="Report occupier is not keeper and break" sap:VirtualizedContainerService.HintSize="496,392.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message - occupier is not keeper" sap:VirtualizedContainerService.HintSize="434,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Difference between Occupier and KeeperDetails for key '&quot;+keyvalue.Key+&quot;'. Assuming Occupier is not Keeper.&quot;+Environment.NewLine+&quot;Occupier: &quot;+dictOccupier(keyvalue.Key)+Environment.NewLine+&quot;Keeper: &quot;+keyvalue.Value]" />
+                                      <Assign DisplayName="Occupier is not keeper" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Boolean">[boolOccupierIsKeeper]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ui:Break sap:VirtualizedContainerService.HintSize="434,24.8" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                    </Sequence>
+                                  </If.Then>
+                                </If>
+                              </ActivityAction>
+                            </ui:ForEach.Body>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If.Then>
-                              <Sequence DisplayName="Report occupier is not keeper and break" sap:VirtualizedContainerService.HintSize="496,392.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                          </ui:ForEach>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <If sap2010:Annotation.AnnotationText="Compare first name, surname and address" Condition="[dictOccupier(&quot;Forename&quot;)=dictKeeperDetails(&quot;Forename&quot;) and dictOccupier(&quot;Surname&quot;)=dictKeeperDetails(&quot;Surname&quot;) and dictOccupier(&quot;Address&quot;)=dictKeeperDetails(&quot;Address&quot;)]" DisplayName="Check if Occupier is Keeper" sap:VirtualizedContainerService.HintSize="592,98" sap2010:WorkflowViewState.IdRef="If_39">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Occupier is Keeper" sap:VirtualizedContainerService.HintSize="496,328" sap2010:WorkflowViewState.IdRef="Sequence_129">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message - Occupier is Keeper" sap:VirtualizedContainerService.HintSize="434,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Forename, Surname and Address all match. Assuming Occupier is Keeper.&quot;]" />
+                          <Assign DisplayName="Set Occupier is Keeper" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_46">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[boolOccupierIsKeeper]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Occupier is NOT Keeper" sap:VirtualizedContainerService.HintSize="496,515.2" sap2010:WorkflowViewState.IdRef="Sequence_132">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message - Occupier is NOT Keeper" sap:VirtualizedContainerService.HintSize="434,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Differences found between Forename, Surname and/or Address of Occupier and Keeper Details. Assuming Occupier is NOT Keeper.&quot;]" />
+                          <ui:CommentOut sap2010:Annotation.AnnotationText="This version of the message contains personal info detailing the differences. Probably not secure to be putting that on Orch." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,147.2" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,205.6" sap2010:WorkflowViewState.IdRef="Sequence_131">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:LogMessage DisplayName="Log Message - occupier is not keeper" sap:VirtualizedContainerService.HintSize="434,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Difference between Occupier and KeeperDetails for key '&quot;+keyvalue.Key+&quot;'. Assuming Occupier is not Keeper.&quot;+Environment.NewLine+&quot;Occupier: &quot;+dictOccupier(keyvalue.Key)+Environment.NewLine+&quot;Keeper: &quot;+keyvalue.Value]" />
-                                <Assign DisplayName="Occupier is not keeper" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_8">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Boolean">[boolOccupierIsKeeper]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <ui:Break sap:VirtualizedContainerService.HintSize="434,24.8" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                <ui:LogMessage DisplayName="Log Message - Occupier is Keeper" sap:VirtualizedContainerService.HintSize="388,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Differences found between Occupier and Keeper Details. Assuming Occupier IS NOT Keeper.&quot;+Environment.NewLine+&#xD;&#xA;&quot;Occupier forename: &quot;+dictOccupier(&quot;Forename&quot;)+Environment.NewLine+&#xD;&#xA;&quot;Occupier surname: &quot;+dictOccupier(&quot;Surname&quot;)+Environment.NewLine+&#xD;&#xA;&quot;Occupier address: &quot;+dictOccupier(&quot;Address&quot;)+Environment.NewLine+Environment.NewLine+&#xD;&#xA;&quot;Keeper forename: &quot;+dictKeeperDetails(&quot;Forename&quot;)+Environment.NewLine+&#xD;&#xA;&quot;Keeper surname: &quot;+dictKeeperDetails(&quot;Surname&quot;)+Environment.NewLine+&#xD;&#xA;&quot;Keeper address: &quot;+dictKeeperDetails(&quot;Address&quot;)]" />
                               </Sequence>
-                            </If.Then>
-                          </If>
-                        </ActivityAction>
-                      </ui:ForEach.Body>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:ForEach>
-                    <Sequence DisplayName="Validate and manipulate Keeper Details" sap:VirtualizedContainerService.HintSize="643.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <Assign DisplayName="Set Occupier is NOT Keeper" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_47">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[boolOccupierIsKeeper]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <Sequence DisplayName="Validate and manipulate Keeper Details" sap:VirtualizedContainerService.HintSize="592,83.6" sap2010:WorkflowViewState.IdRef="Sequence_56">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:MultipleAssign sap2010:Annotation.AnnotationText="Convert Title, Forename, Surname, LocationName, AddressLine1 and AddressLine2 to Title Case. Convert to lower first as title case conversion doesn't work on all caps for some reason.&#xA;&#xA;Convert TownOrCity to upper case.&#xA;&#xA;Also replace slashes with hyphens and remove brackets from LocationName, AddressLine1 and AddressLine2." DisplayName="Keeper Details name and address cases" sap:VirtualizedContainerService.HintSize="581.6,448" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
@@ -774,7 +853,7 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <Sequence DisplayName="Validate and manipulate Occupier Details" sap:VirtualizedContainerService.HintSize="643.6,2957.2" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                    <Sequence DisplayName="Validate and manipulate Occupier Details" sap:VirtualizedContainerService.HintSize="592,83.6" sap2010:WorkflowViewState.IdRef="Sequence_57">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd1:DataRow[]" Name="arrOccDesc" />
                       </Sequence.Variables>
@@ -784,6 +863,14 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
+                      <Assign DisplayName="Update Occupier title if Occupier is Keeper" sap:VirtualizedContainerService.HintSize="581.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_48">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[dictOccupier("Title")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[if(boolOccupierIsKeeper, dictKeeperDetails("Title"), dictOccupier("Title"))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
                       <ui:MultipleAssign sap2010:Annotation.AnnotationText="Convert Title, Forename, Surname, LocationName, AddressLine1 and AddressLine2 to Title Case. Convert to lower first as title case conversion doesn't work on all caps for some reason.&#xA;&#xA;Convert TownOrCity to upper case.&#xA;&#xA;Also replace slashes with hyphens and remove brackets from LocationName, AddressLine1 and AddressLine2." DisplayName="Occupier name and address cases" sap:VirtualizedContainerService.HintSize="581.6,448" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
@@ -1040,11 +1127,11 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <Sequence DisplayName="Validate and manipulate Location details" sap:VirtualizedContainerService.HintSize="643.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                    <Sequence DisplayName="Validate and manipulate Location details" sap:VirtualizedContainerService.HintSize="592,83.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="LocationID" DataTable="[dtLocations]" DisplayName="Add Location ID column" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
@@ -1208,27 +1295,28 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEachRow>
                     </Sequence>
-                    <Sequence DisplayName="Validate and manipulate Bird details" sap:VirtualizedContainerService.HintSize="643.6,1289.2" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                    <Sequence DisplayName="Validate and manipulate Bird details" sap:VirtualizedContainerService.HintSize="592,1095.6" sap2010:WorkflowViewState.IdRef="Sequence_79">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="UnitID" DataTable="[dtBirdDetails]" DisplayName="Add Unit ID column" sap:VirtualizedContainerService.HintSize="575.6,190" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtBirdDetails]" DisplayName="For Each unit - validate" sap:VirtualizedContainerService.HintSize="575.6,948" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="UnitID" DataTable="[dtBirdDetails]" DisplayName="Add Unit ID column" sap:VirtualizedContainerService.HintSize="530,53.2" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtBirdDetails]" DisplayName="For Each unit - validate" sap:VirtualizedContainerService.HintSize="530,891.2" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd1:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Validate current unit KeptForReason and Species" sap:VirtualizedContainerService.HintSize="541.6,831.2" sap2010:WorkflowViewState.IdRef="Sequence_120">
+                            <Sequence DisplayName="Validate current unit KeptForReason and Species" sap:VirtualizedContainerService.HintSize="496,773.6" sap2010:WorkflowViewState.IdRef="Sequence_120">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:MultipleAssign sap2010:Annotation.AnnotationText="Convert LocationName, AddressLine1, AddressLine2 to Title Case and TownOrCity to upper case. Convert to lower first as title case conversion doesn't work on all caps for some reason.&#xA;&#xA;Also replace slashes with hyphens and remove brackets from LocationName, AddressLine1 and AddressLine2.&#xA;&#xA;NOTE this is only necessary for joining with location data later." DisplayName="Unit title cases" sap:VirtualizedContainerService.HintSize="479.6,354.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_13">
+                              <ui:MultipleAssign sap2010:Annotation.AnnotationText="Convert LocationName, AddressLine1, AddressLine2 to Title Case and TownOrCity to upper case. Convert to lower first as title case conversion doesn't work on all caps for some reason.&#xA;&#xA;Also replace slashes with hyphens and remove brackets from LocationName, AddressLine1 and AddressLine2.&#xA;&#xA;NOTE this is only necessary for joining with location data later." DisplayName="Unit title cases" sap:VirtualizedContainerService.HintSize="434,196.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_13">
                                 <ui:MultipleAssign.AssignOperations>
                                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_38">
@@ -1271,7 +1359,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:MultipleAssign>
-                              <Assign DisplayName="Replace species with SAM option" sap:VirtualizedContainerService.HintSize="479.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_43">
+                              <Assign DisplayName="Replace species with SAM option" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="Assign_43">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Object">[CurrentRow("Species")]</OutArgument>
                                 </Assign.To>
@@ -1279,7 +1367,7 @@
                                   <InArgument x:TypeArguments="x:Object">[in_dtSAMMapping.Select("Bird_Form = '"+CurrentRow("Species").ToString+"'")(0)("Bird_SAM").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign DisplayName="Replace KeptForReason with SAM option" sap:VirtualizedContainerService.HintSize="479.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_44">
+                              <Assign DisplayName="Replace KeptForReason with SAM option" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="Assign_44">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Object">[CurrentRow("KeptForReason")]</OutArgument>
                                 </Assign.To>
@@ -1287,7 +1375,7 @@
                                   <InArgument x:TypeArguments="x:Object">[in_dtSAMMapping.Select("KeptForReason_Form = '"+CurrentRow("KeptForReason").ToString+"'")(0)("KeptForReason_SAM").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign DisplayName="Replace KeptForPurpose with SAM option" sap:VirtualizedContainerService.HintSize="479.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_45">
+                              <Assign DisplayName="Replace KeptForPurpose with SAM option" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="Assign_45">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Object">[CurrentRow("KeptForPurpose")]</OutArgument>
                                 </Assign.To>
@@ -1295,9 +1383,42 @@
                                   <InArgument x:TypeArguments="x:Object">[in_dtSAMMapping.Select("KeptForPurpose_Form = '"+CurrentRow("KeptForPurpose").ToString+"'")(0)("KeptForPurpose_SAM").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
+                              <Assign DisplayName="Replace Husbandry_System with SAM option" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="Assign_49">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[CurrentRow("Husbandry_System")]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">[in_dtSAMMapping.Select("HusbandrySystem_Form = '"+CurrentRow("Husbandry_System").ToString+"'")(0)("HusbandrySystem_SAM").ToString]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <Assign DisplayName="Replace Farm_Management_System with SAM option" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="Assign_50">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[CurrentRow("Farm_Management_System")]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">[in_dtSAMMapping.Select("FarmManagementSystem_Form = '"+CurrentRow("Farm_Management_System").ToString+"'")(0)("FarmManagementSystem_SAM").ToString]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
                             </Sequence>
                           </ActivityAction>
                         </ui:ForEachRow.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEachRow>
                     </Sequence>
                   </Sequence>
@@ -1321,7 +1442,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">260,761.34 260,791.34 330,791.34 330,822.14</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="531.6,1388.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="strDefaults" />
                             </Sequence.Variables>
@@ -2095,7 +2216,10 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                     </ui:BrowserScope>
                                   </Sequence>
                                   <FlowStep.Next>
-                                    <FlowDecision x:Name="__ReferenceID17" Condition="[dictOccupier(&quot;TradingName&quot;)&lt;&gt;&quot;&quot; and not boolOccupierIsKeeper]" DisplayName="Register Keeper?" sap:VirtualizedContainerService.HintSize="94.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                                    <FlowDecision x:Name="__ReferenceID17" DisplayName="Register Keeper?" sap:VirtualizedContainerService.HintSize="94.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                                      <FlowDecision.Condition>
+                                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="dictOccupier(&quot;TradingName&quot;)&lt;&gt;&quot;&quot;or not boolOccupierIsKeeper" />
+                                      </FlowDecision.Condition>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2691,7 +2815,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                               <av:PointCollection x:Key="ConnectorLocation">323,1679.4 323,1700.2</av:PointCollection>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <Sequence DisplayName="Create Occupier record" sap:VirtualizedContainerService.HintSize="688,3900" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                          <Sequence DisplayName="Create Occupier record" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                                             <Sequence.Variables>
                                                               <Variable x:TypeArguments="sd1:DataTable" Name="dtContactMethods" />
                                                             </Sequence.Variables>
@@ -3029,13 +3153,13 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Browser="[browserSAM]" BrowserType="Edge" DisplayName="Attach Browser - complete occupier record" sap:VirtualizedContainerService.HintSize="588,1770" sap2010:WorkflowViewState.IdRef="BrowserScope_10" UiBrowser="[browserSAM]">
+                                                                        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Browser="[browserSAM]" BrowserType="Edge" DisplayName="Attach Browser - complete occupier record" sap:VirtualizedContainerService.HintSize="588,1768.4" sap2010:WorkflowViewState.IdRef="BrowserScope_10" UiBrowser="[browserSAM]">
                                                                           <ui:BrowserScope.Body>
                                                                             <ActivityAction x:TypeArguments="x:Object">
                                                                               <ActivityAction.Argument>
                                                                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                                               </ActivityAction.Argument>
-                                                                              <Sequence DisplayName="Confirm submission and get customer ID - Occupier" sap:VirtualizedContainerService.HintSize="554,1661.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                                                              <Sequence DisplayName="Confirm submission and get customer ID - Occupier" sap:VirtualizedContainerService.HintSize="554,1659.6" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3105,7 +3229,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                     </Sequence>
                                                                                   </If.Else>
                                                                                 </If>
-                                                                                <Assign DisplayName="Store Occupier customer ID" sap:VirtualizedContainerService.HintSize="492,82.4" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                                                <Assign DisplayName="Store Occupier customer ID" sap:VirtualizedContainerService.HintSize="492,81.6" sap2010:WorkflowViewState.IdRef="Assign_13">
                                                                                   <Assign.To>
                                                                                     <OutArgument x:TypeArguments="x:String">[dictOccupier("CustomerID")]</OutArgument>
                                                                                   </Assign.To>
@@ -3113,9 +3237,9 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                     <InArgument x:TypeArguments="x:String">[Regex.Match(strOccupierID,"(?s)(?&lt;=Identification Number).*(?=Registration Status)").Value.Trim]</InArgument>
                                                                                   </Assign.Value>
                                                                                 </Assign>
-                                                                                <If Condition="[boolOccupierIsKeeper and dictOccupier(&quot;TradingName&quot;)=&quot;&quot;]" DisplayName="If Occupier is Keeper and reg basis is individual" sap:VirtualizedContainerService.HintSize="492,273.2" sap2010:WorkflowViewState.IdRef="If_11">
+                                                                                <If Condition="[boolOccupierIsKeeper and dictOccupier(&quot;TradingName&quot;)=&quot;&quot;]" DisplayName="If Occupier is Keeper and reg basis is individual" sap:VirtualizedContainerService.HintSize="492,272.4" sap2010:WorkflowViewState.IdRef="If_11">
                                                                                   <If.Then>
-                                                                                    <Assign DisplayName="Overwrite keeper customer ID with Occupier" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                                                    <Assign DisplayName="Overwrite keeper customer ID with Occupier" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_14">
                                                                                       <Assign.To>
                                                                                         <OutArgument x:TypeArguments="x:String">[dictKeeperDetails("CustomerID")]</OutArgument>
                                                                                       </Assign.To>
@@ -3200,7 +3324,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                 <ui:LogMessage DisplayName="Log Message - create location" sap:VirtualizedContainerService.HintSize="577.2,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Creating location &quot;+(intLocationCounter+1).ToString+&quot; of &quot;+dtLocations.RowCount.ToString]" />
-                                                                                <Assign DisplayName="Get current location row" sap:VirtualizedContainerService.HintSize="577.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                                                                <Assign DisplayName="Get current location row" sap:VirtualizedContainerService.HintSize="577.2,82.4" sap2010:WorkflowViewState.IdRef="Assign_19">
                                                                                   <Assign.To>
                                                                                     <OutArgument x:TypeArguments="sd1:DataRow">[rowLocation]</OutArgument>
                                                                                   </Assign.To>
@@ -3208,7 +3332,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                     <InArgument x:TypeArguments="sd1:DataRow">[dtLocations.Rows(intLocationCounter)]</InArgument>
                                                                                   </Assign.Value>
                                                                                 </Assign>
-                                                                                <If sap2010:Annotation.AnnotationText="Check if grid reference follows 2 letter, 10 digit format" Condition="[not Regex.Match(rowLocation(&quot;GridReference&quot;).ToString.Replace(&quot; &quot;,&quot;&quot;),&quot;^[A-z]{2}[0-9]{10}$&quot;).Success]" DisplayName="If invalid grid reference provided" sap:VirtualizedContainerService.HintSize="577.2,643.2" sap2010:WorkflowViewState.IdRef="If_14">
+                                                                                <If sap2010:Annotation.AnnotationText="Check if grid reference follows 2 letter, 10 digit format" Condition="[not Regex.Match(rowLocation(&quot;GridReference&quot;).ToString.Replace(&quot; &quot;,&quot;&quot;),&quot;^[A-z]{2}[0-9]{10}$&quot;).Success]" DisplayName="If invalid grid reference provided" sap:VirtualizedContainerService.HintSize="577.2,644" sap2010:WorkflowViewState.IdRef="If_14">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -3292,7 +3416,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                     </scg:List>
                                                                                   </ui:MultipleAssign.AssignOperations>
                                                                                 </ui:MultipleAssign>
-                                                                                <sel:Add_New_Location DisplayName="Add New Location" sap:VirtualizedContainerService.HintSize="577.2,24.8" IN_AddressLine1="[rowLocation(&quot;AddressLine1&quot;).ToString]" IN_AddressLine2="[rowLocation(&quot;AddressLine2&quot;).ToString]" IN_County="[rowLocation(&quot;County&quot;).ToString]" IN_LocationName="[rowLocation(&quot;LocationName&quot;).ToString]" IN_ManualAddress="False" IN_MapReferences="[dtMapRefs]" IN_PostCode="[rowLocation(&quot;Postcode&quot;).ToString]" IN_TownOrCity="[rowLocation(&quot;TownOrCity&quot;).ToString]" IN_UiBrowser="[browserSAM]" IO_TaskIDs="[listTaskIDs]" IO_swProcessTimer="[io_swProcessingTimer]" sap2010:WorkflowViewState.IdRef="Add_New_Location_1" in_AdditionalLocationIdentifiers="[dictAdditionalIdentifiers]" />
+                                                                                <sel:Add_New_Location DisplayName="Add New Location" sap:VirtualizedContainerService.HintSize="577.2,24.8" IN_AddressLine1="[if(rowLocation(&quot;AddressLine1&quot;).ToString&lt;&gt;rowLocation(&quot;LocationName&quot;).ToString, rowLocation(&quot;AddressLine1&quot;).ToString, &quot;&quot;)]" IN_AddressLine2="[rowLocation(&quot;AddressLine2&quot;).ToString]" IN_County="[rowLocation(&quot;County&quot;).ToString]" IN_LocationName="[rowLocation(&quot;LocationName&quot;).ToString]" IN_ManualAddress="False" IN_MapReferences="[dtMapRefs]" IN_PostCode="[rowLocation(&quot;Postcode&quot;).ToString]" IN_TownOrCity="[rowLocation(&quot;TownOrCity&quot;).ToString]" IN_UiBrowser="[browserSAM]" IO_TaskIDs="[listTaskIDs]" IO_swProcessTimer="[io_swProcessingTimer]" sap2010:WorkflowViewState.IdRef="Add_New_Location_1" in_AdditionalLocationIdentifiers="[dictAdditionalIdentifiers]" />
                                                                                 <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Browser="[browserSAM]" BrowserType="Edge" DisplayName="Attach Browser - click submit post new location" sap:VirtualizedContainerService.HintSize="577.2,388" sap2010:WorkflowViewState.IdRef="BrowserScope_12" UiBrowser="[browserSAM]">
                                                                                   <ui:BrowserScope.Body>
                                                                                     <ActivityAction x:TypeArguments="x:Object">
@@ -3658,7 +3782,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                           <av:PointCollection x:Key="ConnectorLocation">380,2801.34 380,2822.14</av:PointCollection>
                                                                                         </scg:Dictionary>
                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                      <Sequence DisplayName="Create Unit" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                                                      <Sequence DisplayName="Create Unit" sap:VirtualizedContainerService.HintSize="639.2,928.4" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                                                                         <Sequence.Variables>
                                                                                           <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictAdditionalIdentifiersUnit" />
                                                                                         </Sequence.Variables>
@@ -3669,7 +3793,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                                         <ui:LogMessage DisplayName="Log Message - create unit" sap:VirtualizedContainerService.HintSize="577.2,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Creating unit &quot;+(intUnitCounter+1).ToString+&quot; of &quot;+dtBirdDetails.RowCount.ToString]" />
-                                                                                        <Assign DisplayName="Get current bird row" sap:VirtualizedContainerService.HintSize="577.2,82.4" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                                                                        <Assign DisplayName="Get current bird row" sap:VirtualizedContainerService.HintSize="577.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_34">
                                                                                           <Assign.To>
                                                                                             <OutArgument x:TypeArguments="sd1:DataRow">[rowUnit]</OutArgument>
                                                                                           </Assign.To>
