@@ -254,7 +254,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">330,558.14 330,575.34</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Validate JSON data" sap:VirtualizedContainerService.HintSize="654,2148" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <Sequence DisplayName="Validate JSON data" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="scg:List(x:String)" Default="[{&quot;Mr&quot;,&#xA;&quot;Mrs&quot;,&#xA;&quot;Ms&quot;,&#xA;&quot;Miss&quot;,&#xA;&quot;Mx&quot;,&#xA;&quot;Baron&quot;,&#xA;&quot;Baroness&quot;,&#xA;&quot;Captain&quot;,&#xA;&quot;Colonel&quot;,&#xA;&quot;Count&quot;,&#xA;&quot;Countess&quot;,&#xA;&quot;Dame&quot;,&#xA;&quot;Deacon&quot;,&#xA;&quot;Dr&quot;,&#xA;&quot;Duchess&quot;,&#xA;&quot;Duke&quot;,&#xA;&quot;Earl&quot;,&#xA;&quot;Father&quot;,&#xA;&quot;Lady&quot;,&#xA;&quot;Lord&quot;,&#xA;&quot;Lt Colonel&quot;,&#xA;&quot;Major&quot;,&#xA;&quot;Prof&quot;,&#xA;&quot;Rev&quot;,&#xA;&quot;Rt Hon&quot;,&#xA;&quot;Sir&quot;,&#xA;&quot;Viscount&quot;,&#xA;&quot;Viscountess&quot;}.ToList]" Name="listTitles" />
                     </Sequence.Variables>
@@ -264,7 +264,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap2010:Annotation.AnnotationText="This robot is not currently configured to process updates for existing registrations. New registrations should have registration type = new" Condition="[dictDefaults(&quot;Registration_Type&quot;).Trim.ToLower=&quot;update&quot;]" DisplayName="If registration type is &quot;update&quot;" sap:VirtualizedContainerService.HintSize="592,130.8" sap2010:WorkflowViewState.IdRef="If_12">
+                    <If sap2010:Annotation.AnnotationText="This robot is not currently configured to process updates for existing registrations. New registrations should have registration type = new" Condition="[dictDefaults(&quot;Registration_Type&quot;).Trim.ToLower=&quot;update&quot;]" DisplayName="If registration type is &quot;update&quot;" sap:VirtualizedContainerService.HintSize="592,163.6" sap2010:WorkflowViewState.IdRef="If_12">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1295,7 +1295,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEachRow>
                     </Sequence>
-                    <Sequence DisplayName="Validate and manipulate Bird details" sap:VirtualizedContainerService.HintSize="592,1095.6" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                    <Sequence DisplayName="Validate and manipulate Bird details" sap:VirtualizedContainerService.HintSize="592,1154" sap2010:WorkflowViewState.IdRef="Sequence_79">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1303,13 +1303,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="UnitID" DataTable="[dtBirdDetails]" DisplayName="Add Unit ID column" sap:VirtualizedContainerService.HintSize="530,53.2" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtBirdDetails]" DisplayName="For Each unit - validate" sap:VirtualizedContainerService.HintSize="530,891.2" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtBirdDetails]" DisplayName="For Each unit - validate" sap:VirtualizedContainerService.HintSize="530,949.6" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd1:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Validate current unit KeptForReason and Species" sap:VirtualizedContainerService.HintSize="496,773.6" sap2010:WorkflowViewState.IdRef="Sequence_120">
+                            <Sequence DisplayName="Validate current unit KeptForReason and Species" sap:VirtualizedContainerService.HintSize="496,832" sap2010:WorkflowViewState.IdRef="Sequence_120">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1383,7 +1383,7 @@
                                   <InArgument x:TypeArguments="x:Object">[in_dtSAMMapping.Select("KeptForPurpose_Form = '"+CurrentRow("KeptForPurpose").ToString+"'")(0)("KeptForPurpose_SAM").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign DisplayName="Replace Husbandry_System with SAM option" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="Assign_49">
+                              <Assign DisplayName="Replace Husbandry_System with SAM option" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_49">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Object">[CurrentRow("Husbandry_System")]</OutArgument>
                                 </Assign.To>
@@ -1392,12 +1392,12 @@
                                 </Assign.Value>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
-                              <Assign DisplayName="Replace Farm_Management_System with SAM option" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="Assign_50">
+                              <Assign DisplayName="Replace Farm_Management_System with SAM option" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_50">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Object">[CurrentRow("Farm_Management_System")]</OutArgument>
                                 </Assign.To>
@@ -1406,8 +1406,8 @@
                                 </Assign.Value>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
@@ -1481,11 +1481,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:CommentOut>
-                            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each - construct Keeper Details HTML" sap:VirtualizedContainerService.HintSize="469.6,208.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dictKeeperDetails]">
+                            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each - construct Keeper Details HTML" sap:VirtualizedContainerService.HintSize="469.6,53.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dictKeeperDetails]">
                               <ui:ForEach.Body>
                                 <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                                   <ActivityAction.Argument>
@@ -1502,7 +1502,7 @@
                                 </ActivityAction>
                               </ui:ForEach.Body>
                             </ui:ForEach>
-                            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each - construct Occupier HTML" sap:VirtualizedContainerService.HintSize="469.6,208.8" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[dictOccupier]">
+                            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each - construct Occupier HTML" sap:VirtualizedContainerService.HintSize="469.6,53.2" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[dictOccupier]">
                               <ui:ForEach.Body>
                                 <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                                   <ActivityAction.Argument>
@@ -1519,19 +1519,19 @@
                                 </ActivityAction>
                               </ui:ForEach.Body>
                             </ui:ForEach>
-                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Convert Datatable to HTML - locations" sap:VirtualizedContainerService.HintSize="469.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\Process Subflows\Convert Datatable to HTML.xaml">
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Convert Datatable to HTML - locations" sap:VirtualizedContainerService.HintSize="469.6,53.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\Process Subflows\Convert Datatable to HTML.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="sd1:DataTable" x:Key="in_dtTable">[dtLocations]</InArgument>
                                 <OutArgument x:TypeArguments="x:String" x:Key="out_strHTMLTable">[strLocations]</OutArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
-                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Convert Datatable to HTML - bird details" sap:VirtualizedContainerService.HintSize="469.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Process Subflows\Convert Datatable to HTML.xaml">
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Convert Datatable to HTML - bird details" sap:VirtualizedContainerService.HintSize="469.6,53.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Process Subflows\Convert Datatable to HTML.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="sd1:DataTable" x:Key="in_dtTable">[dtBirdDetails]</InArgument>
                                 <OutArgument x:TypeArguments="x:String" x:Key="out_strHTMLTable">[strBirdDetails]</OutArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
-                            <InvokeMethod DisplayName="Stop timer - PP1" sap:VirtualizedContainerService.HintSize="469.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Stop">
+                            <InvokeMethod DisplayName="Stop timer - PP1" sap:VirtualizedContainerService.HintSize="469.6,136" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Stop">
                               <InvokeMethod.TargetObject>
                                 <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
                               </InvokeMethod.TargetObject>
@@ -3323,8 +3323,8 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                <ui:LogMessage DisplayName="Log Message - create location" sap:VirtualizedContainerService.HintSize="577.2,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Creating location &quot;+(intLocationCounter+1).ToString+&quot; of &quot;+dtLocations.RowCount.ToString]" />
-                                                                                <Assign DisplayName="Get current location row" sap:VirtualizedContainerService.HintSize="577.2,82.4" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                                                                <ui:LogMessage DisplayName="Log Message - create location" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Creating location &quot;+(intLocationCounter+1).ToString+&quot; of &quot;+dtLocations.RowCount.ToString]" />
+                                                                                <Assign DisplayName="Get current location row" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="Assign_19">
                                                                                   <Assign.To>
                                                                                     <OutArgument x:TypeArguments="sd1:DataRow">[rowLocation]</OutArgument>
                                                                                   </Assign.To>
@@ -3332,7 +3332,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                     <InArgument x:TypeArguments="sd1:DataRow">[dtLocations.Rows(intLocationCounter)]</InArgument>
                                                                                   </Assign.Value>
                                                                                 </Assign>
-                                                                                <If sap2010:Annotation.AnnotationText="Check if grid reference follows 2 letter, 10 digit format" Condition="[not Regex.Match(rowLocation(&quot;GridReference&quot;).ToString.Replace(&quot; &quot;,&quot;&quot;),&quot;^[A-z]{2}[0-9]{10}$&quot;).Success]" DisplayName="If invalid grid reference provided" sap:VirtualizedContainerService.HintSize="577.2,644" sap2010:WorkflowViewState.IdRef="If_14">
+                                                                                <If sap2010:Annotation.AnnotationText="Check if grid reference follows 2 letter, 10 digit format" Condition="[not Regex.Match(rowLocation(&quot;GridReference&quot;).ToString.Replace(&quot; &quot;,&quot;&quot;),&quot;^[A-z]{2}[0-9]{10}$&quot;).Success]" DisplayName="If invalid grid reference provided" sap:VirtualizedContainerService.HintSize="434,114.4" sap2010:WorkflowViewState.IdRef="If_14">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -3392,9 +3392,9 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                     </Sequence>
                                                                                   </If.Else>
                                                                                 </If>
-                                                                                <ui:BuildDataTable DataTable="[dtMapRefs]" DisplayName="Initialise map refs table" sap:VirtualizedContainerService.HintSize="577.2,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Map_x0020_Reference&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Grid_x0020_Reference_x0020_Relationship&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Primary_x0020__x002F__x0020_Secondary&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-                                                                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{rowLocation(&quot;GridReference&quot;).ToString.Replace(&quot; &quot;,&quot;&quot;),&quot;Centroid&quot;,&quot;Primary&quot;}]" DataTable="[dtMapRefs]" DisplayName="Add grid reference row" sap:VirtualizedContainerService.HintSize="577.2,190" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
-                                                                                <ui:MultipleAssign DisplayName="Create additional identifiers dictionary for CPH" sap:VirtualizedContainerService.HintSize="577.2,148.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+                                                                                <ui:BuildDataTable DataTable="[dtMapRefs]" DisplayName="Initialise map refs table" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Map_x0020_Reference&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Grid_x0020_Reference_x0020_Relationship&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Primary_x0020__x002F__x0020_Secondary&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                                                                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{rowLocation(&quot;GridReference&quot;).ToString.Replace(&quot; &quot;,&quot;&quot;),&quot;Centroid&quot;,&quot;Primary&quot;}]" DataTable="[dtMapRefs]" DisplayName="Add grid reference row" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
+                                                                                <ui:MultipleAssign DisplayName="Create additional identifiers dictionary for CPH" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
                                                                                   <ui:MultipleAssign.AssignOperations>
                                                                                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                                                                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
@@ -3416,8 +3416,8 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                     </scg:List>
                                                                                   </ui:MultipleAssign.AssignOperations>
                                                                                 </ui:MultipleAssign>
-                                                                                <sel:Add_New_Location DisplayName="Add New Location" sap:VirtualizedContainerService.HintSize="577.2,24.8" IN_AddressLine1="[if(rowLocation(&quot;AddressLine1&quot;).ToString&lt;&gt;rowLocation(&quot;LocationName&quot;).ToString, rowLocation(&quot;AddressLine1&quot;).ToString, &quot;&quot;)]" IN_AddressLine2="[rowLocation(&quot;AddressLine2&quot;).ToString]" IN_County="[rowLocation(&quot;County&quot;).ToString]" IN_LocationName="[rowLocation(&quot;LocationName&quot;).ToString]" IN_ManualAddress="False" IN_MapReferences="[dtMapRefs]" IN_PostCode="[rowLocation(&quot;Postcode&quot;).ToString]" IN_TownOrCity="[rowLocation(&quot;TownOrCity&quot;).ToString]" IN_UiBrowser="[browserSAM]" IO_TaskIDs="[listTaskIDs]" IO_swProcessTimer="[io_swProcessingTimer]" sap2010:WorkflowViewState.IdRef="Add_New_Location_1" in_AdditionalLocationIdentifiers="[dictAdditionalIdentifiers]" />
-                                                                                <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Browser="[browserSAM]" BrowserType="Edge" DisplayName="Attach Browser - click submit post new location" sap:VirtualizedContainerService.HintSize="577.2,388" sap2010:WorkflowViewState.IdRef="BrowserScope_12" UiBrowser="[browserSAM]">
+                                                                                <sel:Add_New_Location DisplayName="Add New Location" sap:VirtualizedContainerService.HintSize="434,24.8" IN_AddressLine1="[if(rowLocation(&quot;AddressLine1&quot;).ToString&lt;&gt;rowLocation(&quot;LocationName&quot;).ToString, rowLocation(&quot;AddressLine1&quot;).ToString, &quot;&quot;)]" IN_AddressLine2="[rowLocation(&quot;AddressLine2&quot;).ToString]" IN_County="[rowLocation(&quot;County&quot;).ToString]" IN_LocationName="[rowLocation(&quot;LocationName&quot;).ToString]" IN_ManualAddress="False" IN_MapReferences="[dtMapRefs]" IN_PostCode="[rowLocation(&quot;Postcode&quot;).ToString]" IN_TownOrCity="[rowLocation(&quot;TownOrCity&quot;).ToString]" IN_UiBrowser="[browserSAM]" IO_TaskIDs="[listTaskIDs]" IO_swProcessTimer="[io_swProcessingTimer]" sap2010:WorkflowViewState.IdRef="Add_New_Location_1" in_AdditionalLocationIdentifiers="[dictAdditionalIdentifiers]" />
+                                                                                <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Browser="[browserSAM]" BrowserType="Edge" DisplayName="Attach Browser - click submit post new location" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="BrowserScope_12" UiBrowser="[browserSAM]">
                                                                                   <ui:BrowserScope.Body>
                                                                                     <ActivityAction x:TypeArguments="x:Object">
                                                                                       <ActivityAction.Argument>
@@ -3456,7 +3456,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                     </ActivityAction>
                                                                                   </ui:BrowserScope.Body>
                                                                                 </ui:BrowserScope>
-                                                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Process Subflows\Add CPH to Customer.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="577.2,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add CPH to Customer.xaml">
+                                                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Process Subflows\Add CPH to Customer.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add CPH to Customer.xaml">
                                                                                   <ui:InvokeWorkflowFile.Arguments>
                                                                                     <InArgument x:TypeArguments="ui:Browser" x:Key="IN_browsSAM">[browserSAM]</InArgument>
                                                                                     <InArgument x:TypeArguments="x:String" x:Key="IN_strCustomerID">[dictOccupier("CustomerID")]</InArgument>
@@ -3782,7 +3782,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                           <av:PointCollection x:Key="ConnectorLocation">380,2801.34 380,2822.14</av:PointCollection>
                                                                                         </scg:Dictionary>
                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                      <Sequence DisplayName="Create Unit" sap:VirtualizedContainerService.HintSize="639.2,928.4" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                                                      <Sequence DisplayName="Create Unit" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                                                                         <Sequence.Variables>
                                                                                           <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictAdditionalIdentifiersUnit" />
                                                                                         </Sequence.Variables>
@@ -3995,7 +3995,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                   <av:PointCollection x:Key="ConnectorLocation">320,3001 320,3021.8</av:PointCollection>
                                                                                                 </scg:Dictionary>
                                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                                              <Sequence DisplayName="Pause Point 4" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                                                                              <Sequence DisplayName="Pause Point 4" sap:VirtualizedContainerService.HintSize="581.6,1135.2" sap2010:WorkflowViewState.IdRef="Sequence_66">
                                                                                                 <Sequence.Variables>
                                                                                                   <Variable x:TypeArguments="x:String" Name="strUnit" />
                                                                                                   <Variable x:TypeArguments="x:Int32" Name="intRowItem" />
@@ -4007,7 +4007,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                                   </scg:Dictionary>
                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                <Assign DisplayName="Reset unit pause point text" sap:VirtualizedContainerService.HintSize="519.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                                                                                <Assign DisplayName="Reset unit pause point text" sap:VirtualizedContainerService.HintSize="519.6,53.2" sap2010:WorkflowViewState.IdRef="Assign_32">
                                                                                                   <Assign.To>
                                                                                                     <OutArgument x:TypeArguments="x:String">[strUnit]</OutArgument>
                                                                                                   </Assign.To>
@@ -4017,17 +4017,27 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                     </InArgument>
                                                                                                   </Assign.Value>
                                                                                                 </Assign>
-                                                                                                <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Index 0 to index of &quot;Husbandry_System&quot; column - 1 (14)" Condition="[intColIndex &lt; dtBirdDetails.Columns.IndexOf(&quot;Husbandry_System&quot;)]" CurrentIndex="[intColIndex]" DisplayName="Do While - iterate through non-additional details columns" sap:VirtualizedContainerService.HintSize="519.6,472.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                                                                                                <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Index 0 to index of &quot;Husbandry_System&quot; column - 1 (14)" Condition="[intColIndex &lt; dtBirdDetails.Columns.IndexOf(&quot;Husbandry_System&quot;)]" CurrentIndex="[intColIndex]" DisplayName="Do While - iterate through non-additional details columns" sap:VirtualizedContainerService.HintSize="519.6,512.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                                                                                                   <ui:InterruptibleDoWhile.Body>
-                                                                                                    <If Condition="[rowUnit(intColIndex).ToString&lt;&gt;&quot;&quot; and not IsDBNull(rowUnit(intColIndex))]" DisplayName="If unit row item is not empty" sap:VirtualizedContainerService.HintSize="484,273.2" sap2010:WorkflowViewState.IdRef="If_33">
+                                                                                                    <If Condition="[rowUnit(intColIndex).ToString&lt;&gt;&quot;&quot; and not IsDBNull(rowUnit(intColIndex))]" DisplayName="If unit row item is not empty - pp4" sap:VirtualizedContainerService.HintSize="484,273.2" sap2010:WorkflowViewState.IdRef="If_33">
+                                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                                                        </scg:Dictionary>
+                                                                                                      </sap:WorkflowViewStateService.ViewState>
                                                                                                       <If.Then>
-                                                                                                        <Assign DisplayName="Append value to pause point string" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_40">
+                                                                                                        <Assign DisplayName="Append value to pause point string - pp4" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_40">
                                                                                                           <Assign.To>
                                                                                                             <OutArgument x:TypeArguments="x:String">[strUnit]</OutArgument>
                                                                                                           </Assign.To>
                                                                                                           <Assign.Value>
                                                                                                             <InArgument x:TypeArguments="x:String">[strUnit+"&lt;br&gt;&lt;strong&gt;"+dtBirdDetails.Columns(intColIndex).ColumnName.ToString+"&lt;/strong&gt;: &amp;ensp; "+rowUnit(intColIndex).ToString]</InArgument>
                                                                                                           </Assign.Value>
+                                                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                                                            </scg:Dictionary>
+                                                                                                          </sap:WorkflowViewStateService.ViewState>
                                                                                                         </Assign>
                                                                                                       </If.Then>
                                                                                                       <If.Else>
@@ -4044,108 +4054,10 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                                     </scg:Dictionary>
                                                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                                                 </ui:InterruptibleDoWhile>
-                                                                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="519.6,53.2" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                                                                                                  <ui:CommentOut.Body>
-                                                                                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="581.6,540.8" sap2010:WorkflowViewState.IdRef="Sequence_117">
-                                                                                                      <sap:WorkflowViewStateService.ViewState>
-                                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                        </scg:Dictionary>
-                                                                                                      </sap:WorkflowViewStateService.ViewState>
-                                                                                                      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Do not include the Additional Details columns for this pause point" DisplayName="For Each column index up to (excluding) Husbandry_System" sap:VirtualizedContainerService.HintSize="519.6,429.6" sap2010:WorkflowViewState.IdRef="ForEach`1_12" Values="[Enumerable.Range(0,dtBirdDetails.Columns.IndexOf(&quot;Husbandry_System&quot;))]">
-                                                                                                        <ui:ForEach.Body>
-                                                                                                          <ActivityAction x:TypeArguments="x:Int32">
-                                                                                                            <ActivityAction.Argument>
-                                                                                                              <DelegateInArgument x:TypeArguments="x:Int32" Name="colIndex" />
-                                                                                                            </ActivityAction.Argument>
-                                                                                                            <If Condition="[rowUnit(colIndex).ToString&lt;&gt;&quot;&quot; and not IsDBNull(rowUnit(colIndex))]" DisplayName="If unit row item is not empty" sap:VirtualizedContainerService.HintSize="484,273.2" sap2010:WorkflowViewState.IdRef="If_32">
-                                                                                                              <If.Then>
-                                                                                                                <Assign DisplayName="Append value to pause point string" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_38">
-                                                                                                                  <Assign.To>
-                                                                                                                    <OutArgument x:TypeArguments="x:String">[strUnit]</OutArgument>
-                                                                                                                  </Assign.To>
-                                                                                                                  <Assign.Value>
-                                                                                                                    <InArgument x:TypeArguments="x:String">[strUnit+"&lt;br&gt;&lt;strong&gt;"+dtBirdDetails.Columns(colIndex).ColumnName.ToString+"&lt;/strong&gt;: &amp;ensp; "+rowUnit(colIndex).ToString]</InArgument>
-                                                                                                                  </Assign.Value>
-                                                                                                                </Assign>
-                                                                                                              </If.Then>
-                                                                                                              <If.Else>
-                                                                                                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_114">
-                                                                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                    </scg:Dictionary>
-                                                                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                                                                </Sequence>
-                                                                                                              </If.Else>
-                                                                                                            </If>
-                                                                                                          </ActivityAction>
-                                                                                                        </ui:ForEach.Body>
-                                                                                                        <sap:WorkflowViewStateService.ViewState>
-                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                                                                          </scg:Dictionary>
-                                                                                                        </sap:WorkflowViewStateService.ViewState>
-                                                                                                      </ui:ForEach>
-                                                                                                    </Sequence>
-                                                                                                  </ui:CommentOut.Body>
-                                                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                                                                                    </scg:Dictionary>
-                                                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                                                </ui:CommentOut>
-                                                                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="519.6,53.2" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                                                                                                  <ui:CommentOut.Body>
-                                                                                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="581.6,509.6" sap2010:WorkflowViewState.IdRef="Sequence_112">
-                                                                                                      <sap:WorkflowViewStateService.ViewState>
-                                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                        </scg:Dictionary>
-                                                                                                      </sap:WorkflowViewStateService.ViewState>
-                                                                                                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="[intRowItem]" DisplayName="For Each unit value" sap:VirtualizedContainerService.HintSize="519.6,398.4" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[rowUnit.ItemArray]">
-                                                                                                        <ui:ForEach.Body>
-                                                                                                          <ActivityAction x:TypeArguments="x:Object">
-                                                                                                            <ActivityAction.Argument>
-                                                                                                              <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
-                                                                                                            </ActivityAction.Argument>
-                                                                                                            <If Condition="[item.ToString&lt;&gt;&quot;&quot; and not IsDBNull(item)]" DisplayName="If unit row item is not empty" sap:VirtualizedContainerService.HintSize="484,273.2" sap2010:WorkflowViewState.IdRef="If_29">
-                                                                                                              <If.Then>
-                                                                                                                <Assign DisplayName="Append value to pause point string" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_33">
-                                                                                                                  <Assign.To>
-                                                                                                                    <OutArgument x:TypeArguments="x:String">[strUnit]</OutArgument>
-                                                                                                                  </Assign.To>
-                                                                                                                  <Assign.Value>
-                                                                                                                    <InArgument x:TypeArguments="x:String">[strUnit+"&lt;br&gt;&lt;strong&gt;"+dtBirdDetails.Columns(intRowItem).ColumnName.ToString+"&lt;/strong&gt;: &amp;ensp; "+item.ToString]</InArgument>
-                                                                                                                  </Assign.Value>
-                                                                                                                </Assign>
-                                                                                                              </If.Then>
-                                                                                                              <If.Else>
-                                                                                                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_102">
-                                                                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                    </scg:Dictionary>
-                                                                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                                                                </Sequence>
-                                                                                                              </If.Else>
-                                                                                                            </If>
-                                                                                                          </ActivityAction>
-                                                                                                        </ui:ForEach.Body>
-                                                                                                      </ui:ForEach>
-                                                                                                    </Sequence>
-                                                                                                  </ui:CommentOut.Body>
-                                                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                                                                                    </scg:Dictionary>
-                                                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                                                </ui:CommentOut>
                                                                                                 <InvokeMethod DisplayName="Stop timer - PP4" sap:VirtualizedContainerService.HintSize="519.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_15" MethodName="Stop">
                                                                                                   <InvokeMethod.TargetObject>
                                                                                                     <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
@@ -4310,7 +4222,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                               <av:PointCollection x:Key="ConnectorLocation">410,3311.34 410,3332.14</av:PointCollection>
                                                                                                             </scg:Dictionary>
                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                          <Sequence DisplayName="Create additional details" sap:VirtualizedContainerService.HintSize="617.2,1067.2" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                                                                                          <Sequence DisplayName="Create additional details" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_68">
                                                                                                             <Sequence.Variables>
                                                                                                               <Variable x:TypeArguments="x:String" Name="strStockMonths" />
                                                                                                               <Variable x:TypeArguments="s:String[]" Name="arrStockMonths" />
@@ -4400,7 +4312,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                                       <av:PointCollection x:Key="ConnectorLocation">350,3511.34 350,3532.14</av:PointCollection>
                                                                                                                     </scg:Dictionary>
                                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                                  <Sequence DisplayName="Pause Point 5" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                                                                                  <Sequence DisplayName="Pause Point 5" sap:VirtualizedContainerService.HintSize="450,720.8" sap2010:WorkflowViewState.IdRef="Sequence_69">
                                                                                                                     <Sequence.Variables>
                                                                                                                       <Variable x:TypeArguments="x:String" Name="strAdditionalDetails" />
                                                                                                                       <Variable x:TypeArguments="x:Int32" Name="intColIndex" />
@@ -4412,7 +4324,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                                                       </scg:Dictionary>
                                                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                                                    <Assign DisplayName="Reset additional details string for pause point" sap:VirtualizedContainerService.HintSize="581.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_39">
+                                                                                                                    <Assign DisplayName="Reset additional details string for pause point" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="Assign_39">
                                                                                                                       <Assign.To>
                                                                                                                         <OutArgument x:TypeArguments="x:String">[strAdditionalDetails]</OutArgument>
                                                                                                                       </Assign.To>
@@ -4422,15 +4334,16 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                                         </InArgument>
                                                                                                                       </Assign.Value>
                                                                                                                     </Assign>
-                                                                                                                    <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Index of &quot;Husbandry_System&quot; column (15) to end column" Condition="[intColIndexAdjusted &lt; dtBirdDetails.ColumnCount]" CurrentIndex="[intColIndex]" DisplayName="Do While - iterate through only additional details columns" sap:VirtualizedContainerService.HintSize="581.6,706" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                                                                                                                    <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Index of &quot;Husbandry_System&quot; column (15) to end column" CurrentIndex="[intColIndex]" DisplayName="Do While - iterate through only additional details columns" sap:VirtualizedContainerService.HintSize="388,98" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                                                                                                                       <ui:InterruptibleDoWhile.Body>
-                                                                                                                        <Sequence DisplayName="Adjust iterator and concatenate string for Pause Point" sap:VirtualizedContainerService.HintSize="546,506.8" sap2010:WorkflowViewState.IdRef="Sequence_119">
+                                                                                                                        <Sequence DisplayName="Adjust iterator and concatenate string for Pause Point 5" sap:VirtualizedContainerService.HintSize="546,477.6" sap2010:WorkflowViewState.IdRef="Sequence_119">
                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                                                             </scg:Dictionary>
                                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                                          <Assign DisplayName="Adjust iterator to count from Husbandry_System column" sap:VirtualizedContainerService.HintSize="484,82.4" sap2010:WorkflowViewState.IdRef="Assign_42">
+                                                                                                                          <Assign DisplayName="Adjust iterator to count from Husbandry_System column" sap:VirtualizedContainerService.HintSize="484,53.2" sap2010:WorkflowViewState.IdRef="Assign_42">
                                                                                                                             <Assign.To>
                                                                                                                               <OutArgument x:TypeArguments="x:Int32">[intColIndexAdjusted]</OutArgument>
                                                                                                                             </Assign.To>
@@ -4438,7 +4351,12 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                                               <InArgument x:TypeArguments="x:Int32">[intColIndex + dtBirdDetails.Columns.IndexOf("Husbandry_System")]</InArgument>
                                                                                                                             </Assign.Value>
                                                                                                                           </Assign>
-                                                                                                                          <If Condition="[rowUnit(intColIndexAdjusted).ToString&lt;&gt;&quot;&quot; and not IsDBNull(rowUnit(intColIndexAdjusted))]" DisplayName="If unit row item is not empty" sap:VirtualizedContainerService.HintSize="484,273.2" sap2010:WorkflowViewState.IdRef="If_34">
+                                                                                                                          <If Condition="[rowUnit(intColIndexAdjusted).ToString&lt;&gt;&quot;&quot; and not IsDBNull(rowUnit(intColIndexAdjusted))]" DisplayName="If unit row item is not empty - pp5" sap:VirtualizedContainerService.HintSize="484,273.2" sap2010:WorkflowViewState.IdRef="If_34">
+                                                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                                                                              </scg:Dictionary>
+                                                                                                                            </sap:WorkflowViewStateService.ViewState>
                                                                                                                             <If.Then>
                                                                                                                               <Assign DisplayName="Append value to pause point string - additional details" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_41">
                                                                                                                                 <Assign.To>
@@ -4447,6 +4365,11 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                                                 <Assign.Value>
                                                                                                                                   <InArgument x:TypeArguments="x:String">[strAdditionalDetails+"&lt;br&gt;&lt;strong&gt;"+dtBirdDetails.Columns(intColIndexAdjusted).ColumnName.ToString+"&lt;/strong&gt;: &amp;ensp; "+rowUnit(intColIndexAdjusted).ToString]</InArgument>
                                                                                                                                 </Assign.Value>
+                                                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                                                                                  </scg:Dictionary>
+                                                                                                                                </sap:WorkflowViewStateService.ViewState>
                                                                                                                               </Assign>
                                                                                                                             </If.Then>
                                                                                                                             <If.Else>
@@ -4461,6 +4384,9 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                                           </If>
                                                                                                                         </Sequence>
                                                                                                                       </ui:InterruptibleDoWhile.Body>
+                                                                                                                      <ui:InterruptibleDoWhile.Condition>
+                                                                                                                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="intColIndexAdjusted &lt; dtBirdDetails.ColumnCount - 1" />
+                                                                                                                      </ui:InterruptibleDoWhile.Condition>
                                                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -4469,13 +4395,13 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                                         </scg:Dictionary>
                                                                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                                                                     </ui:InterruptibleDoWhile>
-                                                                                                                    <InvokeMethod DisplayName="Stop timer - PP5" sap:VirtualizedContainerService.HintSize="581.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_17" MethodName="Stop">
+                                                                                                                    <InvokeMethod DisplayName="Stop timer - PP5" sap:VirtualizedContainerService.HintSize="388,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_17" MethodName="Stop">
                                                                                                                       <InvokeMethod.TargetObject>
                                                                                                                         <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
                                                                                                                       </InvokeMethod.TargetObject>
                                                                                                                     </InvokeMethod>
-                                                                                                                    <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Pause Point 5" sap:VirtualizedContainerService.HintSize="581.6,24.8" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Please review additional details for new unit record&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Please &lt;strong&gt;do not&lt;/strong&gt; click the Submit button in SAM. Once you have reviewed these details, simply click 'Continue' on this pop-up.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+strAdditionalDetails+&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 5" IN_WidthHeight="[{500,600}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_10" />
-                                                                                                                    <InvokeMethod DisplayName="Start timer - PP5" sap:VirtualizedContainerService.HintSize="581.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_18" MethodName="Start">
+                                                                                                                    <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Pause Point 5" sap:VirtualizedContainerService.HintSize="388,24.8" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Please review additional details for new unit record&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Please &lt;strong&gt;do not&lt;/strong&gt; click the Submit button in SAM. Once you have reviewed these details, simply click 'Continue' on this pop-up.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+strAdditionalDetails+&quot;&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 5" IN_WidthHeight="[{500,600}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_10" />
+                                                                                                                    <InvokeMethod DisplayName="Start timer - PP5" sap:VirtualizedContainerService.HintSize="388,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_18" MethodName="Start">
                                                                                                                       <InvokeMethod.TargetObject>
                                                                                                                         <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
                                                                                                                       </InvokeMethod.TargetObject>
