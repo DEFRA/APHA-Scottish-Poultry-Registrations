@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+Lt1eKSKGEAMhQmOdMJnN+Kh3VZDXy+sktGquyvWUCdL5UcXtFmg6MDP1q6M+RUOFh7HiCpID/mk+j8oWMQhSw==",
+  "dgSpecHash": "oAqS5uiQtBBRR+gCw8XbxXJi4Iz5dWWDW3Rbp4VNXQJKa/2cnjUpnGHPi7df8PEhpRHHtLpZ45762rb1w5LyhA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\APHA-Scottish-Poultry-Registrations\\Scottish Poultry Registrations\\.local\\",
   "expectedPackageFiles": [
@@ -91,7 +91,7 @@
     "C:\\Users\\rm000121\\.nuget\\packages\\pop.ups\\1.0.3\\pop.ups.1.0.3.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\restsharp\\106.15.0\\restsharp.106.15.0.nupkg.sha512",
-    "C:\\Users\\rm000121\\.nuget\\packages\\sam.reuseable.components\\1.0.27\\sam.reuseable.components.1.0.27.nupkg.sha512",
+    "C:\\Users\\rm000121\\.nuget\\packages\\sam.reuseable.components\\1.0.28\\sam.reuseable.components.1.0.28.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\sharepointpnp.identitymodel.extensions\\1.2.4\\sharepointpnp.identitymodel.extensions.1.2.4.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\sharepointpnpcore2016\\3.12.1908\\sharepointpnpcore2016.3.12.1908.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512",

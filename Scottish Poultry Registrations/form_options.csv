@@ -1,0 +1,1043 @@
+﻿species,reason,purpose
+Select,Select,Select
+Select,Select,
+Select,Select,Egg layers
+Select,Select,
+Select,Select,Hobby
+Select,Select,
+Select,Select,Showing
+Select,Select,
+Select,Select,Reared for meat
+Select,Select,
+Select,Backyard Flock,Select
+Select,Backyard Flock,
+Select,Backyard Flock,Egg layers
+Select,Backyard Flock,
+Select,Backyard Flock,Hobby
+Select,Backyard Flock,
+Select,Backyard Flock,Showing
+Select,Backyard Flock,
+Select,Backyard Flock,Reared for meat
+Select,Backyard Flock,
+Select,Egg Laying,Select
+Select,Egg Laying,
+Select,Egg Laying,Breeding for egg laying great-grandparent stock
+Select,Egg Laying,
+Select,Egg Laying,Breeding for egg laying
+Select,Egg Laying,
+Select,Egg Laying,Breeding for egg laying grandparent stock
+Select,Egg Laying,
+Select,Egg Laying,Breeding for egg laying parent stock
+Select,Egg Laying,
+Select,Egg Laying,Egg layers
+Select,Egg Laying,
+Select,Egg Laying,Growing pullets to point of lay
+Select,Egg Laying,
+Select,Egg Laying,Poults
+Select,Egg Laying,
+Select,Egg Laying,Birds in laying flock
+Select,Egg Laying,
+Select,Meat,Select
+Select,Meat,
+Select,Meat,Breeding for meat great-grandparent stock
+Select,Meat,
+Select,Meat,Breeding for meat grandparent stock
+Select,Meat,
+Select,Meat,Breeding for meat parent stock
+Select,Meat,
+Select,Meat,Poults
+Select,Meat,
+Select,Meat,Reared for meat
+Select,Meat,
+Select,Meat,Breeding for meat
+Select,Meat,
+Select,Other,Select
+Select,Other,
+Select,Other,Other
+Select,Other,
+Select,Other,Showing
+Select,Other,
+Select,Production of other products,Select
+Select,Production of other products,
+Select,Production of other products,"Breeding for other products (feathers, skin etc)"
+Select,Production of other products,
+Select,Production of other products,"Reared for other products (feathers, skin etc)"
+Select,Production of other products,
+Select,Showing,Select
+Select,Showing,
+Select,Showing,Breeding for Showing
+Select,Showing,
+Select,Showing,Reared for Showing
+Select,Showing,
+Select,Table egg production,Select
+Select,Table egg production,
+Select,Table egg production,Egg Layers
+Select,Table egg production,
+Avian Zoo collections (BIAZA Registered),Select,Select
+Avian Zoo collections (BIAZA Registered),Select,
+Avian Zoo collections (BIAZA Registered),Not Applicable,Select
+Avian Zoo collections (BIAZA Registered),Not Applicable,
+Avian Zoo collections (BIAZA Registered),Not Applicable,Not Applicable
+Avian Zoo collections (BIAZA Registered),Not Applicable,
+Aviary Birds,Select,Select
+Aviary Birds,Select,
+Aviary Birds,Not Applicable,Select
+Aviary Birds,Not Applicable,
+Aviary Birds,Not Applicable,Not Applicable
+Aviary Birds,Not Applicable,
+Aviary Birds,Production of other products,Select
+Aviary Birds,Production of other products,
+Aviary Birds,Production of other products,"Breeding for other products (feathers, skin etc)"
+Aviary Birds,Production of other products,
+Aviary Birds,Production of other products,"Reared for other products (feathers, skin etc)"
+Aviary Birds,Production of other products,
+Birds of Prey,Select,Select
+Birds of Prey,Select,
+Birds of Prey,Production of other products,Select
+Birds of Prey,Production of other products,
+Birds of Prey,Production of other products,Reared for other products
+Birds of Prey,Production of other products,
+Birds of Prey,Production of other products,"Breeding for other products (features, skin etc)"
+Birds of Prey,Production of other products,
+Birds of Prey,Other Captive Birds,Select
+Birds of Prey,Other Captive Birds,
+Birds of Prey,Other Captive Birds,Breeding
+Birds of Prey,Other Captive Birds,
+Birds of Prey,Other Captive Birds,Display
+Birds of Prey,Other Captive Birds,
+Birds of Prey,Other Captive Birds,Hobby
+Birds of Prey,Other Captive Birds,
+Birds of Prey,Other Captive Birds,Hunting/Pest Control
+Birds of Prey,Other Captive Birds,
+Birds of Prey,Other Captive Birds,Rescue
+Birds of Prey,Other Captive Birds,
+Cassowaries,Select,Select
+Cassowaries,Select,
+Cassowaries,Meat,Select
+Cassowaries,Meat,
+Cassowaries,Meat,Reared for meat
+Cassowaries,Meat,
+Cassowaries,Meat,Breeding for meat
+Cassowaries,Meat,
+Cassowaries,Other,Select
+Cassowaries,Other,
+Cassowaries,Other,Other
+Cassowaries,Other,
+Cassowaries,Production of other products,Select
+Cassowaries,Production of other products,
+Cassowaries,Production of other products,"Breeding for other products (feathers, skin etc)"
+Cassowaries,Production of other products,
+Cassowaries,Production of other products,"Reared for other products (feathers, skin etc)"
+Cassowaries,Production of other products,
+Chickens,Select,Select
+Chickens,Select,
+Chickens,Backyard Flock,Select
+Chickens,Backyard Flock,
+Chickens,Backyard Flock,Egg layers
+Chickens,Backyard Flock,
+Chickens,Backyard Flock,Hobby
+Chickens,Backyard Flock,
+Chickens,Backyard Flock,Showing
+Chickens,Backyard Flock,
+Chickens,Backyard Flock,Reared for meat
+Chickens,Backyard Flock,
+Chickens,Egg Laying,Select
+Chickens,Egg Laying,
+Chickens,Egg Laying,Breeding for egg laying great-grandparent stock
+Chickens,Egg Laying,
+Chickens,Egg Laying,Breeding for egg laying
+Chickens,Egg Laying,
+Chickens,Egg Laying,Breeding for egg laying grandparent stock
+Chickens,Egg Laying,
+Chickens,Egg Laying,Breeding for egg laying parent stock
+Chickens,Egg Laying,
+Chickens,Egg Laying,Egg layers
+Chickens,Egg Laying,
+Chickens,Egg Laying,Growing pullets to point of lay
+Chickens,Egg Laying,
+Chickens,Egg Laying,Poults
+Chickens,Egg Laying,
+Chickens,Egg Laying,Birds in laying flock
+Chickens,Egg Laying,
+Chickens,Meat,Select
+Chickens,Meat,
+Chickens,Meat,Breeding for meat great-grandparent stock
+Chickens,Meat,
+Chickens,Meat,Breeding for meat grandparent stock
+Chickens,Meat,
+Chickens,Meat,Breeding for meat parent stock
+Chickens,Meat,
+Chickens,Meat,Poults
+Chickens,Meat,
+Chickens,Meat,Reared for meat
+Chickens,Meat,
+Chickens,Meat,Breeding for meat
+Chickens,Meat,
+Chickens,Other,Select
+Chickens,Other,
+Chickens,Other,Other
+Chickens,Other,
+Chickens,Other,Showing
+Chickens,Other,
+Chickens,Production of other products,Select
+Chickens,Production of other products,
+Chickens,Production of other products,"Breeding for other products (feathers, skin etc)"
+Chickens,Production of other products,
+Chickens,Production of other products,"Reared for other products (feathers, skin etc)"
+Chickens,Production of other products,
+Chickens,Showing,Select
+Chickens,Showing,
+Chickens,Showing,Breeding for Showing
+Chickens,Showing,
+Chickens,Showing,Reared for Showing
+Chickens,Showing,
+Chickens,Table egg production,Select
+Chickens,Table egg production,
+Chickens,Table egg production,Egg Layers
+Chickens,Table egg production,
+Ducks,Select,Select
+Ducks,Select,
+Ducks,Backyard Flock,Select
+Ducks,Backyard Flock,
+Ducks,Backyard Flock,Hobby
+Ducks,Backyard Flock,
+Ducks,Backyard Flock,Egg layers
+Ducks,Backyard Flock,
+Ducks,Backyard Flock,Showing
+Ducks,Backyard Flock,
+Ducks,Backyard Flock,Reared for meat
+Ducks,Backyard Flock,
+Ducks,Egg Laying,Select
+Ducks,Egg Laying,
+Ducks,Egg Laying,Breeding for egg laying great-grandparent stock
+Ducks,Egg Laying,
+Ducks,Egg Laying,Breeding for egg laying
+Ducks,Egg Laying,
+Ducks,Egg Laying,Breeding for egg laying grandparent stock
+Ducks,Egg Laying,
+Ducks,Egg Laying,Breeding for egg laying parent stock
+Ducks,Egg Laying,
+Ducks,Egg Laying,Birds in laying flock
+Ducks,Egg Laying,
+Ducks,Egg Laying,Egg layers
+Ducks,Egg Laying,
+Ducks,Egg Laying,Growing pullets to point of lay
+Ducks,Egg Laying,
+Ducks,Egg Laying,Poults
+Ducks,Egg Laying,
+Ducks,Meat,Select
+Ducks,Meat,
+Ducks,Meat,Breeding for meat great-grandparent stock
+Ducks,Meat,
+Ducks,Meat,Breeding for meat grandparent stock
+Ducks,Meat,
+Ducks,Meat,Breeding for meat parent stock
+Ducks,Meat,
+Ducks,Meat,Poults
+Ducks,Meat,
+Ducks,Meat,Reared for meat
+Ducks,Meat,
+Ducks,Meat,Breeding for meat
+Ducks,Meat,
+Ducks,Other,Select
+Ducks,Other,
+Ducks,Other,Breeding for shooting
+Ducks,Other,
+Ducks,Other,Other
+Ducks,Other,
+Ducks,Other,Showing
+Ducks,Other,
+Ducks,Other,Reared for shooting
+Ducks,Other,
+Ducks,Other,Releasing for shooting
+Ducks,Other,
+Ducks,Production of other products,Select
+Ducks,Production of other products,
+Ducks,Production of other products,"Breeding for other products (feathers, skin etc)"
+Ducks,Production of other products,
+Ducks,Production of other products,"Reared for other products (feathers, skin etc)"
+Ducks,Production of other products,
+Ducks,Shooting,Select
+Ducks,Shooting,
+Ducks,Shooting,Breeding for shooting
+Ducks,Shooting,
+Ducks,Shooting,Reared for shooting
+Ducks,Shooting,
+Ducks,Shooting,Releasing for shooting
+Ducks,Shooting,
+Ducks,Showing,Select
+Ducks,Showing,
+Ducks,Showing,Breeding for showing
+Ducks,Showing,
+Ducks,Showing,Reared for showing
+Ducks,Showing,
+Ducks,Table egg production,Select
+Ducks,Table egg production,
+Ducks,Table egg production,Egg Layers
+Ducks,Table egg production,
+Emus,Select,Select
+Emus,Select,
+Emus,Backyard Flock,Select
+Emus,Backyard Flock,
+Emus,Backyard Flock,Egg layers
+Emus,Backyard Flock,
+Emus,Backyard Flock,Hobby
+Emus,Backyard Flock,
+Emus,Backyard Flock,Showing
+Emus,Backyard Flock,
+Emus,Backyard Flock,Reared for meat
+Emus,Backyard Flock,
+Emus,Egg Laying,Select
+Emus,Egg Laying,
+Emus,Egg Laying,Breeding for egg laying great-grandparent stock
+Emus,Egg Laying,
+Emus,Egg Laying,Breeding for egg laying
+Emus,Egg Laying,
+Emus,Egg Laying,Breeding for egg laying grandparent stock
+Emus,Egg Laying,
+Emus,Egg Laying,Breeding for egg laying parent stock
+Emus,Egg Laying,
+Emus,Egg Laying,Birds in laying flock
+Emus,Egg Laying,
+Emus,Egg Laying,Egg layers
+Emus,Egg Laying,
+Emus,Egg Laying,Growing pullets to point of lay
+Emus,Egg Laying,
+Emus,Egg Laying,Poults
+Emus,Egg Laying,
+Emus,Meat,Select
+Emus,Meat,
+Emus,Meat,Breeding for meat great-grandparent stock
+Emus,Meat,
+Emus,Meat,Breeding for meat grandparent stock
+Emus,Meat,
+Emus,Meat,Breeding for meat parent stock
+Emus,Meat,
+Emus,Meat,Poults
+Emus,Meat,
+Emus,Meat,Reared for meat
+Emus,Meat,
+Emus,Meat,Breeding for meat
+Emus,Meat,
+Emus,Other,Select
+Emus,Other,
+Emus,Other,Other
+Emus,Other,
+Emus,Production of other products,Select
+Emus,Production of other products,
+Emus,Production of other products,"Breeding for other products (feathers, skin etc)"
+Emus,Production of other products,
+Emus,Production of other products,"Reared for other products (feathers, skin etc)"
+Emus,Production of other products,
+Emus,Showing,Select
+Emus,Showing,
+Emus,Showing,Breeding for showing
+Emus,Showing,
+Emus,Showing,Reared for showing
+Emus,Showing,
+Emus,Table egg production,Select
+Emus,Table egg production,
+Emus,Table egg production,Egg Layers
+Emus,Table egg production,
+Geese,Select,Select
+Geese,Select,
+Geese,Backyard Flock,Select
+Geese,Backyard Flock,
+Geese,Backyard Flock,Egg layers
+Geese,Backyard Flock,
+Geese,Backyard Flock,Hobby
+Geese,Backyard Flock,
+Geese,Backyard Flock,Showing
+Geese,Backyard Flock,
+Geese,Backyard Flock,Reared for meat
+Geese,Backyard Flock,
+Geese,Egg Laying,Select
+Geese,Egg Laying,
+Geese,Egg Laying,Breeding for egg laying great-grandparent stock
+Geese,Egg Laying,
+Geese,Egg Laying,Breeding for egg laying
+Geese,Egg Laying,
+Geese,Egg Laying,Breeding for egg laying grandparent stock
+Geese,Egg Laying,
+Geese,Egg Laying,Breeding for egg laying parent stock
+Geese,Egg Laying,
+Geese,Egg Laying,Birds in laying flock
+Geese,Egg Laying,
+Geese,Egg Laying,Egg layers
+Geese,Egg Laying,
+Geese,Egg Laying,Growing pullets to point of lay
+Geese,Egg Laying,
+Geese,Egg Laying,Poults
+Geese,Egg Laying,
+Geese,Meat,Select
+Geese,Meat,
+Geese,Meat,Breeding for meat great-grandparent stock
+Geese,Meat,
+Geese,Meat,Breeding for meat grandparent stock
+Geese,Meat,
+Geese,Meat,Breeding for meat parent stock
+Geese,Meat,
+Geese,Meat,Poults
+Geese,Meat,
+Geese,Meat,Reared for meat
+Geese,Meat,
+Geese,Meat,Breeding for meat
+Geese,Meat,
+Geese,Other,Select
+Geese,Other,
+Geese,Other,Other
+Geese,Other,
+Geese,Other,Showing
+Geese,Other,
+Geese,Production of other products,Select
+Geese,Production of other products,
+Geese,Production of other products,"Breeding for other products (feathers, skin etc)"
+Geese,Production of other products,
+Geese,Production of other products,"Reared for other products (feathers, skin etc)"
+Geese,Production of other products,
+Geese,Shooting,Select
+Geese,Shooting,
+Geese,Shooting,Breeding for shooting
+Geese,Shooting,
+Geese,Shooting,Reared for shooting
+Geese,Shooting,
+Geese,Shooting,Releasing for shooting
+Geese,Shooting,
+Geese,Showing,Select
+Geese,Showing,
+Geese,Showing,Breeding for showing
+Geese,Showing,
+Geese,Showing,Reared for showing
+Geese,Showing,
+Geese,Table egg production,Select
+Geese,Table egg production,
+Geese,Table egg production,Egg Layers
+Geese,Table egg production,
+Guinea Fowl,Select,Select
+Guinea Fowl,Select,
+Guinea Fowl,Backyard Flock,Select
+Guinea Fowl,Backyard Flock,
+Guinea Fowl,Backyard Flock,Egg layers
+Guinea Fowl,Backyard Flock,
+Guinea Fowl,Backyard Flock,Hobby
+Guinea Fowl,Backyard Flock,
+Guinea Fowl,Backyard Flock,Showing
+Guinea Fowl,Backyard Flock,
+Guinea Fowl,Backyard Flock,Reared for meat
+Guinea Fowl,Backyard Flock,
+Guinea Fowl,Egg Laying,Select
+Guinea Fowl,Egg Laying,
+Guinea Fowl,Egg Laying,Breeding for egg laying great-grandparent stock
+Guinea Fowl,Egg Laying,
+Guinea Fowl,Egg Laying,Breeding for egg laying
+Guinea Fowl,Egg Laying,
+Guinea Fowl,Egg Laying,Breeding for egg laying grandparent stock
+Guinea Fowl,Egg Laying,
+Guinea Fowl,Egg Laying,Breeding for egg laying parent stock
+Guinea Fowl,Egg Laying,
+Guinea Fowl,Egg Laying,Growing pullets to point of lay
+Guinea Fowl,Egg Laying,
+Guinea Fowl,Egg Laying,Poults
+Guinea Fowl,Egg Laying,
+Guinea Fowl,Meat,Select
+Guinea Fowl,Meat,
+Guinea Fowl,Meat,Breeding for meat great-grandparent stock
+Guinea Fowl,Meat,
+Guinea Fowl,Meat,Breeding for meat grandparent stock
+Guinea Fowl,Meat,
+Guinea Fowl,Meat,Breeding for meat parent stock
+Guinea Fowl,Meat,
+Guinea Fowl,Meat,Poults
+Guinea Fowl,Meat,
+Guinea Fowl,Meat,Reared for meat
+Guinea Fowl,Meat,
+Guinea Fowl,Meat,Breeding for meat
+Guinea Fowl,Meat,
+Guinea Fowl,Other,Select
+Guinea Fowl,Other,
+Guinea Fowl,Other,Other
+Guinea Fowl,Other,
+Guinea Fowl,Other,Showing
+Guinea Fowl,Other,
+Guinea Fowl,Production of other products,Select
+Guinea Fowl,Production of other products,
+Guinea Fowl,Production of other products,"Breeding for other products (feathers, skin etc)"
+Guinea Fowl,Production of other products,
+Guinea Fowl,Production of other products,"Reared for other products (feathers, skin etc)"
+Guinea Fowl,Production of other products,
+Guinea Fowl,Shooting,Select
+Guinea Fowl,Shooting,
+Guinea Fowl,Shooting,Breeding for shooting
+Guinea Fowl,Shooting,
+Guinea Fowl,Shooting,Reared for shooting
+Guinea Fowl,Shooting,
+Guinea Fowl,Shooting,Releasing for shooting
+Guinea Fowl,Shooting,
+Guinea Fowl,Showing,Select
+Guinea Fowl,Showing,
+Guinea Fowl,Showing,Breeding for showing
+Guinea Fowl,Showing,
+Guinea Fowl,Showing,Reared for showing
+Guinea Fowl,Showing,
+Guinea Fowl,Table egg production,Select
+Guinea Fowl,Table egg production,
+Guinea Fowl,Table egg production,Egg Layers
+Guinea Fowl,Table egg production,
+Ostriches,Select,Select
+Ostriches,Select,
+Ostriches,Backyard Flock,Select
+Ostriches,Backyard Flock,
+Ostriches,Backyard Flock,Egg layers
+Ostriches,Backyard Flock,
+Ostriches,Backyard Flock,Hobby
+Ostriches,Backyard Flock,
+Ostriches,Backyard Flock,Showing
+Ostriches,Backyard Flock,
+Ostriches,Backyard Flock,Reared for meat
+Ostriches,Backyard Flock,
+Ostriches,Egg Laying,Select
+Ostriches,Egg Laying,
+Ostriches,Egg Laying,Breeding for egg laying great-grandparent stock
+Ostriches,Egg Laying,
+Ostriches,Egg Laying,Breeding for egg laying
+Ostriches,Egg Laying,
+Ostriches,Egg Laying,Breeding for egg laying grandparent stock
+Ostriches,Egg Laying,
+Ostriches,Egg Laying,Breeding for egg laying parent stock
+Ostriches,Egg Laying,
+Ostriches,Egg Laying,Birds in laying flock
+Ostriches,Egg Laying,
+Ostriches,Egg Laying,Growing pullets to point of lay
+Ostriches,Egg Laying,
+Ostriches,Egg Laying,Poults
+Ostriches,Egg Laying,
+Ostriches,Meat,Select
+Ostriches,Meat,
+Ostriches,Meat,Breeding for meat great-grandparent stock
+Ostriches,Meat,
+Ostriches,Meat,Breeding for meat grandparent stock
+Ostriches,Meat,
+Ostriches,Meat,Breeding for meat parent stock
+Ostriches,Meat,
+Ostriches,Meat,Poults
+Ostriches,Meat,
+Ostriches,Meat,Reared for meat
+Ostriches,Meat,
+Ostriches,Meat,Breeding for meat
+Ostriches,Meat,
+Ostriches,Other,Select
+Ostriches,Other,
+Ostriches,Other,Other
+Ostriches,Other,
+Ostriches,Production of other products,Select
+Ostriches,Production of other products,
+Ostriches,Production of other products,"Breeding for other products (feathers, skin etc)"
+Ostriches,Production of other products,
+Ostriches,Production of other products,"Reared for other products (feathers, skin etc)"
+Ostriches,Production of other products,
+Ostriches,Shooting,Select
+Ostriches,Shooting,
+Ostriches,Shooting,Breeding for shooting
+Ostriches,Shooting,
+Ostriches,Shooting,Reared for shooting
+Ostriches,Shooting,
+Ostriches,Shooting,Releasing for shooting
+Ostriches,Shooting,
+Ostriches,Showing,Select
+Ostriches,Showing,
+Ostriches,Showing,Breeding for showing
+Ostriches,Showing,
+Ostriches,Showing,Reared for showing
+Ostriches,Showing,
+Ostriches,Table egg production,Select
+Ostriches,Table egg production,
+Ostriches,Table egg production,Egg Layers
+Ostriches,Table egg production,
+Other Birds,Select,Select
+Other Birds,Select,
+Other Birds,Mixed Backyard Flock,Select
+Other Birds,Mixed Backyard Flock,
+Other Birds,Mixed Backyard Flock,Egg layers
+Other Birds,Mixed Backyard Flock,
+Other Birds,Mixed Backyard Flock,Hobby
+Other Birds,Mixed Backyard Flock,
+Other Birds,Mixed Backyard Flock,Reared for showing
+Other Birds,Mixed Backyard Flock,
+Other Birds,Mixed Backyard Flock,Not Applicable
+Other Birds,Mixed Backyard Flock,
+Other Birds,Not Applicable,Select
+Other Birds,Not Applicable,
+Other Birds,Not Applicable,Not Applicable
+Other Birds,Not Applicable,
+Other Birds,Other Captive Birds,Select
+Other Birds,Other Captive Birds,
+Other Birds,Other Captive Birds,Breeding
+Other Birds,Other Captive Birds,
+Other Birds,Other Captive Birds,Display
+Other Birds,Other Captive Birds,
+Other Birds,Other Captive Birds,Hobby
+Other Birds,Other Captive Birds,
+Other Birds,Other Captive Birds,"Hunting/Pest control "
+Other Birds,Other Captive Birds,
+Other Birds,Other Captive Birds,Rescue
+Other Birds,Other Captive Birds,
+Other Birds,Production of other products,Select
+Other Birds,Production of other products,
+Other Birds,Production of other products,"Breeding for other products (feathers, skin etc)"
+Other Birds,Production of other products,
+Other Birds,Production of other products,"Reared for other products (feathers, skin etc)"
+Other Birds,Production of other products,
+Partridges,Select,Select
+Partridges,Select,
+Partridges,Backyard Flock,Select
+Partridges,Backyard Flock,
+Partridges,Backyard Flock,Egg layers
+Partridges,Backyard Flock,
+Partridges,Backyard Flock,Hobby
+Partridges,Backyard Flock,
+Partridges,Backyard Flock,Showing
+Partridges,Backyard Flock,
+Partridges,Backyard Flock,Reared for meat
+Partridges,Backyard Flock,
+Partridges,Egg Laying,Select
+Partridges,Egg Laying,
+Partridges,Egg Laying,Breeding for egg laying great-grandparent stock
+Partridges,Egg Laying,
+Partridges,Egg Laying,Breeding for egg laying
+Partridges,Egg Laying,
+Partridges,Egg Laying,Breeding for egg laying grandparent stock
+Partridges,Egg Laying,
+Partridges,Egg Laying,Breeding for egg laying parent stock
+Partridges,Egg Laying,
+Partridges,Egg Laying,Growing pullets to point of lay
+Partridges,Egg Laying,
+Partridges,Egg Laying,Poults
+Partridges,Egg Laying,
+Partridges,Meat,Select
+Partridges,Meat,
+Partridges,Meat,Breeding for meat great-grandparent stock
+Partridges,Meat,
+Partridges,Meat,Breeding for meat grandparent stock
+Partridges,Meat,
+Partridges,Meat,Breeding for meat parent stock
+Partridges,Meat,
+Partridges,Meat,Poults
+Partridges,Meat,
+Partridges,Meat,Reared for meat
+Partridges,Meat,
+Partridges,Meat,Breeding for meat
+Partridges,Meat,
+Partridges,Other,Select
+Partridges,Other,
+Partridges,Other,Breeding for shooting
+Partridges,Other,
+Partridges,Other,Other
+Partridges,Other,
+Partridges,Other,Rearing for shooting
+Partridges,Other,
+Partridges,Other,Releasing for shooting
+Partridges,Other,
+Partridges,Other,Showing
+Partridges,Other,
+Partridges,Production of other products,Select
+Partridges,Production of other products,
+Partridges,Production of other products,"Breeding for other products (feathers, skin etc)"
+Partridges,Production of other products,
+Partridges,Production of other products,"Reared for other products (feathers, skin etc)"
+Partridges,Production of other products,
+Partridges,Shooting,Select
+Partridges,Shooting,
+Partridges,Shooting,Breeding for shooting
+Partridges,Shooting,
+Partridges,Shooting,Reared for shooting
+Partridges,Shooting,
+Partridges,Shooting,Releasing for shooting
+Partridges,Shooting,
+Partridges,Showing,Select
+Partridges,Showing,
+Partridges,Showing,Breeding for showing
+Partridges,Showing,
+Partridges,Showing,Reared for showing
+Partridges,Showing,
+Partridges,Table egg production,Select
+Partridges,Table egg production,
+Partridges,Table egg production,Egg Layers
+Partridges,Table egg production,
+Pheasants,Select,Select
+Pheasants,Select,
+Pheasants,Backyard Flock,Select
+Pheasants,Backyard Flock,
+Pheasants,Backyard Flock,Egg layers
+Pheasants,Backyard Flock,
+Pheasants,Backyard Flock,Hobby
+Pheasants,Backyard Flock,
+Pheasants,Backyard Flock,Showing
+Pheasants,Backyard Flock,
+Pheasants,Backyard Flock,Reared for meat
+Pheasants,Backyard Flock,
+Pheasants,Egg Laying,Select
+Pheasants,Egg Laying,
+Pheasants,Egg Laying,Breeding for egg laying great-grandparent stock
+Pheasants,Egg Laying,
+Pheasants,Egg Laying,Breeding for egg laying
+Pheasants,Egg Laying,
+Pheasants,Egg Laying,Breeding for egg laying grandparent stock
+Pheasants,Egg Laying,
+Pheasants,Egg Laying,Breeding for egg laying parent stock
+Pheasants,Egg Laying,
+Pheasants,Egg Laying,Growing pullets to point of lay
+Pheasants,Egg Laying,
+Pheasants,Egg Laying,Poults
+Pheasants,Egg Laying,
+Pheasants,Meat,Select
+Pheasants,Meat,
+Pheasants,Meat,Breeding for meat great-grandparent stock
+Pheasants,Meat,
+Pheasants,Meat,Breeding for meat grandparent stock
+Pheasants,Meat,
+Pheasants,Meat,Breeding for meat parent stock
+Pheasants,Meat,
+Pheasants,Meat,Poults
+Pheasants,Meat,
+Pheasants,Meat,Reared for meat
+Pheasants,Meat,
+Pheasants,Meat,Breeding for meat
+Pheasants,Meat,
+Pheasants,Other,Select
+Pheasants,Other,
+Pheasants,Other,Breeding for shooting
+Pheasants,Other,
+Pheasants,Other,Other
+Pheasants,Other,
+Pheasants,Other,Rearing for shooting
+Pheasants,Other,
+Pheasants,Other,Releasing for shooting
+Pheasants,Other,
+Pheasants,Other,Showing
+Pheasants,Other,
+Pheasants,Production of other products,Select
+Pheasants,Production of other products,
+Pheasants,Production of other products,"Breeding for other products (feathers, skin etc)"
+Pheasants,Production of other products,
+Pheasants,Production of other products,"Reared for other products (feathers, skin etc)"
+Pheasants,Production of other products,
+Pheasants,Shooting,Select
+Pheasants,Shooting,
+Pheasants,Shooting,Breeding for shooting
+Pheasants,Shooting,
+Pheasants,Shooting,Reared for shooting
+Pheasants,Shooting,
+Pheasants,Shooting,Releasing for shooting
+Pheasants,Shooting,
+Pheasants,Showing,Select
+Pheasants,Showing,
+Pheasants,Showing,Breeding for showing
+Pheasants,Showing,
+Pheasants,Showing,Reared for showing
+Pheasants,Showing,
+Pheasants,Table egg production,Select
+Pheasants,Table egg production,
+Pheasants,Table egg production,Egg Layers
+Pheasants,Table egg production,
+Pigeons,Select,Select
+Pigeons,Select,
+Pigeons,Backyard Flock,Select
+Pigeons,Backyard Flock,
+Pigeons,Backyard Flock,Egg layers
+Pigeons,Backyard Flock,
+Pigeons,Backyard Flock,Hobby
+Pigeons,Backyard Flock,
+Pigeons,Backyard Flock,Showing
+Pigeons,Backyard Flock,
+Pigeons,Backyard Flock,Reared for meat
+Pigeons,Backyard Flock,
+Pigeons,Egg Laying,Select
+Pigeons,Egg Laying,
+Pigeons,Egg Laying,Breeding for egg laying great-grandparent stock
+Pigeons,Egg Laying,
+Pigeons,Egg Laying,Breeding for egg laying
+Pigeons,Egg Laying,
+Pigeons,Egg Laying,Breeding for egg laying grandparent stock
+Pigeons,Egg Laying,
+Pigeons,Egg Laying,Breeding for egg laying parent stock
+Pigeons,Egg Laying,
+Pigeons,Egg Laying,Growing pullets to point of lay
+Pigeons,Egg Laying,
+Pigeons,Egg Laying,Poults
+Pigeons,Egg Laying,
+Pigeons,Meat,Select
+Pigeons,Meat,
+Pigeons,Meat,Breeding for meat great-grandparent stock
+Pigeons,Meat,
+Pigeons,Meat,Breeding for meat grandparent stock
+Pigeons,Meat,
+Pigeons,Meat,Breeding for meat parent stock
+Pigeons,Meat,
+Pigeons,Meat,Poults
+Pigeons,Meat,
+Pigeons,Meat,Reared for meat
+Pigeons,Meat,
+Pigeons,Meat,Breeding for meat
+Pigeons,Meat,
+Pigeons,Other,Select
+Pigeons,Other,
+Pigeons,Other,Other
+Pigeons,Other,
+Pigeons,Other,Showing
+Pigeons,Other,
+Pigeons,Other,Breeding for racing
+Pigeons,Other,
+Pigeons,Racing,Select
+Pigeons,Racing,
+Pigeons,Racing,Not applicable
+Pigeons,Racing,
+Pigeons,Racing,Reared for racing
+Pigeons,Racing,
+Pigeons,Racing,Releasing for racing
+Pigeons,Racing,
+Pigeons,Racing,Releasing for racing EU/NI
+Pigeons,Racing,
+Pigeons,Production of other products,Select
+Pigeons,Production of other products,
+Pigeons,Production of other products,"Breeding for other products (feathers, skin etc)"
+Pigeons,Production of other products,
+Pigeons,Production of other products,"Reared for other products (feathers, skin etc)"
+Pigeons,Production of other products,
+Pigeons,Shooting,Select
+Pigeons,Shooting,
+Pigeons,Shooting,Breeding for shooting
+Pigeons,Shooting,
+Pigeons,Shooting,Reared for shooting
+Pigeons,Shooting,
+Pigeons,Shooting,Releasing for shooting
+Pigeons,Shooting,
+Pigeons,Showing,Select
+Pigeons,Showing,
+Pigeons,Showing,Breeding for showing
+Pigeons,Showing,
+Pigeons,Showing,Reared for showing
+Pigeons,Showing,
+Pigeons,Table egg production,Select
+Pigeons,Table egg production,
+Pigeons,Table egg production,Egg Layers
+Pigeons,Table egg production,
+Psittacines,Select,Select
+Psittacines,Select,
+Psittacines,Other Captive Birds,Select
+Psittacines,Other Captive Birds,
+Psittacines,Other Captive Birds,Breeding
+Psittacines,Other Captive Birds,
+Psittacines,Other Captive Birds,Display
+Psittacines,Other Captive Birds,
+Psittacines,Other Captive Birds,Hobby
+Psittacines,Other Captive Birds,
+Psittacines,Other Captive Birds,Hunting/Pest control rescue
+Psittacines,Other Captive Birds,
+Psittacines,Production of other products,Select
+Psittacines,Production of other products,
+Psittacines,Production of other products,"Breeding for other products (feathers, skin etc)"
+Psittacines,Production of other products,
+Psittacines,Production of other products,"Reared for other products (feathers, skin etc)"
+Psittacines,Production of other products,
+Quails,Select,Select
+Quails,Select,
+Quails,Backyard Flock,Select
+Quails,Backyard Flock,
+Quails,Backyard Flock,Egg layers
+Quails,Backyard Flock,
+Quails,Backyard Flock,Hobby
+Quails,Backyard Flock,
+Quails,Backyard Flock,Showing
+Quails,Backyard Flock,
+Quails,Backyard Flock,Reared for meat
+Quails,Backyard Flock,
+Quails,Egg Laying,Select
+Quails,Egg Laying,
+Quails,Egg Laying,Breeding for egg laying great-grandparent stock
+Quails,Egg Laying,
+Quails,Egg Laying,Breeding for egg laying
+Quails,Egg Laying,
+Quails,Egg Laying,Breeding for egg laying grandparent stock
+Quails,Egg Laying,
+Quails,Egg Laying,Breeding for egg laying parent stock
+Quails,Egg Laying,
+Quails,Egg Laying,Growing pullets to point of lay
+Quails,Egg Laying,
+Quails,Egg Laying,Poults
+Quails,Egg Laying,
+Quails,Meat,Select
+Quails,Meat,
+Quails,Meat,Breeding for meat great-grandparent stock
+Quails,Meat,
+Quails,Meat,Breeding for meat grandparent stock
+Quails,Meat,
+Quails,Meat,Breeding for meat parent stock
+Quails,Meat,
+Quails,Meat,Poults
+Quails,Meat,
+Quails,Meat,Reared for meat
+Quails,Meat,
+Quails,Meat,Breeding for meat
+Quails,Meat,
+Quails,Other,Select
+Quails,Other,
+Quails,Other,Other
+Quails,Other,
+Quails,Other,Showing
+Quails,Other,
+Quails,Production of other products,Select
+Quails,Production of other products,
+Quails,Production of other products,"Breeding for other products (feathers, skin etc)"
+Quails,Production of other products,
+Quails,Production of other products,"Reared for other products (feathers, skin etc)"
+Quails,Production of other products,
+Quails,Shooting,Select
+Quails,Shooting,
+Quails,Shooting,Breeding for shooting
+Quails,Shooting,
+Quails,Shooting,Reared for shooting
+Quails,Shooting,
+Quails,Shooting,Releasing for shooting
+Quails,Shooting,
+Quails,Showing,Select
+Quails,Showing,
+Quails,Showing,Breeding for showing
+Quails,Showing,
+Quails,Showing,Reared for showing
+Quails,Showing,
+Quails,Table egg production,Select
+Quails,Table egg production,
+Quails,Table egg production,Egg Layers
+Quails,Table egg production,
+Rheas,Select,Select
+Rheas,Select,
+Rheas,Backyard Flock,Select
+Rheas,Backyard Flock,
+Rheas,Backyard Flock,Egg layers
+Rheas,Backyard Flock,
+Rheas,Backyard Flock,Hobby
+Rheas,Backyard Flock,
+Rheas,Backyard Flock,Showing
+Rheas,Backyard Flock,
+Rheas,Backyard Flock,Reared for meat
+Rheas,Backyard Flock,
+Rheas,Egg Laying,Select
+Rheas,Egg Laying,
+Rheas,Egg Laying,Breeding for egg laying great-grandparent stock
+Rheas,Egg Laying,
+Rheas,Egg Laying,Breeding for egg laying
+Rheas,Egg Laying,
+Rheas,Egg Laying,Breeding for egg laying grandparent stock
+Rheas,Egg Laying,
+Rheas,Egg Laying,Breeding for egg laying parent stock
+Rheas,Egg Laying,
+Rheas,Egg Laying,Birds in laying flock
+Rheas,Egg Laying,
+Rheas,Egg Laying,Growing pullets to point of lay
+Rheas,Egg Laying,
+Rheas,Egg Laying,Poults
+Rheas,Egg Laying,
+Rheas,Meat,Select
+Rheas,Meat,
+Rheas,Meat,Breeding for meat great-grandparent stock
+Rheas,Meat,
+Rheas,Meat,Breeding for meat grandparent stock
+Rheas,Meat,
+Rheas,Meat,Breeding for meat parent stock
+Rheas,Meat,
+Rheas,Meat,Poults
+Rheas,Meat,
+Rheas,Meat,Reared for meat
+Rheas,Meat,
+Rheas,Meat,Breeding for meat
+Rheas,Meat,
+Rheas,Other,Select
+Rheas,Other,
+Rheas,Other,Other
+Rheas,Other,
+Rheas,Production of other products,Select
+Rheas,Production of other products,
+Rheas,Production of other products,"Breeding for other products (feathers, skin etc)"
+Rheas,Production of other products,
+Rheas,Production of other products,"Reared for other products (feathers, skin etc)"
+Rheas,Production of other products,
+Rheas,Shooting,Select
+Rheas,Shooting,
+Rheas,Shooting,Breeding for shooting
+Rheas,Shooting,
+Rheas,Shooting,Reared for shooting
+Rheas,Shooting,
+Rheas,Shooting,Releasing for shooting
+Rheas,Shooting,
+Rheas,Showing,Select
+Rheas,Showing,
+Rheas,Showing,Breeding for showing
+Rheas,Showing,
+Rheas,Showing,Reared for showing
+Rheas,Showing,
+Rheas,Table egg production,Select
+Rheas,Table egg production,
+Rheas,Table egg production,Egg Layers
+Rheas,Table egg production,
+Turkeys,Select,Select
+Turkeys,Select,
+Turkeys,Backyard Flock,Select
+Turkeys,Backyard Flock,
+Turkeys,Backyard Flock,Egg layers
+Turkeys,Backyard Flock,
+Turkeys,Backyard Flock,Hobby
+Turkeys,Backyard Flock,
+Turkeys,Backyard Flock,Showing
+Turkeys,Backyard Flock,
+Turkeys,Backyard Flock,Reared for meat
+Turkeys,Backyard Flock,
+Turkeys,Egg Laying,Select
+Turkeys,Egg Laying,
+Turkeys,Egg Laying,Breeding for egg laying great-grandparent stock
+Turkeys,Egg Laying,
+Turkeys,Egg Laying,Breeding for egg laying
+Turkeys,Egg Laying,
+Turkeys,Egg Laying,Breeding for egg laying grandparent stock
+Turkeys,Egg Laying,
+Turkeys,Egg Laying,Breeding for egg laying parent stock
+Turkeys,Egg Laying,
+Turkeys,Egg Laying,Growing pullets to point of lay
+Turkeys,Egg Laying,
+Turkeys,Egg Laying,Poults
+Turkeys,Egg Laying,
+Turkeys,Meat,Select
+Turkeys,Meat,
+Turkeys,Meat,Breeding for meat great-grandparent stock
+Turkeys,Meat,
+Turkeys,Meat,Breeding for meat grandparent stock
+Turkeys,Meat,
+Turkeys,Meat,Breeding for meat parent stock
+Turkeys,Meat,
+Turkeys,Meat,Poults
+Turkeys,Meat,
+Turkeys,Meat,Reared for meat
+Turkeys,Meat,
+Turkeys,Meat,Breeding for meat
+Turkeys,Meat,
+Turkeys,Other,Select
+Turkeys,Other,
+Turkeys,Other,Other
+Turkeys,Other,
+Turkeys,Other,Showing
+Turkeys,Other,
+Turkeys,Production of other products,Select
+Turkeys,Production of other products,
+Turkeys,Production of other products,"Breeding for other products (feathers, skin etc)"
+Turkeys,Production of other products,
+Turkeys,Production of other products,"Reared for other products (feathers, skin etc)"
+Turkeys,Production of other products,
+Turkeys,Showing,Select
+Turkeys,Showing,
+Turkeys,Showing,Breeding for Showing
+Turkeys,Showing,
+Turkeys,Showing,Reared for Showing
+Turkeys,Showing,
+Turkeys,Table egg production,Select
+Turkeys,Table egg production,
+Turkeys,Table egg production,Egg Layers
+Turkeys,Table egg production,

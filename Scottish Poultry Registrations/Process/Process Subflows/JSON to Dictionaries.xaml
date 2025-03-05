@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,7686.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,2269.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>JSON_to_Excel_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -91,17 +91,20 @@
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="JSON_to_Dictionaries" sap:VirtualizedContainerService.HintSize="750,6242.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="JSON_to_Dictionaries" sap:VirtualizedContainerService.HintSize="609.6,2204" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtFullJSON" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtKeeperDetails" />
@@ -112,15 +115,16 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read JSON workflow" sap:VirtualizedContainerService.HintSize="688,53.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Process Subflows\Read JSON.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read JSON workflow" sap:VirtualizedContainerService.HintSize="547.6,53.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Process Subflows\Read JSON.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="IN_strJSONPath">[IN_strJSONPath]</InArgument>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="OUT_dtTable">[dtFullJSON]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Default details" sap:VirtualizedContainerService.HintSize="688,83.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Default details" sap:VirtualizedContainerService.HintSize="547.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -148,18 +152,18 @@
       </ui:FilterDataTable>
       <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="source" DataTable="[dtDefaults]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_3" />
     </Sequence>
-    <Sequence DisplayName="Keeper Details" sap:VirtualizedContainerService.HintSize="688,83.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Keeper Details" sap:VirtualizedContainerService.HintSize="547.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtKeeperAddress" />
         <Variable x:TypeArguments="x:String" Name="strKeeperAddress" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter Keeper Details" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="468,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtKeeperDetails]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter Keeper Details" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="468,53.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtKeeperDetails]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -178,7 +182,7 @@
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
-      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="source" DataTable="[dtKeeperDetails]" DisplayName="Remove source column" sap:VirtualizedContainerService.HintSize="468,190" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
+      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="source" DataTable="[dtKeeperDetails]" DisplayName="Remove source column" sap:VirtualizedContainerService.HintSize="468,53.2" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
       <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Get address details (- postcode and country)" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="468,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dtKeeperAddress]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="8">
@@ -245,8 +249,13 @@
             <x:Null />
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtKeeperAddress]" DisplayName="Concatenate Keeper address values" sap:VirtualizedContainerService.HintSize="468,204.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtKeeperAddress]" DisplayName="Concatenate Keeper address values" sap:VirtualizedContainerService.HintSize="468,53.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -265,7 +274,7 @@
       </ui:ForEachRow>
       <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Address&quot;,System.Text.RegularExpressions.Regex.Replace(strKeeperAddress.Trim,&quot;,$&quot;,&quot;&quot;)}]" DataTable="[dtKeeperDetails]" DisplayName="Add concatenated Keeper address" sap:VirtualizedContainerService.HintSize="468,190" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
     </Sequence>
-    <Sequence DisplayName="Occupier/Owner" sap:VirtualizedContainerService.HintSize="688,83.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="Occupier/Owner" sap:VirtualizedContainerService.HintSize="547.6,711.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtOccupierAddress" />
         <Variable x:TypeArguments="x:String" Name="strOccupierAddress" />
@@ -273,10 +282,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter Occupier" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="468,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtOccupier]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter Occupier" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="485.6,53.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtOccupier]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -294,9 +303,15 @@
             <x:Null />
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="source" DataTable="[dtOccupier]" DisplayName="Remove source column" sap:VirtualizedContainerService.HintSize="468,190" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_2" />
-      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Get address details (- postcode and country)" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="468,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[dtOccupierAddress]" SelectColumnsMode="Keep">
+      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="source" DataTable="[dtOccupier]" DisplayName="Remove source column" sap:VirtualizedContainerService.HintSize="485.6,53.2" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_2" />
+      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Get address details (- postcode and country)" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="485.6,53.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[dtOccupierAddress]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="8">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -362,27 +377,64 @@
             <x:Null />
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtOccupierAddress]" DisplayName="Concatenate Occupier address values" sap:VirtualizedContainerService.HintSize="468,204.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-        <ui:ForEachRow.Body>
-          <ActivityAction x:TypeArguments="sd:DataRow">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-            </ActivityAction.Argument>
-            <Assign DisplayName="Append to Occupier string (if not blank)" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[strOccupierAddress]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[strOccupierAddress+if(CurrentRow("value").ToString="","",CurrentRow("value").ToString+","+Environment.NewLine)]</InArgument>
-              </Assign.Value>
-            </Assign>
-          </ActivityAction>
-        </ui:ForEachRow.Body>
-      </ui:ForEachRow>
-      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Address&quot;,System.Text.RegularExpressions.Regex.Replace(strOccupierAddress.Trim,&quot;,$&quot;,&quot;&quot;)}]" DataTable="[dtOccupier]" DisplayName="Add concatenated Occupier address" sap:VirtualizedContainerService.HintSize="468,190" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+      <If sap2010:Annotation.AnnotationText="Occupier info may be incomplete. This is handled further in the &quot;Validate JSON data&quot; sequence within Process Transaction." Condition="[dtOccupierAddress.RowCount&lt;&gt;0]" DisplayName="If Occupier address is not null" sap:VirtualizedContainerService.HintSize="485.6,320.4" sap2010:WorkflowViewState.IdRef="If_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Concatenate and add occupier address" sap:VirtualizedContainerService.HintSize="450,83.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtOccupierAddress]" DisplayName="Concatenate Occupier address values" sap:VirtualizedContainerService.HintSize="434,170.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Assign DisplayName="Append to Occupier string (if not blank)" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[strOccupierAddress]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[strOccupierAddress+if(CurrentRow("value").ToString="","",CurrentRow("value").ToString+","+Environment.NewLine)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Address&quot;,System.Text.RegularExpressions.Regex.Replace(strOccupierAddress.Trim,&quot;,$&quot;,&quot;&quot;)}]" DataTable="[dtOccupier]" DisplayName="Add concatenated Occupier address" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AddDataRow>
+          </Sequence>
+        </If.Then>
+      </If>
     </Sequence>
-    <Sequence DisplayName="Locations" sap:VirtualizedContainerService.HintSize="688,83.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence DisplayName="Locations" sap:VirtualizedContainerService.HintSize="547.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtFullLocations" />
         <Variable x:TypeArguments="x:Int32" Name="intAddressCount" />
@@ -488,7 +540,7 @@
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
     </Sequence>
-    <Sequence DisplayName="Bird Details" sap:VirtualizedContainerService.HintSize="688,2234.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <Sequence DisplayName="Bird Details" sap:VirtualizedContainerService.HintSize="547.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtFullLocations" />
         <Variable x:TypeArguments="sd:DataTable" Name="dtFullBirdDetails" />
@@ -498,10 +550,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Initialise datatable" sap:VirtualizedContainerService.HintSize="626,53.2" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign DisplayName="Initialise datatable" sap:VirtualizedContainerService.HintSize="626,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[OUT_dtBirdDetails]</OutArgument>
         </Assign.To>
@@ -509,7 +561,7 @@
           <InArgument x:TypeArguments="sd:DataTable">[new DataTable]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter all locations" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,53.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dtFullBirdDetails]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter all locations" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dtFullBirdDetails]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -532,11 +584,11 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataColumn>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFullBirdDetails.DefaultView.ToTable(true, &quot;key&quot;)]" DisplayName="Build bird details data table" sap:VirtualizedContainerService.HintSize="626,312.4" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFullBirdDetails.DefaultView.ToTable(true, &quot;key&quot;)]" DisplayName="Build bird details data table" sap:VirtualizedContainerService.HintSize="626,307.6" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -545,7 +597,7 @@
             <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="[key(&quot;key&quot;).ToString]" DataTable="[OUT_dtBirdDetails]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="334,190" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:AddDataColumn>
@@ -553,7 +605,7 @@
         </ui:ForEachRow.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
@@ -578,17 +630,17 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intBirdCount]" DataTable="[dtBirdsNonAddress.DefaultView.ToTable(true, &quot;source&quot;)]" DisplayName="For each Address" sap:VirtualizedContainerService.HintSize="626,995.2" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intBirdCount]" DataTable="[dtBirdsNonAddress.DefaultView.ToTable(true, &quot;source&quot;)]" DisplayName="For each Address" sap:VirtualizedContainerService.HintSize="626,1096.4" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="bird" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="592,872.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence sap:VirtualizedContainerService.HintSize="592,978.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
               <Sequence.Variables>
                 <Variable x:TypeArguments="scg:List(x:String)" Name="listLocationsRow" />
                 <Variable x:TypeArguments="sd:DataTable" Name="dtAddress" />
@@ -597,10 +649,10 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:FilterDataTable DataTable="[dtFullBirdDetails]" DisplayName="Filter on current bird" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="530,53.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_10" OutputDataTable="[dtAddress]" SelectColumnsMode="Keep">
+              <ui:FilterDataTable DataTable="[dtFullBirdDetails]" DisplayName="Filter on current bird" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="530,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_10" OutputDataTable="[dtAddress]" SelectColumnsMode="Keep">
                 <ui:FilterDataTable.Filters>
                   <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                     <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -622,11 +674,11 @@
               <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{}]" DataTable="[OUT_dtBirdDetails]" DisplayName="Add empty row for current Bird" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="AddDataRow_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:AddDataRow>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtAddress]" DisplayName="Assign each bird value to current row" sap:VirtualizedContainerService.HintSize="530,316" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtAddress]" DisplayName="Assign each bird value to current row" sap:VirtualizedContainerService.HintSize="530,311.2" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
@@ -636,7 +688,7 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign DisplayName="Assign address value to birds table" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_10">
@@ -648,7 +700,7 @@
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
@@ -657,7 +709,7 @@
                 </ui:ForEachRow.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
@@ -670,7 +722,7 @@
                 </Assign.Value>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
@@ -679,12 +731,12 @@
         </ui:ForEachRow.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
     </Sequence>
-    <Sequence DisplayName="Additional Details" sap:VirtualizedContainerService.HintSize="688,2318.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
+    <Sequence DisplayName="Additional Details" sap:VirtualizedContainerService.HintSize="547.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtFullLocations" />
         <Variable x:TypeArguments="sd:DataTable" Name="dtFullBirdDetails" />
@@ -697,10 +749,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Initialise datatable" sap:VirtualizedContainerService.HintSize="626,53.2" sap2010:WorkflowViewState.IdRef="Assign_11">
+      <Assign DisplayName="Initialise datatable" sap:VirtualizedContainerService.HintSize="626,82.4" sap2010:WorkflowViewState.IdRef="Assign_11">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dtAdditionalDetails]</OutArgument>
         </Assign.To>
@@ -728,7 +780,7 @@
         </ui:FilterDataTable.SelectColumns>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
@@ -736,11 +788,11 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataColumn>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFullAdditionalDetails.DefaultView.ToTable(true, &quot;key&quot;)]" DisplayName="Build additional details data table" sap:VirtualizedContainerService.HintSize="626,175.6" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFullAdditionalDetails.DefaultView.ToTable(true, &quot;key&quot;)]" DisplayName="Build additional details data table" sap:VirtualizedContainerService.HintSize="626,170.8" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -751,7 +803,7 @@
         </ui:ForEachRow.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
@@ -776,17 +828,17 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intDetailCount]" DataTable="[dtDetailsNonStocking.DefaultView.ToTable(true, &quot;source&quot;)]" DisplayName="For each stocking arrangement" sap:VirtualizedContainerService.HintSize="626,1105.2" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intDetailCount]" DataTable="[dtDetailsNonStocking.DefaultView.ToTable(true, &quot;source&quot;)]" DisplayName="For each stocking arrangement" sap:VirtualizedContainerService.HintSize="626,1096.4" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="detail" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="592,982.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
+            <Sequence sap:VirtualizedContainerService.HintSize="592,978.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
               <Sequence.Variables>
                 <Variable x:TypeArguments="scg:List(x:String)" Name="listLocationsRow" />
                 <Variable x:TypeArguments="sd:DataTable" Name="dtAddress" />
@@ -796,7 +848,7 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:FilterDataTable DataTable="[dtFullAdditionalDetails]" DisplayName="Filter on current detail" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="530,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_14" OutputDataTable="[dtStock]" SelectColumnsMode="Keep">
@@ -819,31 +871,31 @@
                 </ui:FilterDataTable.SelectColumns>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:FilterDataTable>
               <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{}]" DataTable="[dtAdditionalDetails]" DisplayName="Add empty row for current detail" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="AddDataRow_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:AddDataRow>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtStock]" DisplayName="Assign each detail value to current row" sap:VirtualizedContainerService.HintSize="530,315.2" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtStock]" DisplayName="Assign each detail value to current row" sap:VirtualizedContainerService.HintSize="530,311.2" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="val" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="496,192.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                    <Sequence sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign address value to birds table" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                      <Assign DisplayName="Assign address value to birds table" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_12">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[dtAdditionalDetails(intDetailCount)(val("key").ToString)]</OutArgument>
                         </Assign.To>
@@ -852,7 +904,7 @@
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
@@ -861,7 +913,7 @@
                 </ui:ForEachRow.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
@@ -874,7 +926,7 @@
                 </Assign.Value>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
@@ -883,19 +935,19 @@
         </ui:ForEachRow.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
     </Sequence>
-    <Sequence DisplayName="Write Dictionaries" sap:VirtualizedContainerService.HintSize="688,910.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Write Dictionaries" sap:VirtualizedContainerService.HintSize="547.6,630.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:JoinDataTables DataTable1="[OUT_dtBirdDetails]" DataTable2="[dtAdditionalDetails]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Full" OutputDataTable="[OUT_dtBirdDetails]">
+      <ui:JoinDataTables DataTable1="[OUT_dtBirdDetails]" DataTable2="[dtAdditionalDetails]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Full" OutputDataTable="[OUT_dtBirdDetails]">
         <ui:JoinDataTables.Arguments>
           <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
             <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -910,21 +962,21 @@
         </ui:JoinDataTables.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:JoinDataTables>
-      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="id" DataTable="[OUT_dtBirdDetails]" DisplayName="Remove id column" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_4">
+      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="id" DataTable="[OUT_dtBirdDetails]" DisplayName="Remove id column" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RemoveDataColumn>
-      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="id_1" DataTable="[OUT_dtBirdDetails]" DisplayName="Remove id_1 column" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_5">
+      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="id_1" DataTable="[OUT_dtBirdDetails]" DisplayName="Remove id_1 column" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RemoveDataColumn>
@@ -945,6 +997,12 @@
           <InArgument x:TypeArguments="sd:DataTable" x:Key="IN_dtTable">[dtOccupier]</InArgument>
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="OUT_dictTable">[OUT_dictOccupier]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
     </Sequence>
   </Sequence>
