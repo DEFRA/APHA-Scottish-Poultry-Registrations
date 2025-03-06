@@ -66,7 +66,6 @@
       <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
@@ -90,7 +89,7 @@
           <OutArgument x:TypeArguments="x:String">[strJSONPath]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">C:\Users\rm000121\OneDrive - Defra\UiPath\APHA-Scottish-Poultry-Registrations\Scottish Poultry Registrations\Test Data\MissingOccupierData.json</InArgument>
+          <InArgument x:TypeArguments="x:String">C:\Users\rm000121\OneDrive - Defra\UiPath\APHA-Scottish-Poultry-Registrations\Scottish Poultry Registrations\Test Data\794514001.json</InArgument>
         </Assign.Value>
       </Assign>
     </Sequence>
@@ -106,15 +105,9 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke JSON to Dictionaries workflow" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Process Subflows\JSON to Dictionaries.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="IN_strJSONPath">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strJSONPath" />
-          </InArgument>
-          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="OUT_dictKeeperDetails">
-            <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="dictKeeperDetails" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="OUT_dictOccupier">
-            <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="dictOccupier" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="IN_strJSONPath">[strJSONPath]</InArgument>
+          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="OUT_dictKeeperDetails">[dictKeeperDetails]</OutArgument>
+          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="OUT_dictOccupier">[dictOccupier]</OutArgument>
           <OutArgument x:TypeArguments="sd:DataTable" x:Key="OUT_dtBirdDetails" />
           <OutArgument x:TypeArguments="sd:DataTable" x:Key="OUT_dtLocations" />
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="OUT_dictDefaults" />
