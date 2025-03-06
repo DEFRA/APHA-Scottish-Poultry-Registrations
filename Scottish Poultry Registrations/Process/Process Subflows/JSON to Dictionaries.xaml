@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,2269.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,4312.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>JSON_to_Excel_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -104,7 +104,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="JSON_to_Dictionaries" sap:VirtualizedContainerService.HintSize="609.6,2204" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="JSON_to_Dictionaries" sap:VirtualizedContainerService.HintSize="609.6,4247.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtFullJSON" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtKeeperDetails" />
@@ -540,7 +540,7 @@
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
     </Sequence>
-    <Sequence DisplayName="Bird Details" sap:VirtualizedContainerService.HintSize="547.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <Sequence DisplayName="Bird Details" sap:VirtualizedContainerService.HintSize="547.6,1232" sap2010:WorkflowViewState.IdRef="Sequence_14">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtFullLocations" />
         <Variable x:TypeArguments="sd:DataTable" Name="dtFullBirdDetails" />
@@ -550,10 +550,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Initialise datatable" sap:VirtualizedContainerService.HintSize="626,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign DisplayName="Initialise datatable" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="Assign_5">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[OUT_dtBirdDetails]</OutArgument>
         </Assign.To>
@@ -561,7 +561,7 @@
           <InArgument x:TypeArguments="sd:DataTable">[new DataTable]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter all locations" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dtFullBirdDetails]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter all locations" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dtFullBirdDetails]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -569,7 +569,15 @@
                 <InArgument x:TypeArguments="x:String">["source"]</InArgument>
               </ui:FilterOperationArgument.Column>
               <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["GroupedDetails0/BirdDetails"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["GroupedDetails"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["source"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["BirdDetails"]</InArgument>
               </ui:FilterOperationArgument.Operand>
             </ui:FilterOperationArgument>
           </scg:List>
@@ -579,8 +587,13 @@
             <x:Null />
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="For joining with Additional Details. Can be removed at the end." ColumnName="id" DataTable="[OUT_dtBirdDetails]" DisplayName="Add row id column for join" sap:VirtualizedContainerService.HintSize="626,234.8" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7">
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="For joining with Additional Details. Can be removed at the end." ColumnName="id" DataTable="[OUT_dtBirdDetails]" DisplayName="Add row id column for join" sap:VirtualizedContainerService.HintSize="434,114.4" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -588,7 +601,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataColumn>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFullBirdDetails.DefaultView.ToTable(true, &quot;key&quot;)]" DisplayName="Build bird details data table" sap:VirtualizedContainerService.HintSize="626,307.6" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFullBirdDetails.DefaultView.ToTable(true, &quot;key&quot;)]" DisplayName="Build bird details data table" sap:VirtualizedContainerService.HintSize="434,306.8" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -597,7 +610,7 @@
             <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="[key(&quot;key&quot;).ToString]" DataTable="[OUT_dtBirdDetails]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="334,190" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:AddDataColumn>
@@ -605,11 +618,11 @@
         </ui:ForEachRow.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="The nested address details (i.e. BirdDetails0/WhereKeptLocation) need to be filtered out so that the number of BirdDetails submitted can be counted based on the Source column. There's probably cleaner ways of doing this but this is the easiest way I know of..." DataTable="[dtFullBirdDetails]" DisplayName="Filter out address details to get no. of rows required" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,274.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_11" OutputDataTable="[dtBirdsNonAddress]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="The nested address details (i.e. BirdDetails0/WhereKeptLocation) need to be filtered out so that the number of BirdDetails submitted can be counted based on the Source column. There's probably cleaner ways of doing this but this is the easiest way I know of..." DataTable="[dtFullBirdDetails]" DisplayName="Filter out address details to get no. of rows required" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,229.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_11" OutputDataTable="[dtBirdsNonAddress]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTCONTAINS">
@@ -634,7 +647,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intBirdCount]" DataTable="[dtBirdsNonAddress.DefaultView.ToTable(true, &quot;source&quot;)]" DisplayName="For each Address" sap:VirtualizedContainerService.HintSize="626,1096.4" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intBirdCount]" DataTable="[dtBirdsNonAddress.DefaultView.ToTable(true, &quot;source&quot;)]" DisplayName="For each Address" sap:VirtualizedContainerService.HintSize="434,53.2" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -736,7 +749,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
     </Sequence>
-    <Sequence DisplayName="Additional Details" sap:VirtualizedContainerService.HintSize="547.6,83.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+    <Sequence DisplayName="Additional Details" sap:VirtualizedContainerService.HintSize="547.6,978.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtFullLocations" />
         <Variable x:TypeArguments="sd:DataTable" Name="dtFullBirdDetails" />
@@ -749,10 +762,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Initialise datatable" sap:VirtualizedContainerService.HintSize="626,82.4" sap2010:WorkflowViewState.IdRef="Assign_11">
+      <Assign DisplayName="Initialise datatable" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="Assign_11">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dtAdditionalDetails]</OutArgument>
         </Assign.To>
@@ -760,7 +773,7 @@
           <InArgument x:TypeArguments="sd:DataTable">[new DataTable]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter all stocking arrangements" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_12" OutputDataTable="[dtFullAdditionalDetails]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable DataTable="[dtFullJSON]" DisplayName="Filter all stocking arrangements" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="388,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_12" OutputDataTable="[dtFullAdditionalDetails]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -768,7 +781,15 @@
                 <InArgument x:TypeArguments="x:String">["source"]</InArgument>
               </ui:FilterOperationArgument.Column>
               <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["GroupedDetails0/AdditionalDetails"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["GroupedDetails"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["source"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["AdditionalDetails"]</InArgument>
               </ui:FilterOperationArgument.Operand>
             </ui:FilterOperationArgument>
           </scg:List>
@@ -780,11 +801,11 @@
         </ui:FilterDataTable.SelectColumns>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="For joining with Additional Details. Can be removed at the end." ColumnName="id" DataTable="[dtAdditionalDetails]" DisplayName="Add row id column for join" sap:VirtualizedContainerService.HintSize="626,234.8" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_8">
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="For joining with Additional Details. Can be removed at the end." ColumnName="id" DataTable="[dtAdditionalDetails]" DisplayName="Add row id column for join" sap:VirtualizedContainerService.HintSize="388,114.4" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -792,7 +813,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataColumn>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFullAdditionalDetails.DefaultView.ToTable(true, &quot;key&quot;)]" DisplayName="Build additional details data table" sap:VirtualizedContainerService.HintSize="626,170.8" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFullAdditionalDetails.DefaultView.ToTable(true, &quot;key&quot;)]" DisplayName="Build additional details data table" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -807,7 +828,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="The nested stocking details (i.e. BirdDetails0/Stocking_arrangements) need to be filtered out so that the number of AdditionalDetails submitted can be counted based on the Source column. There's probably cleaner ways of doing this but this is the easiest way I know of..." DataTable="[dtFullAdditionalDetails]" DisplayName="Filter out stocking details to get no. of rows required" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,274.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_13" OutputDataTable="[dtDetailsNonStocking]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="The nested stocking details (i.e. BirdDetails0/Stocking_arrangements) need to be filtered out so that the number of AdditionalDetails submitted can be counted based on the Source column. There's probably cleaner ways of doing this but this is the easiest way I know of..." DataTable="[dtFullAdditionalDetails]" DisplayName="Filter out stocking details to get no. of rows required" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="388,229.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_13" OutputDataTable="[dtDetailsNonStocking]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTCONTAINS">
@@ -832,7 +853,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intDetailCount]" DataTable="[dtDetailsNonStocking.DefaultView.ToTable(true, &quot;source&quot;)]" DisplayName="For each stocking arrangement" sap:VirtualizedContainerService.HintSize="626,1096.4" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intDetailCount]" DataTable="[dtDetailsNonStocking.DefaultView.ToTable(true, &quot;source&quot;)]" DisplayName="For each stocking arrangement" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
