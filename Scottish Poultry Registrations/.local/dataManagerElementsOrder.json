@@ -54,6 +54,8 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strPostcode&Sequence_120",
+        "strPostcode&Sequence_80",
         "intColIndexAdjusted&Sequence_69",
         "intColIndex&Sequence_69",
         "intColIndex&Sequence_66",
