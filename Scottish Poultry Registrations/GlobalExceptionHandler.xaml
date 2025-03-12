@@ -102,7 +102,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ucas:ReadStorageText TimeoutMS="{x:Null}" DisplayName="Read Storage Text - retryable activities" FolderPath="APHA Root/Poultry Registrations" sap:VirtualizedContainerService.HintSize="974.4,135.6" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="RetryableActivities.csv" Result="[strRetryable]" StorageBucketName="Scottish Poultry Registrations" />
+    <ucas:ReadStorageText TimeoutMS="{x:Null}" DisplayName="Read Storage Text - retryable activities" sap:VirtualizedContainerService.HintSize="974.4,135.6" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="RetryableActivities.csv" Result="[strRetryable]" StorageBucketName="Scottish Poultry Registrations" />
     <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="True" DataTable="[dtRetryable]" DisplayName="Generate Data Table - retryable activities" sap:VirtualizedContainerService.HintSize="974.4,204" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[strRetryable]" UseColumnHeader="True" />
     <Assign sap2010:Annotation.AnnotationText="This ensures that the retry mechanism isn't triggered for exceptions on container activities such as Browser Scope." DisplayName="Retry activity?" sap:VirtualizedContainerService.HintSize="974.4,127.2" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
