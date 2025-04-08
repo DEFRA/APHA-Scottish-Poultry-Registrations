@@ -3,10 +3,14 @@
     <x:Property Name="OUT_NoOfRecords" Type="OutArgument(x:Int32)" />
     <x:Property Name="IN_UiBrowser" Type="InArgument(ui:Browser)" />
     <x:Property Name="IN_strPhoneNumber" Type="InArgument(x:String)" />
+    <x:Property Name="in_intRetryCount" Type="InArgument(x:Int32)" />
   </x:Members>
   <this:Search_Customer_Phone.IN_strPhoneNumber>
     <InArgument x:TypeArguments="x:String" />
   </this:Search_Customer_Phone.IN_strPhoneNumber>
+  <this:Search_Customer_Phone.in_intRetryCount>
+    <InArgument x:TypeArguments="x:Int32" />
+  </this:Search_Customer_Phone.in_intRetryCount>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
@@ -170,7 +174,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:RetryScope sap2010:Annotation.AnnotationText="This selector is prone to &quot;UiElement is no longer valid&quot; so the retry scope is an effort to combat this." DisplayName="Retry Scope - get no. of records" sap:VirtualizedContainerService.HintSize="434,329.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:02">
+            <ui:RetryScope sap2010:Annotation.AnnotationText="This selector is prone to &quot;UiElement is no longer valid&quot; so the retry scope is an effort to combat this." DisplayName="Retry Scope - get no. of records" sap:VirtualizedContainerService.HintSize="434,329.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_intRetryCount]" RetryInterval="00:00:02">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get amount of records returned " sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="GetValue_1">

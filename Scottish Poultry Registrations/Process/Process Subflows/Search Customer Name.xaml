@@ -4,6 +4,7 @@
     <x:Property Name="IN_UiBrowser" Type="InArgument(ui:Browser)" />
     <x:Property Name="IN_strFirstName" Type="InArgument(x:String)" />
     <x:Property Name="IN_strSurname" Type="InArgument(x:String)" />
+    <x:Property Name="in_intRetryCount" Type="InArgument(x:Int32)" />
   </x:Members>
   <this:Search_Customer_Name.IN_strFirstName>
     <InArgument x:TypeArguments="x:String" />
@@ -71,6 +72,17 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPathTeam.SharePoint</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Search_Customer_Name" sap:VirtualizedContainerService.HintSize="592,1883.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -79,7 +91,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_UiBrowser]" BrowserType="Edge" DisplayName="Attach Browswer - Animal Health Portal" sap:VirtualizedContainerService.HintSize="530,1772.4" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="852fb0a266cd946828e5848b6e08a51e">
+    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_UiBrowser]" DisplayName="Attach Browser - Animal Health Portal" sap:VirtualizedContainerService.HintSize="530,1772.4" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="852fb0a266cd946828e5848b6e08a51e">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -170,7 +182,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:RetryScope sap2010:Annotation.AnnotationText="This selector is prone to &quot;UiElement is no longer valid&quot; so the retry scope is an effort to combat this." DisplayName="Retry Scope - get no. of records" sap:VirtualizedContainerService.HintSize="434,329.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:02">
+            <ui:RetryScope sap2010:Annotation.AnnotationText="This selector is prone to &quot;UiElement is no longer valid&quot; so the retry scope is an effort to combat this." DisplayName="Retry Scope - get no. of records" sap:VirtualizedContainerService.HintSize="434,329.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_intRetryCount]" RetryInterval="00:00:02">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get amount of records returned " sap:VirtualizedContainerService.HintSize="334,106.8" sap2010:WorkflowViewState.IdRef="GetValue_1">

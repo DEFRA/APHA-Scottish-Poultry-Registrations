@@ -1388,23 +1388,30 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Transition.To>
-                                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="144,124" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                                    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="945.6,1384" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                                       <State.Entry>
-                                        <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="450,164.4" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                        <Sequence DisplayName="End Process" sap:VirtualizedContainerService.HintSize="900,1238" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[boolRunProcess]" DisplayName="Process Has Run?" sap:VirtualizedContainerService.HintSize="694.4,245.2" sap2010:WorkflowViewState.IdRef="If_21">
+                                          <If Condition="[boolRunProcess]" DisplayName="Process Has Run?" sap:VirtualizedContainerService.HintSize="838,1126.8" sap2010:WorkflowViewState.IdRef="If_21">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
                                             <If.Then>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="512,556.4" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="593.6,965.2" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <If Condition="[SystemException is Nothing]" DisplayName="Has SystemException Occured on Last Run?" sap:VirtualizedContainerService.HintSize="450,53.2" sap2010:WorkflowViewState.IdRef="If_20">
+                                                <If Condition="[SystemException is Nothing]" DisplayName="Has SystemException Occured on Last Run?" sap:VirtualizedContainerService.HintSize="531.6,53.2" sap2010:WorkflowViewState.IdRef="If_20">
                                                   <If.Then>
                                                     <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="438,345" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                                                       <TryCatch.Try>
@@ -1445,52 +1452,71 @@
                                                     </TryCatch>
                                                   </If.Then>
                                                 </If>
-                                                <Sequence DisplayName="Insert SQL Transactions &amp; Check Outcome" sap:VirtualizedContainerService.HintSize="450,164.4" sap2010:WorkflowViewState.IdRef="Sequence_84">
-                                                  <Sequence.Variables>
-                                                    <Variable x:TypeArguments="x:String" Name="strOutcome" />
-                                                    <Variable x:TypeArguments="x:String" Name="strOutcomeMessage" />
-                                                  </Sequence.Variables>
+                                                <If Condition="[TransactionNumber &gt; 1]" DisplayName="If at least one transaction complete" sap:VirtualizedContainerService.HintSize="531.6,492.4" sap2010:WorkflowViewState.IdRef="If_31">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <TryCatch DisplayName="Try Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="TryCatch_21">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <TryCatch.Try>
-                                                      <l:Upload_SQL_to_Storage_Bucket DisplayName="Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="200,24.8" IN_strSQLFilePath="[Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Upload_SQL_to_Storage_Bucket_1" />
-                                                    </TryCatch.Try>
-                                                    <TryCatch.Catches>
-                                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_28">
+                                                  <If.Then>
+                                                    <Sequence DisplayName="Insert SQL Transactions &amp; Check Outcome" sap:VirtualizedContainerService.HintSize="496,300.4" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                                                      <Sequence.Variables>
+                                                        <Variable x:TypeArguments="x:String" Name="strOutcome" />
+                                                        <Variable x:TypeArguments="x:String" Name="strOutcomeMessage" />
+                                                      </Sequence.Variables>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <TryCatch DisplayName="Try Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="434,189.2" sap2010:WorkflowViewState.IdRef="TryCatch_21">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ActivityAction x:TypeArguments="s:Exception">
-                                                          <ActivityAction.Argument>
-                                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                                          </ActivityAction.Argument>
-                                                          <ui:LogMessage DisplayName="Log Upload Failure" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="Fatal" Message="[&quot;SQL Transaction Upload Failure: &quot;+exception.Message]">
+                                                        <TryCatch.Try>
+                                                          <l:Upload_SQL_to_Storage_Bucket DisplayName="Upload SQL to Storage Bucket" sap:VirtualizedContainerService.HintSize="200,24.8" IN_strSQLFilePath="[Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Upload_SQL_to_Storage_Bucket_1" />
+                                                        </TryCatch.Try>
+                                                        <TryCatch.Catches>
+                                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_28">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                          </ui:LogMessage>
-                                                        </ActivityAction>
-                                                      </Catch>
-                                                    </TryCatch.Catches>
-                                                  </TryCatch>
-                                                </Sequence>
-                                                <ui:CommentOut sap2010:Annotation.AnnotationText="Only necessary in Document Understanding work packages to upload license usage.&#xA;&#xA;Delete if not required." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,163.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                                            <ActivityAction x:TypeArguments="s:Exception">
+                                                              <ActivityAction.Argument>
+                                                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                              </ActivityAction.Argument>
+                                                              <ui:LogMessage DisplayName="Log Upload Failure" sap:VirtualizedContainerService.HintSize="334,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="Fatal" Message="[&quot;SQL Transaction Upload Failure: &quot;+exception.Message]">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </ui:LogMessage>
+                                                            </ActivityAction>
+                                                          </Catch>
+                                                        </TryCatch.Catches>
+                                                      </TryCatch>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                  <If.Else>
+                                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_93">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </Sequence>
+                                                  </If.Else>
+                                                </If>
+                                                <ui:CommentOut sap2010:Annotation.AnnotationText="Only necessary in Document Understanding work packages to upload license usage.&#xA;&#xA;Delete if not required." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="531.6,163.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                                                   <ui:CommentOut.Body>
                                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="522,476" sap2010:WorkflowViewState.IdRef="Sequence_86">
                                                       <sap:WorkflowViewStateService.ViewState>
@@ -1552,7 +1578,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:CommentOut>
-                                                <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="End Process Form" sap:VirtualizedContainerService.HintSize="450,24.8" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\EndForm.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;Robot Complete&lt;/h1&gt;&lt;P&gt;The Robot has completed processing, click OK to close.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{550,250}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_7" />
+                                                <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="End Process Form" sap:VirtualizedContainerService.HintSize="531.6,24.8" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\EndForm.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;Robot Complete&lt;/h1&gt;&lt;P&gt;The Robot has completed processing, click OK to close.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{550,250}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_7" />
                                               </Sequence>
                                             </If.Then>
                                             <If.Else>
@@ -1701,7 +1727,7 @@
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="Present user with pop-up to confirm robotic process start. Also allow user to confirm breakout, or batch transaction processing." DisplayName="Request Run Type" sap:VirtualizedContainerService.HintSize="641.2,1162.8" sap2010:WorkflowViewState.IdRef="State_5">
+    <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="Present user with pop-up to confirm robotic process start. Also allow user to confirm breakout, or batch transaction processing." DisplayName="Request Run Type" sap:VirtualizedContainerService.HintSize="256,139.2" sap2010:WorkflowViewState.IdRef="State_5">
       <State.Entry>
         <Sequence sap:VirtualizedContainerService.HintSize="595.6,725.2" sap2010:WorkflowViewState.IdRef="Sequence_53">
           <sap:WorkflowViewStateService.ViewState>
