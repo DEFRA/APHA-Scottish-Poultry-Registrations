@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GlobalExceptionHandler" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uico="http://schemas.uipath.com/workflow/activities/contracts" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GlobalExceptionHandler" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uico="http://schemas.uipath.com/workflow/activities/contracts" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="errorInfo" Type="InArgument(uico:ExceptionHandlerArgs)" />
     <x:Property Name="result" Type="OutArgument(uico:ErrorAction)" />
@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,1508.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,2436</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GlobalHandler_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -42,6 +42,7 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Xml.Serialization</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -86,9 +87,11 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="ONLY USING THIS FOR WHEN CLICK ACTIVITIES IN SAM FAIL DUE TO &quot;TARGET IS DISABLED&quot; OR &quot;UIELEMENT NO LONGER VALID&quot; EXCEPTIONS." DisplayName="Global Exception Handler" sap:VirtualizedContainerService.HintSize="1036.4,1443.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="ONLY USING THIS FOR WHEN CLICK ACTIVITIES IN SAM FAIL DUE TO &quot;TARGET IS DISABLED&quot; OR &quot;UIELEMENT NO LONGER VALID&quot; EXCEPTIONS." DisplayName="Global Exception Handler" sap:VirtualizedContainerService.HintSize="1354,2370.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="answer" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="retry" />
@@ -102,9 +105,9 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ucas:ReadStorageText TimeoutMS="{x:Null}" DisplayName="Read Storage Text - retryable activities" sap:VirtualizedContainerService.HintSize="974.4,135.6" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="RetryableActivities.csv" Result="[strRetryable]" StorageBucketName="Scottish Poultry Registrations" />
-    <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="True" DataTable="[dtRetryable]" DisplayName="Generate Data Table - retryable activities" sap:VirtualizedContainerService.HintSize="974.4,204" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[strRetryable]" UseColumnHeader="True" />
-    <Assign sap2010:Annotation.AnnotationText="This ensures that the retry mechanism isn't triggered for exceptions on container activities such as Browser Scope." DisplayName="Retry activity?" sap:VirtualizedContainerService.HintSize="974.4,127.2" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <ucas:ReadStorageText TimeoutMS="{x:Null}" DisplayName="Read Storage Text - retryable activities" sap:VirtualizedContainerService.HintSize="1292,135.6" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="RetryableActivities.csv" Result="[strRetryable]" StorageBucketName="Scottish Poultry Registrations" />
+    <ui:GenerateDataTable ColumnSeparators="{x:Null}" ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="True" DataTable="[dtRetryable]" DisplayName="Generate Data Table - retryable activities" sap:VirtualizedContainerService.HintSize="1292,204" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[strRetryable]" UseColumnHeader="True" />
+    <Assign sap2010:Annotation.AnnotationText="This ensures that the retry mechanism isn't triggered for exceptions on container activities such as Browser Scope." DisplayName="Retry activity?" sap:VirtualizedContainerService.HintSize="1292,127.2" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[boolRetryable]</OutArgument>
       </Assign.To>
@@ -117,22 +120,222 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <If sap2010:Annotation.AnnotationText="Choose the action to be taken after the Global Exception Handler steps in: &#xA;&#xA;Continue - The exception is re-thrown.&#xA;&#xA;Ignore - The exception is ignored, and the execution continues from the next activity.&#xA;&#xA;Retry - The activity which threw the exception is retried.&#xA;&#xA;Abort - The execution stops after running the current handler." Condition="[errorInfo.RetryCount &lt; 3 AND NOT (errorInfo.Exception.GetType.ToString = &quot;UiPath.Core.BusinessRuleException&quot;) and boolRetryable and (errorInfo.Exception.Message.Contains(&quot;target element is disabled&quot;) or errorInfo.Exception.Message.Contains(&quot;UiElement is no longer valid&quot;))]" DisplayName="Choose Next Behaviour" sap:VirtualizedContainerService.HintSize="974.4,714" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="Choose the action to be taken after the Global Exception Handler steps in: &#xA;&#xA;Continue - The exception is re-thrown.&#xA;&#xA;Ignore - The exception is ignored, and the execution continues from the next activity.&#xA;&#xA;Retry - The activity which threw the exception is retried.&#xA;&#xA;Abort - The execution stops after running the current handler." Condition="[errorInfo.RetryCount &lt; 5 AND NOT (errorInfo.Exception.GetType.ToString = &quot;UiPath.Core.BusinessRuleException&quot;) and boolRetryable and (errorInfo.Exception.Message.Contains(&quot;target element is disabled&quot;) or errorInfo.Exception.Message.Contains(&quot;UiElement is no longer valid&quot;))]" DisplayName="Choose Next Behaviour" sap:VirtualizedContainerService.HintSize="1292,1641.6" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Retry activity" sap:VirtualizedContainerService.HintSize="496,392.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Retry activity" sap:VirtualizedContainerService.HintSize="813.6,1320.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="ui:Browser" Name="browserSAM" />
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Error - retry attempt" sap:VirtualizedContainerService.HintSize="434,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Retry Num: &quot;+errorInfo.RetryCount.ToString+&quot; - '&quot;+errorInfo.ActivityInfo.Name+&quot;'&quot;]" />
-          <Delay DisplayName="Delay between retries" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,24.8" sap2010:WorkflowViewState.IdRef="Delay_1" />
-          <Assign DisplayName="Set result to retry" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+          <ui:LogMessage DisplayName="Log Error - retry attempt" sap:VirtualizedContainerService.HintSize="751.6,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Retry Num: &quot;+errorInfo.RetryCount.ToString+&quot; - '&quot;+errorInfo.ActivityInfo.Name+&quot;'&quot;]" />
+          <ui:CommentOut sap2010:Annotation.AnnotationText="WIP code to try in future. Facilitates a browser refresh when &quot;UiElement no longer valid&quot; exception appears (or others, potentially).&#xD;&#xA;&#xD;&#xA;Currently feels too risky to refresh at potentially any spot as this may lose half-completed data and not actually resolve anything." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="751.6,887.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="716,748" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Flowchart DisplayName="Find browser variable/argument and refresh" sap:VirtualizedContainerService.HintSize="654,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">370,12.5</av:Point>
+                      <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">400,87.7 400,107.7</av:PointCollection>
+                      <x:Double x:Key="Width">620</x:Double>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Flowchart.StartNode>
+                    <x:Reference>__ReferenceID8</x:Reference>
+                  </Flowchart.StartNode>
+                  <FlowDecision x:Name="__ReferenceID7" Condition="[errorInfo.Variables.ContainsKey(&quot;browserSAM&quot;)]" DisplayName="browserSAM?" sap:VirtualizedContainerService.HintSize="78.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">290.641666666667,197.7</av:Point>
+                        <av:Size x:Key="ShapeSize">78.8,87.2</av:Size>
+                        <av:PointCollection x:Key="FalseConnector">369.441666666667,241.3 390.641666666667,241.3 390.641666666667,297.8</av:PointCollection>
+                        <av:PointCollection x:Key="TrueConnector">290.641666666667,241.3 260.641666666667,241.3 260.641666666667,241.42 210,241.42</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">10,214.82</av:Point>
+                            <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">10,241.42 0,241.42 0,521.5 71.0416666666666,521.5</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Assign from variables" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Assign_8">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="ui:Browser">[browserSAM]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="ui:Browser">[DirectCast(errorInfo.Variables("browserSAM"),UiPath.Core.Browser)]</InArgument>
+                          </Assign.Value>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Assign>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID0">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">71.0416666666666,509.1</av:Point>
+                                <av:Size x:Key="ShapeSize">200,24.8</av:Size>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:RefreshBrowser Browser="[browserSAM]" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="RefreshBrowser_1">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:RefreshBrowser>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.True>
+                    <FlowDecision.False>
+                      <FlowDecision x:Name="__ReferenceID1" Condition="[errorInfo.Arguments.ContainsKey(&quot;IN_UiBrowser&quot;)]" DisplayName="IN_UiBrowser?" sap:VirtualizedContainerService.HintSize="81.6,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <av:Point x:Key="ShapeLocation">329.441666666667,297.8</av:Point>
+                            <av:Size x:Key="ShapeSize">81.6,87.2</av:Size>
+                            <av:PointCollection x:Key="TrueConnector">329.441666666667,341.4 299.441666666667,341.4 299.441666666667,341.52 249.441666666667,341.52</av:PointCollection>
+                            <av:PointCollection x:Key="FalseConnector">411.041666666667,341.4 434.941666666667,341.4 434.941666666667,397.9</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <FlowDecision.True>
+                          <FlowStep x:Name="__ReferenceID3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">49.4416666666667,314.92</av:Point>
+                                <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">49.4416666666667,341.52 19.4416666666667,341.52 19.4416666666667,521.5 71.0416666666666,521.5</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="Assign from arguments" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Assign_9">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="ui:Browser">[browserSAM]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="ui:Browser">[DirectCast(errorInfo.Arguments("IN_UiBrowser"),UiPath.Core.Browser)]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <FlowStep.Next>
+                              <x:Reference>__ReferenceID0</x:Reference>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowDecision.True>
+                        <FlowDecision.False>
+                          <FlowDecision x:Name="__ReferenceID4" Condition="[errorInfo.Arguments.ContainsKey(&quot;IN_browsSAM&quot;)]" DisplayName="IN_browsSAM?" sap:VirtualizedContainerService.HintSize="85.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <av:Point x:Key="ShapeLocation">371.041666666667,397.9</av:Point>
+                                <av:Size x:Key="ShapeSize">85.2,87.2</av:Size>
+                                <av:PointCollection x:Key="TrueConnector">371.041666666667,441.5 311.041666666667,441.5</av:PointCollection>
+                                <av:PointCollection x:Key="FalseConnector">456.241666666667,441.5 480,441.5 480,493.52</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <FlowDecision.True>
+                              <FlowStep x:Name="__ReferenceID5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">111.041666666667,414.9</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">111.041666666667,441.5 41.0416666666666,441.5 41.0416666666666,521.5 71.0416666666666,521.5</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign DisplayName="Assign from arguments" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="ui:Browser">[browserSAM]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="ui:Browser">[DirectCast(errorInfo.Arguments("IN_browsSAM"),UiPath.Core.Browser)]</InArgument>
+                                  </Assign.Value>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Assign>
+                                <FlowStep.Next>
+                                  <x:Reference>__ReferenceID0</x:Reference>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowDecision.True>
+                            <FlowDecision.False>
+                              <FlowStep x:Name="__ReferenceID6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">380,493.52</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message - no refresh" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;Could not find browser variable/argument to refresh in Global Handler&quot;]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:LogMessage>
+                              </FlowStep>
+                            </FlowDecision.False>
+                          </FlowDecision>
+                        </FlowDecision.False>
+                      </FlowDecision>
+                    </FlowDecision.False>
+                  </FlowDecision>
+                  <x:Reference>__ReferenceID1</x:Reference>
+                  <x:Reference>__ReferenceID2</x:Reference>
+                  <x:Reference>__ReferenceID3</x:Reference>
+                  <x:Reference>__ReferenceID4</x:Reference>
+                  <x:Reference>__ReferenceID0</x:Reference>
+                  <x:Reference>__ReferenceID5</x:Reference>
+                  <x:Reference>__ReferenceID6</x:Reference>
+                  <FlowDecision x:Name="__ReferenceID8" Condition="[errorInfo.Exception.Message.Contains(&quot;UiElement is no longer valid&quot;)]" DisplayName="UiElement no longer valid?" sap:VirtualizedContainerService.HintSize="147.6,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4" True="{x:Reference __ReferenceID7}">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">326.2,107.7</av:Point>
+                        <av:Size x:Key="ShapeSize">147.6,87.2</av:Size>
+                        <av:PointCollection x:Key="TrueConnector">326.2,151.3 310.341666666667,151.3 310.341666666667,197.7</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </FlowDecision>
+                </Flowchart>
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+          <Delay DisplayName="Delay between retries" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="751.6,24.8" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <Assign DisplayName="Set result to retry" sap:VirtualizedContainerService.HintSize="751.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
             <Assign.To>
               <OutArgument x:TypeArguments="uico:ErrorAction">[result]</OutArgument>
             </Assign.To>

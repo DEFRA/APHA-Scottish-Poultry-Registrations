@@ -1,8 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Add_CPH_to_Customer" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Add_CPH_to_Customer" this:Add_CPH_to_Customer.in_intRetryCount="5" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="IN_browsSAM" Type="InArgument(ui:Browser)" />
     <x:Property Name="IN_strCustomerID" Type="InArgument(x:String)" />
     <x:Property Name="IN_strCPH" Type="InArgument(x:String)" />
+    <x:Property Name="in_intRetryCount" Type="InArgument(x:Int32)" />
   </x:Members>
   <this:Add_CPH_to_Customer.IN_browsSAM>
     <InArgument x:TypeArguments="ui:Browser" />
@@ -83,6 +84,11 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
+      <AssemblyReference>UiPathTeam.SharePoint</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Add_CPH_to_Customer" sap:VirtualizedContainerService.HintSize="650,2128.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -91,7 +97,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browsSAM]" BrowserType="Edge" DisplayName="Attach Browser - Add CPH" sap:VirtualizedContainerService.HintSize="588,2017.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browsSAM]" DisplayName="Attach Browser - Add CPH" sap:VirtualizedContainerService.HintSize="588,2017.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -118,7 +124,7 @@
                 </ui:Target>
               </ui:Check.Target>
             </ui:Check>
-            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="492,1007.6" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3">
+            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="492,1007.6" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[in_intRetryCount]">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
                   <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,714.4" sap2010:WorkflowViewState.IdRef="Sequence_7">

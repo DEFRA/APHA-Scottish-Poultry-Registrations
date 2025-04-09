@@ -54,6 +54,9 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "arrPhoneNumbers&Sequence_134",
+        "intNumberSearch&Sequence_134",
+        "browserTemp&Sequence_68",
         "strPostcode&Sequence_120",
         "strPostcode&Sequence_80",
         "intColIndexAdjusted&Sequence_69",
@@ -105,8 +108,6 @@
         "strDefaults&Sequence_8",
         "boolTabsOpen&Sequence_3",
         "intNoOfRecords&Sequence_7",
-        "arrPhoneNumbers&Sequence_19",
-        "intNumberSearch&Sequence_19",
         "strRegBasis&Sequence_29",
         "dtContactMethods&Sequence_29",
         "strKeeperID&Sequence_37",
@@ -303,6 +304,7 @@
         "strNoOfRecords&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_intRetryCount",
         "OUT_NoOfRecords",
         "IN_UiBrowser",
         "IN_strFirstName",
@@ -329,6 +331,7 @@
         "strNoOfRecords&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_intRetryCount",
         "OUT_NoOfRecords",
         "IN_UiBrowser",
         "IN_strPhoneNumber"
@@ -343,6 +346,7 @@
         "boolChecked&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_intRetryCount",
         "IN_browsSAM",
         "IN_strCustomerID",
         "IN_strCPH"
@@ -365,6 +369,7 @@
       "Path": "GlobalExceptionHandler.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "browserSAM&Sequence_2",
         "answer&Sequence_1",
         "retry&Sequence_1",
         "strRetryable&Sequence_1",
@@ -467,6 +472,14 @@
         "dtOptions&Sequence_1",
         "strSpeciesOptions&Sequence_2"
       ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
