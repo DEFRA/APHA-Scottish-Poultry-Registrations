@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,3941.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1104,3941.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -1707,7 +1707,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">330,1001.74 330,1022.54</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Search customer records" sap:VirtualizedContainerService.HintSize="809.6,3937.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                  <Sequence DisplayName="Search customer records" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Int32" Name="intNoOfRecords" />
                                     </Sequence.Variables>
@@ -1783,13 +1783,13 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:BrowserScope>
-                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtLocations]" DisplayName="For Each Row in Data Table - locations CPH" sap:VirtualizedContainerService.HintSize="747.6,53.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtLocations]" DisplayName="For Each Row in Data Table - locations CPH" sap:VirtualizedContainerService.HintSize="580,637.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                                       <ui:ForEachRow.Body>
                                         <ActivityAction x:TypeArguments="sd1:DataRow">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Search CPH" sap:VirtualizedContainerService.HintSize="546,521.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                          <Sequence DisplayName="Search CPH" sap:VirtualizedContainerService.HintSize="546,520.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1797,7 +1797,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ses:Complete_CPH_Search DisplayName="Complete CPH Search" sap:VirtualizedContainerService.HintSize="484,24.8" IN_CPHNumber="[CurrentRow(&quot;CPH&quot;).ToString]" IN_UiBrowser="[browserSAM]" sap2010:WorkflowViewState.IdRef="Complete_CPH_Search_1" OUT_NoOfRecords="[intNoOfRecords]" in_SearchArchived="Yes" />
-                                            <If Condition="[intNoOfRecords&lt;&gt;0]" DisplayName="If any CPH records returned" sap:VirtualizedContainerService.HintSize="484,252" sap2010:WorkflowViewState.IdRef="If_3">
+                                            <If Condition="[intNoOfRecords&lt;&gt;0]" DisplayName="If any CPH records returned" sap:VirtualizedContainerService.HintSize="484,251.2" sap2010:WorkflowViewState.IdRef="If_3">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -1816,7 +1816,7 @@
                                                 </Sequence>
                                               </If.Else>
                                             </If>
-                                            <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[browserSAM]" DisplayName="Attach Browser - prep next search" sap:VirtualizedContainerService.HintSize="526,450" sap2010:WorkflowViewState.IdRef="BrowserScope_3">
+                                            <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[browserSAM]" DisplayName="Attach Browser - prep next search" sap:VirtualizedContainerService.HintSize="484,53.2" sap2010:WorkflowViewState.IdRef="BrowserScope_3">
                                               <ui:BrowserScope.Body>
                                                 <ActivityAction x:TypeArguments="x:Object">
                                                   <ActivityAction.Argument>
@@ -2474,13 +2474,13 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                     <ui:RetryScope DisplayName="Retry Scope - click through to additional identifiers" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="RetryScope_5" NumberOfRetries="[CInt(io_Config(&quot;RetryScopeCount&quot;))]">
                                                       <ui:RetryScope.ActivityBody>
                                                         <ActivityAction>
-                                                          <Sequence DisplayName="Click through to additional identifiers" sap:VirtualizedContainerService.HintSize="450,364.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                          <Sequence DisplayName="Click through to additional identifiers" sap:VirtualizedContainerService.HintSize="450,257.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (associations)" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (associations)" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                               <ui:Click.CursorPosition>
                                                                 <ui:CursorPosition Position="Center">
                                                                   <ui:CursorPosition.OffsetX>
@@ -2502,7 +2502,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                 </ui:Target>
                                                               </ui:Click.Target>
                                                             </ui:Click>
-                                                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find &quot;Additional Identifiers&quot;" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9">
+                                                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find &quot;Additional Identifiers&quot;" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9">
                                                               <ui:WaitUiElementAppear.Target>
                                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e3b783a6-5321-4ad2-b3fa-7e197396ac6f" InformativeScreenshot="ee797a229720065e14a5411f1fd7fada" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&#xA;&lt;webctrl tag='H4' aaname='Additional Identifiers' /&gt;&#xA;" TimeoutMS="5000">
                                                                   <ui:Target.WaitForReady>
@@ -2521,13 +2521,13 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                     <ui:RetryScope DisplayName="Retry Scope - click through to confirmation" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="RetryScope_6" NumberOfRetries="[CInt(io_Config(&quot;RetryScopeCount&quot;))]">
                                                       <ui:RetryScope.ActivityBody>
                                                         <ActivityAction>
-                                                          <Sequence DisplayName="Click through to confirmation" sap:VirtualizedContainerService.HintSize="450,364.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                          <Sequence DisplayName="Click through to confirmation" sap:VirtualizedContainerService.HintSize="450,257.6" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (additional identifiers)" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (additional identifiers)" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                               <ui:Click.CursorPosition>
                                                                 <ui:CursorPosition Position="Center">
                                                                   <ui:CursorPosition.OffsetX>
@@ -2549,7 +2549,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                 </ui:Target>
                                                               </ui:Click.Target>
                                                             </ui:Click>
-                                                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - confirm" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
+                                                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - confirm" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
                                                               <ui:WaitUiElementAppear.Target>
                                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a75fc4d1-b55c-453e-9d54-f74934eb84ef" InformativeScreenshot="8c9d577ab090c50acf0afa2176fa3800" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&lt;webctrl tag='P' innertext='     Registration                    Authentication                    Associations                    Identifiers                  Confirm    ' /&gt;" TimeoutMS="5000">
                                                                   <ui:Target.WaitForReady>
@@ -2753,7 +2753,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                           </Assign.Value>
                                                         </Assign>
                                                         <ui:LogMessage DisplayName="Log Message - keeper record complete" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;New Keeper record complete&quot;]" />
-                                                        <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[browserSAM]" DisplayName="Attach Browser - set up for Occupier record creation" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="BrowserScope_8">
+                                                        <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[browserSAM]" DisplayName="Attach Browser - set up for Occupier record creation" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="BrowserScope_8">
                                                           <ui:BrowserScope.Body>
                                                             <ActivityAction x:TypeArguments="x:Object">
                                                               <ActivityAction.Argument>
@@ -2939,13 +2939,13 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                     <ui:RetryScope DisplayName="Retry Scope - continue customer record creation" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="RetryScope_9" NumberOfRetries="[CInt(io_Config(&quot;RetryScopeCount&quot;))]">
                                                                       <ui:RetryScope.ActivityBody>
                                                                         <ActivityAction>
-                                                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,364.8" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,257.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (associations)" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (associations)" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                               <ui:Click.CursorPosition>
                                                                                 <ui:CursorPosition Position="Center">
                                                                                   <ui:CursorPosition.OffsetX>
@@ -2967,7 +2967,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                 </ui:Target>
                                                                               </ui:Click.Target>
                                                                             </ui:Click>
-                                                                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find &quot;Additional Identifiers&quot;" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_8">
+                                                                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find &quot;Additional Identifiers&quot;" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_8">
                                                                               <ui:WaitUiElementAppear.Target>
                                                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e3b783a6-5321-4ad2-b3fa-7e197396ac6f" InformativeScreenshot="ee797a229720065e14a5411f1fd7fada" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&#xA;&lt;webctrl tag='H4' aaname='Additional Identifiers' /&gt;&#xA;" TimeoutMS="5000">
                                                                                   <ui:Target.WaitForReady>
@@ -3097,13 +3097,13 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                     <ui:RetryScope DisplayName="Retry Scope - click through to confirmation" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="RetryScope_10" NumberOfRetries="[CInt(io_Config(&quot;RetryScopeCount&quot;))]">
                                                                       <ui:RetryScope.ActivityBody>
                                                                         <ActivityAction>
-                                                                          <Sequence DisplayName="Click through to confirmation" sap:VirtualizedContainerService.HintSize="450,364.8" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                                                          <Sequence DisplayName="Click through to confirmation" sap:VirtualizedContainerService.HintSize="450,257.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (additional identifiers)" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (additional identifiers)" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                               <ui:Click.CursorPosition>
                                                                                 <ui:CursorPosition Position="Center">
                                                                                   <ui:CursorPosition.OffsetX>
@@ -3125,7 +3125,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                 </ui:Target>
                                                                               </ui:Click.Target>
                                                                             </ui:Click>
-                                                                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - confirm" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_10">
+                                                                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - confirm" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_10">
                                                                               <ui:WaitUiElementAppear.Target>
                                                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a75fc4d1-b55c-453e-9d54-f74934eb84ef" InformativeScreenshot="8c9d577ab090c50acf0afa2176fa3800" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&lt;webctrl tag='P' innertext='     Registration                    Authentication                    Associations                    Identifiers                  Confirm    ' /&gt;" TimeoutMS="5000">
                                                                                   <ui:Target.WaitForReady>
@@ -3375,7 +3375,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                   <av:PointCollection x:Key="ConnectorLocation">230,2251.34 230,2272.14</av:PointCollection>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <Sequence DisplayName="Create Location" sap:VirtualizedContainerService.HintSize="588,1668" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                                              <Sequence DisplayName="Create Location" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                                                                 <Sequence.Variables>
                                                                                   <Variable x:TypeArguments="sd1:DataTable" Name="dtMapRefs" />
                                                                                   <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictAdditionalIdentifiers" />
@@ -3892,7 +3892,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                           <av:PointCollection x:Key="ConnectorLocation">380,2801.34 380,2822.14</av:PointCollection>
                                                                                         </scg:Dictionary>
                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                      <Sequence DisplayName="Create Unit" sap:VirtualizedContainerService.HintSize="450,480.4" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                                                      <Sequence DisplayName="Create Unit" sap:VirtualizedContainerService.HintSize="650,1899.2" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                                                                         <Sequence.Variables>
                                                                                           <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictAdditionalIdentifiersUnit" />
                                                                                         </Sequence.Variables>
@@ -3902,8 +3902,8 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                        <ui:LogMessage DisplayName="Log Message - create unit" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Creating unit &quot;+(intUnitCounter+1).ToString+&quot; of &quot;+dtBirdDetails.RowCount.ToString]" />
-                                                                                        <Assign DisplayName="Get current bird row" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                                                                        <ui:LogMessage DisplayName="Log Message - create unit" sap:VirtualizedContainerService.HintSize="588,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Creating unit &quot;+(intUnitCounter+1).ToString+&quot; of &quot;+dtBirdDetails.RowCount.ToString]" />
+                                                                                        <Assign DisplayName="Get current bird row" sap:VirtualizedContainerService.HintSize="588,53.2" sap2010:WorkflowViewState.IdRef="Assign_34">
                                                                                           <Assign.To>
                                                                                             <OutArgument x:TypeArguments="sd1:DataRow">[rowUnit]</OutArgument>
                                                                                           </Assign.To>
@@ -3911,31 +3911,32 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                             <InArgument x:TypeArguments="sd1:DataRow">[dtBirdDetails.Rows(intUnitCounter)]</InArgument>
                                                                                           </Assign.Value>
                                                                                         </Assign>
-                                                                                        <seu:Add_Livestock_Unit DisplayName="Add Livestock Unit" sap:VirtualizedContainerService.HintSize="388,24.8" IN_AnimalProductionUsage="[rowUnit(&quot;KeptForReason&quot;).ToString]" IN_AnimalSpecies="[rowUnit(&quot;Species&quot;).ToString]" IN_BusinessPurpose="[rowUnit(&quot;KeptForPurpose&quot;).ToString]" IN_IsBusiness="[dictOccupier(&quot;TradingName&quot;)&lt;&gt;&quot;&quot;]" IN_KeeperCustomerID="[dictKeeperDetails(&quot;CustomerID&quot;)]" IN_KeeperOfUnit="[boolOccupierIsKeeper and dictOccupier(&quot;TradingName&quot;)=&quot;&quot;]" IN_Pedigree="False" IN_Purebred="False" IN_TemporaryCPH="False" IN_UsualStockNumber="[rowUnit(&quot;NumberOfBirds&quot;).ToString]" IN_browsSAM="[browserSAM]" sap2010:WorkflowViewState.IdRef="Add_Livestock_Unit_1" in_AdditionalIdentifiers="[new Dictionary(of String, String)]">
+                                                                                        <seu:Add_Livestock_Unit DisplayName="Add Livestock Unit" sap:VirtualizedContainerService.HintSize="588,24.8" IN_AnimalProductionUsage="[rowUnit(&quot;KeptForReason&quot;).ToString]" IN_AnimalSpecies="[rowUnit(&quot;Species&quot;).ToString]" IN_BusinessPurpose="[rowUnit(&quot;KeptForPurpose&quot;).ToString]" IN_IsBusiness="[dictOccupier(&quot;TradingName&quot;)&lt;&gt;&quot;&quot;]" IN_KeeperCustomerID="[dictKeeperDetails(&quot;CustomerID&quot;)]" IN_KeeperOfUnit="[boolOccupierIsKeeper and dictOccupier(&quot;TradingName&quot;)=&quot;&quot;]" IN_Pedigree="False" IN_Purebred="False" IN_TemporaryCPH="False" IN_UsualStockNumber="[rowUnit(&quot;NumberOfBirds&quot;).ToString]" IN_browsSAM="[browserSAM]" sap2010:WorkflowViewState.IdRef="Add_Livestock_Unit_1" in_AdditionalIdentifiers="[new Dictionary(of String, String)]">
                                                                                           <seu:Add_Livestock_Unit.IN_Comment>
                                                                                             <InArgument x:TypeArguments="x:String" />
                                                                                           </seu:Add_Livestock_Unit.IN_Comment>
                                                                                         </seu:Add_Livestock_Unit>
-                                                                                        <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[browserSAM]" DisplayName="Attach Browser - delivery partner and OV pages" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="BrowserScope_14">
+                                                                                        <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[browserSAM]" DisplayName="Attach Browser - delivery partner and OV pages" sap:VirtualizedContainerService.HintSize="588,1472" sap2010:WorkflowViewState.IdRef="BrowserScope_14">
                                                                                           <ui:BrowserScope.Body>
                                                                                             <ActivityAction x:TypeArguments="x:Object">
                                                                                               <ActivityAction.Argument>
                                                                                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                                                               </ActivityAction.Argument>
-                                                                                              <Sequence DisplayName="Click through to Locations page" sap:VirtualizedContainerService.HintSize="554,545.6" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                                                                                              <Sequence DisplayName="Click through to Locations page" sap:VirtualizedContainerService.HintSize="554,1323.2" sap2010:WorkflowViewState.IdRef="Sequence_107">
                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                                   </scg:Dictionary>
                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                <ui:RetryScope DisplayName="Retry Scope - submit through Delivery Partner page" sap:VirtualizedContainerService.HintSize="492,53.2" sap2010:WorkflowViewState.IdRef="RetryScope_15" NumberOfRetries="[CInt(io_Config(&quot;RetryScopeCount&quot;))]">
+                                                                                                <ui:RetryScope DisplayName="Retry Scope - submit through Delivery Partner page" sap:VirtualizedContainerService.HintSize="492,625.6" sap2010:WorkflowViewState.IdRef="RetryScope_15" NumberOfRetries="[CInt(io_Config(&quot;RetryScopeCount&quot;))]">
                                                                                                   <ui:RetryScope.ActivityBody>
                                                                                                     <ActivityAction>
-                                                                                                      <Sequence DisplayName="Click submit and find OV page" sap:VirtualizedContainerService.HintSize="450,83.6" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                                                                                                      <Sequence DisplayName="Click submit and find OV page" sap:VirtualizedContainerService.HintSize="450,368" sap2010:WorkflowViewState.IdRef="Sequence_105">
                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                                           </scg:Dictionary>
                                                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                                                         <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (DP)" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
@@ -3962,10 +3963,7 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                         </ui:Click>
                                                                                                         <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="The submit selectors are all essentially identical so this step is to make sure it doesn't click the previous Submit button twice and leave the next one unclicked." DisplayName="Find &quot;OV&quot; before clicking submit" sap:VirtualizedContainerService.HintSize="388,163.6" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_15">
                                                                                                           <ui:WaitUiElementAppear.Target>
-                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ee262cf-a5db-4b8e-8166-e29ea5108974" InformativeScreenshot="a446899683d960016fb27c78ff90b592" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&#xA;&lt;webctrl aaname=' OV ' parentid='RULE_KEY' tag='SPAN' /&gt;&#xA;">
-                                                                                                              <ui:Target.TimeoutMS>
-                                                                                                                <InArgument x:TypeArguments="x:Int32" />
-                                                                                                              </ui:Target.TimeoutMS>
+                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ee262cf-a5db-4b8e-8166-e29ea5108974" InformativeScreenshot="a446899683d960016fb27c78ff90b592" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&#xA;&lt;webctrl aaname=' OV ' parentid='RULE_KEY' tag='SPAN' /&gt;&#xA;" TimeoutMS="5000">
                                                                                                               <ui:Target.WaitForReady>
                                                                                                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                                                                                                               </ui:Target.WaitForReady>
@@ -3985,21 +3983,22 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                   </ui:RetryScope.Condition>
                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                                     </scg:Dictionary>
                                                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                                                 </ui:RetryScope>
-                                                                                                <ui:RetryScope DisplayName="Retry Scope - submit through OV page" sap:VirtualizedContainerService.HintSize="492,341.2" sap2010:WorkflowViewState.IdRef="RetryScope_16" NumberOfRetries="[CInt(io_Config(&quot;RetryScopeCount&quot;))]">
+                                                                                                <ui:RetryScope DisplayName="Retry Scope - submit through OV page" sap:VirtualizedContainerService.HintSize="492,546.4" sap2010:WorkflowViewState.IdRef="RetryScope_16" NumberOfRetries="[CInt(io_Config(&quot;RetryScopeCount&quot;))]">
                                                                                                   <ui:RetryScope.ActivityBody>
                                                                                                     <ActivityAction>
-                                                                                                      <Sequence DisplayName="Click submit and find location page" sap:VirtualizedContainerService.HintSize="450,83.6" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                                                                                                      <Sequence DisplayName="Click submit and find location page" sap:VirtualizedContainerService.HintSize="450,288.8" sap2010:WorkflowViewState.IdRef="Sequence_106">
                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                                           </scg:Dictionary>
                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (OV)" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit (OV)" sap:VirtualizedContainerService.HintSize="388,53.2" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                                                           <ui:Click.CursorPosition>
                                                                                                             <ui:CursorPosition Position="Center">
                                                                                                               <ui:CursorPosition.OffsetX>
@@ -4021,12 +4020,9 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                                             </ui:Target>
                                                                                                           </ui:Click.Target>
                                                                                                         </ui:Click>
-                                                                                                        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="See previous annotation." DisplayName="Find &quot;Location&quot; before Assigning unit location" sap:VirtualizedContainerService.HintSize="388,138" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_16">
+                                                                                                        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="See previous annotation." DisplayName="Find &quot;Location&quot; before Assigning unit location" sap:VirtualizedContainerService.HintSize="388,84.4" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_16">
                                                                                                           <ui:WaitUiElementAppear.Target>
-                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ced700c7-3573-4cb8-aea7-261e56f4080a" InformativeScreenshot="aeacb829af5efbe7925c0d6270261a80" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&#xA;&lt;webctrl aaname=' Location ' parentid='RULE_KEY' tag='SPAN' /&gt;&#xA;">
-                                                                                                              <ui:Target.TimeoutMS>
-                                                                                                                <InArgument x:TypeArguments="x:Int32" />
-                                                                                                              </ui:Target.TimeoutMS>
+                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ced700c7-3573-4cb8-aea7-261e56f4080a" InformativeScreenshot="aeacb829af5efbe7925c0d6270261a80" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&#xA;&lt;webctrl aaname=' Location ' parentid='RULE_KEY' tag='SPAN' /&gt;&#xA;" TimeoutMS="5000">
                                                                                                               <ui:Target.WaitForReady>
                                                                                                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                                                                                                               </ui:Target.WaitForReady>
@@ -4055,12 +4051,12 @@ Regex.Replace(dictOccupier("MobileNumber"),"^(0|\+44|44|0044|044)","%")}]</InArg
                                                                                           </ui:BrowserScope.Body>
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                                             </scg:Dictionary>
                                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                                         </ui:BrowserScope>
-                                                                                        <seu:Assign_Unit_Location DisplayName="Assign Unit Location" sap:VirtualizedContainerService.HintSize="388,24.8" IN_EffectiveDate="[Today()]" IN_InactiveRecords="False" IN_LocationID="[rowUnit(&quot;LocationID&quot;).ToString]" IN_browsSAM="[browserSAM]" sap2010:WorkflowViewState.IdRef="Assign_Unit_Location_1" />
+                                                                                        <seu:Assign_Unit_Location DisplayName="Assign Unit Location" sap:VirtualizedContainerService.HintSize="588,24.8" IN_EffectiveDate="[Today()]" IN_InactiveRecords="False" IN_LocationID="[rowUnit(&quot;LocationID&quot;).ToString]" IN_browsSAM="[browserSAM]" sap2010:WorkflowViewState.IdRef="Assign_Unit_Location_1" />
                                                                                       </Sequence>
                                                                                       <FlowStep.Next>
                                                                                         <FlowDecision x:Name="__ReferenceID28" Condition="[CBool(io_Config(&quot;boolPausePoint4&quot;))]" DisplayName="Pause Point 4?" sap:VirtualizedContainerService.HintSize="82,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
