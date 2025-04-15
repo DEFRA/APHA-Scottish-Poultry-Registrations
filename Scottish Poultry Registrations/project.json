@@ -67,6 +67,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 JSON to Dictionaries.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d193ce1b-c6d6-48cb-9680-97f331616160",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\tc01 InitAllApplications.xaml"
       }
     ],
     "modernBehavior": false,

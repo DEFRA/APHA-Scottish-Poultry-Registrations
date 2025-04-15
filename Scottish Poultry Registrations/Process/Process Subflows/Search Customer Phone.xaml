@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,1835.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,2085.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Complete_Postcode_Search_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -42,6 +42,7 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -79,21 +80,22 @@
       <AssemblyReference>UiPathTeam.SharePoint</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search_Customer_Phone" sap:VirtualizedContainerService.HintSize="592,1770" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search_Customer_Phone" sap:VirtualizedContainerService.HintSize="592,2020.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_UiBrowser]" BrowserType="Edge" DisplayName="Attach Browswer - Animal Health Portal" sap:VirtualizedContainerService.HintSize="530,1658.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="852fb0a266cd946828e5848b6e08a51e">
+    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_UiBrowser]" BrowserType="Edge" DisplayName="Attach Browswer - Animal Health Portal" sap:VirtualizedContainerService.HintSize="530,1909.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="852fb0a266cd946828e5848b6e08a51e">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1512" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1762.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strNoOfRecords" />
             </Sequence.Variables>
@@ -114,7 +116,7 @@
                 </ui:Target>
               </ui:Check.Target>
             </ui:Check>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Replace leading 0-surrogate digits (e.g. 0, +44) with % wildcard so that more results will be captured in SAM search" DelayBefore="1000" DisplayName="Type Phone" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="True" Text="[System.Text.RegularExpressions.Regex.Replace(IN_strPhoneNumber,&quot;^(0|\+44|44|0044|044)&quot;,&quot;%&quot;)]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Replace leading 0-surrogate digits (e.g. 0, +44) with % wildcard so that more results will be captured in SAM search" DelayBefore="1000" DisplayName="Type Phone" sap:VirtualizedContainerService.HintSize="434,217.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="True" Text="[System.Text.RegularExpressions.Regex.Replace(IN_strPhoneNumber,&quot;^(0|\+44|44|0044|044)&quot;,&quot;%&quot;)]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0388d3e6-18c0-4555-9c28-fb5ef09f1e57" InformativeScreenshot="b8ed1c3f5381e5f9823f0371399a6ad8" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='Telephone Number' type='text' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -131,7 +133,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:TypeInto>
-            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Change to Yes" sap:VirtualizedContainerService.HintSize="434,134.8" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="Yes">
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Change to Yes" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="Yes">
               <ui:SelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="4">
                   <x:String>Yes</x:String>
@@ -171,6 +173,23 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="Keep getting &quot;UiElement is no longer valid&quot; on the next step, so this is here to confirm the page has loaded." DisplayName="Find &quot;Records Returned&quot; - search phone" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cb56aacd-5475-442e-86bf-19af824dc21f" InformativeScreenshot="cee4850c14aabe1536987c40b321799f" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' innertext='Records returned' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WaitUiElementAppear>
             <ui:RetryScope sap2010:Annotation.AnnotationText="This selector is prone to &quot;UiElement is no longer valid&quot; so the retry scope is an effort to combat this." DisplayName="Retry Scope - get no. of records" sap:VirtualizedContainerService.HintSize="434,329.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_intRetryCount]" RetryInterval="00:00:02">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>

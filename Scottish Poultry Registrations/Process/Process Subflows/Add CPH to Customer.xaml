@@ -17,10 +17,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,2194</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,2475.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Add_CPH_to_Customer_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="27">
+    <scg:List x:TypeArguments="x:String" Capacity="54">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -48,6 +48,7 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -89,21 +90,22 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
       <AssemblyReference>UiPathTeam.SharePoint</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add_CPH_to_Customer" sap:VirtualizedContainerService.HintSize="650,2128.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_CPH_to_Customer" sap:VirtualizedContainerService.HintSize="650,2410.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browsSAM]" DisplayName="Attach Browser - Add CPH" sap:VirtualizedContainerService.HintSize="588,2017.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browsSAM]" DisplayName="Attach Browser - Add CPH" sap:VirtualizedContainerService.HintSize="588,2299.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="554,1908.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="554,2190.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="boolChecked" />
             </Sequence.Variables>
@@ -124,16 +126,25 @@
                 </ui:Target>
               </ui:Check.Target>
             </ui:Check>
-            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="492,1007.6" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[in_intRetryCount]">
+            <ui:RetryScope DisplayName="Retry Scope - search customer ID for CPH holder" sap:VirtualizedContainerService.HintSize="492,1246.8" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[in_intRetryCount]">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,714.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,953.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type into Identification Number" sap:VirtualizedContainerService.HintSize="388,134.8" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[IN_strCustomerID]">
+                    <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find &quot;CPH Holder Search&quot;" sap:VirtualizedContainerService.HintSize="388,106.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                      <ui:WaitUiElementAppear.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="28d037e4-ea1a-4d95-8afb-b5c51ca5f760" InformativeScreenshot="a76e9eeaf62ce432dadc9aca82461ec9" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&lt;webctrl tag='H4' innertext='CPH Holder Search' /&gt;" WaitForReady="COMPLETE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:WaitUiElementAppear.Target>
+                    </ui:WaitUiElementAppear>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type into Identification Number" sap:VirtualizedContainerService.HintSize="388,156" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[IN_strCustomerID]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a5b3b3e-2b2f-4833-bf0b-7f4b1d0d587e" InformativeScreenshot="cd36f46731e6d004de87eef2f23d5cca" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&#xA;&lt;webctrl tag='INPUT' aaname='Identification Number' /&gt;&#xA;">
                           <ui:Target.TimeoutMS>
@@ -186,7 +197,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="checked" DisplayName="Is checked?" sap:VirtualizedContainerService.HintSize="388,134.8" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="checked" DisplayName="Is checked?" sap:VirtualizedContainerService.HintSize="388,206" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
                       <ui:GetAttribute.Result>
                         <OutArgument x:TypeArguments="x:Boolean">[boolChecked]</OutArgument>
                       </ui:GetAttribute.Result>
@@ -210,7 +221,7 @@
                 </ActivityFunc>
               </ui:RetryScope.Condition>
             </ui:RetryScope>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type CPH Number" sap:VirtualizedContainerService.HintSize="492,134.8" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[IN_strCPH]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type CPH Number" sap:VirtualizedContainerService.HintSize="492,156" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[IN_strCPH]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0c7ce1f4-286c-45ec-bf63-18b22096970c" InformativeScreenshot="900844fd0767ee386e74c2561d517582" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&#xA;&lt;webctrl tag='INPUT' aaname='CPH' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
@@ -222,7 +233,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Date" sap:VirtualizedContainerService.HintSize="492,134.8" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="True" Text="[Now.ToString(&quot;dd/MM/yyyy H:mm&quot;)]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Date" sap:VirtualizedContainerService.HintSize="492,156" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="True" Text="[Now.ToString(&quot;dd/MM/yyyy H:mm&quot;)]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5161c753-5d04-4850-ab44-1ced75fd5b87" InformativeScreenshot="11d2c482d257fc34dcf08f2b6aeecb0e" Selector="&lt;webctrl id='PegaGadget1Ifr' tag='IFRAME' /&gt;&#xA;&lt;webctrl tag='INPUT' aaname='Effective Date' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
