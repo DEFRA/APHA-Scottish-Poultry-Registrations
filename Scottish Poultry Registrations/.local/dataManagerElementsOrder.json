@@ -54,6 +54,8 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "boolInvalidElement&Sequence_141",
+        "boolRetried&Sequence_7",
         "arrPhoneNumbers&Sequence_134",
         "intNumberSearch&Sequence_134",
         "browserTemp&Sequence_68",
@@ -480,6 +482,71 @@
       "Path": "Framework/CloseAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_browserSAM"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Log In Sam.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "excSAM&Flowchart_1",
+        "intRetry&Flowchart_1",
+        "boolException&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_browserSAM",
+        "in_strSAMURL",
+        "in_intMaxRetry"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "boolInvalidElement&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "browserSAM",
+        "io_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "browserSAM&Sequence_9",
+        "boolInitFail&Sequence_9",
+        "excInitFail&Sequence_9",
+        "collProcesses&Sequence_9",
+        "boolOutlookOpen&Sequence_15"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/tc01 InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dictConfig&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
