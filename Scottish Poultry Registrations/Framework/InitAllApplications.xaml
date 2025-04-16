@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,3317.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,3740</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -100,12 +100,13 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="728.8,3252" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="728.8,3674.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="sco:Collection(sd:Process)" Name="collProcesses" />
       <Variable x:TypeArguments="s:Exception" Name="excInitFail" />
       <Variable x:TypeArguments="x:Boolean" Name="boolInitFail" />
       <Variable x:TypeArguments="ui:Browser" Name="browserSAM" />
+      <Variable x:TypeArguments="x:Int32" Name="intCount" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -197,9 +198,9 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[boolInitFail]" DisplayName="Do While - open SAM" sap:VirtualizedContainerService.HintSize="666.8,1020" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="[Cint(io_Config(&quot;RetryScopeMax&quot;))]">
+    <ui:InterruptibleDoWhile Condition="[boolInitFail]" CurrentIndex="[intCount]" DisplayName="Do While - open SAM" sap:VirtualizedContainerService.HintSize="666.8,1155.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="[Cint(io_Config(&quot;RetryScopeCount&quot;))]">
       <ui:InterruptibleDoWhile.Body>
-        <TryCatch DisplayName="Try Catch - log in to SAM" sap:VirtualizedContainerService.HintSize="583.6,852" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+        <TryCatch DisplayName="Try Catch - log in to SAM" sap:VirtualizedContainerService.HintSize="583.6,987.2" sap2010:WorkflowViewState.IdRef="TryCatch_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -207,12 +208,13 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <TryCatch.Try>
-            <Sequence DisplayName="Open SAM and maximise" sap:VirtualizedContainerService.HintSize="546,618.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <Sequence DisplayName="Open SAM and maximise" sap:VirtualizedContainerService.HintSize="546,754" sap2010:WorkflowViewState.IdRef="Sequence_20">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message - opening SAM" sap:VirtualizedContainerService.HintSize="484,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Opening SAM - attempt &quot;+(intCount+1).ToString+&quot;/&quot;+io_Config(&quot;RetryScopeCount&quot;).ToString]" />
               <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open SAM" sap:VirtualizedContainerService.HintSize="484,386" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[browserSAM]" Url="[io_Config(&quot;SAM_URL&quot;).ToString]">
                 <ui:OpenBrowser.Body>
                   <ActivityAction x:TypeArguments="x:Object">
@@ -239,7 +241,7 @@
                   </ActivityAction>
                 </ui:OpenBrowser.Body>
               </ui:OpenBrowser>
-              <Assign DisplayName="SAM opened successfully" sap:VirtualizedContainerService.HintSize="484,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign DisplayName="SAM opened successfully" sap:VirtualizedContainerService.HintSize="484,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Boolean">[boolInitFail]</OutArgument>
                 </Assign.To>
@@ -261,14 +263,14 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Store failure info and prep retry" sap:VirtualizedContainerService.HintSize="496,544" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Sequence DisplayName="Store failure info and prep retry" sap:VirtualizedContainerService.HintSize="496,554.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="SAM failed to initialise" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign DisplayName="SAM failed to initialise" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[boolInitFail]</OutArgument>
                     </Assign.To>
@@ -276,7 +278,7 @@
                       <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign DisplayName="Store exception" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign DisplayName="Store exception" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="s:Exception">[excInitFail]</OutArgument>
                     </Assign.To>
@@ -293,7 +295,7 @@
         </TryCatch>
       </ui:InterruptibleDoWhile.Body>
     </ui:InterruptibleDoWhile>
-    <If Condition="[boolInitFail]" DisplayName="If retry count exceeded" sap:VirtualizedContainerService.HintSize="666.8,251.2" sap2010:WorkflowViewState.IdRef="If_5">
+    <If Condition="[boolInitFail]" DisplayName="If retry count exceeded" sap:VirtualizedContainerService.HintSize="666.8,252" sap2010:WorkflowViewState.IdRef="If_5">
       <If.Then>
         <Throw DisplayName="Throw stored exception" Exception="[excInitFail]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="Throw_1" />
       </If.Then>
@@ -307,6 +309,39 @@
         </Sequence>
       </If.Else>
     </If>
+    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[browserSAM]" DisplayName="Attach Browser - close restore pages pop-up" sap:VirtualizedContainerService.HintSize="666.8,246.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="Continue on error = True" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Close restore pages pop-up" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b18ff61-ce6e-4d91-aefe-a446e3add8cd" InformativeScreenshot="01612a9d016694ec06b84b29a142cb31" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Restore pages' /&gt;&#xD;&#xA;&lt;ctrl name='Restore pages' role='alert' /&gt;&#xD;&#xA;&lt;ctrl name='Close' role='push button' /&gt;&#xD;&#xA;" TimeoutMS="5000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:Click>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
     <Assign DisplayName="Store SAM browser to config" sap:VirtualizedContainerService.HintSize="666.8,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Object">[io_Config("SAM_Browser")]</OutArgument>
