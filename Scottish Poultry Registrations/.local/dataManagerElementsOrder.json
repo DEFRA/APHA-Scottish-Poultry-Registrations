@@ -140,30 +140,6 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Framework/SetTransactionStatus - original.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "QueueRetry&Sequence_13",
-        "strLogNote&Sequence_13"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "in_arrCaseID",
-        "in_arrExitPoint",
-        "in_BusinessException",
-        "in_dateCaseStartTime",
-        "in_strWorkLogFilepath",
-        "in_swProcessingTimer",
-        "in_SystemException",
-        "in_TransactionItem",
-        "io_Config",
-        "io_intConSysEx",
-        "io_RetryNumber",
-        "io_TransactionNumber"
-      ],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Framework/SetTransactionStatus - email.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
@@ -508,7 +484,7 @@
       "Path": "test.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "boolInvalidElement&Sequence_9"
+        "browserTest&Sequence_150"
       ],
       "ArgumentsSectionElementsOrder": [
         "browserSAM",
@@ -529,6 +505,7 @@
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "intCount&Sequence_9",
         "browserSAM&Sequence_9",
         "boolInitFail&Sequence_9",
         "excInitFail&Sequence_9",
@@ -548,6 +525,19 @@
         "dictConfig&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Report Browser Change.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "browserReAttached&TryCatch_1",
+        "browserOriginal&Flowchart_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ehaErrorInfo"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
