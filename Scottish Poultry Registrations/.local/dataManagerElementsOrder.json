@@ -481,19 +481,6 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "test.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "browserTest&Sequence_150"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "browserSAM",
-        "io_Config"
-      ],
-      "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Framework/KillAllProcesses.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],

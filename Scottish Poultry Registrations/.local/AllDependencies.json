@@ -1785,7 +1785,7 @@
           }
         }
       },
-      "SAM.Reuseable.Components/1.0.29": {
+      "SAM.Reuseable.Components/1.0.30": {
         "type": "package",
         "dependencies": {
           "Credentials": "1.0.2",
@@ -1798,24 +1798,24 @@
         },
         "runtime": {
           "lib/net45/SAM Reuseable Components.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_1609828.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_17897264.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_17951228.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_22559431.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_22651576.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_24512769.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_2852789.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_30306654.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_307382.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_38841100.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_47912627.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_51377746.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_57203251.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_5760391.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_58264434.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_59610531.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_62259519.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_8751622.dll": {}
+          "lib/net45/SAM Reuseable Components_Expressions_10763911.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_11585328.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_1275386.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_17599455.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_21214116.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_21838560.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_32564813.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_40101120.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_41860447.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_47081317.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_48424613.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_49863335.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_55400036.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_58689592.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_58871257.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_62105946.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_8842241.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_9208092.dll": {}
         },
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -7067,7 +7067,7 @@
           }
         }
       },
-      "SAM.Reuseable.Components/1.0.29": {
+      "SAM.Reuseable.Components/1.0.30": {
         "type": "package",
         "dependencies": {
           "Credentials": "1.0.2",
@@ -7080,24 +7080,24 @@
         },
         "runtime": {
           "lib/net45/SAM Reuseable Components.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_1609828.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_17897264.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_17951228.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_22559431.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_22651576.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_24512769.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_2852789.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_30306654.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_307382.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_38841100.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_47912627.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_51377746.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_57203251.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_5760391.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_58264434.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_59610531.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_62259519.dll": {},
-          "lib/net45/SAM Reuseable Components_Expressions_8751622.dll": {}
+          "lib/net45/SAM Reuseable Components_Expressions_10763911.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_11585328.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_1275386.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_17599455.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_21214116.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_21838560.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_32564813.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_40101120.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_41860447.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_47081317.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_48424613.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_49863335.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_55400036.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_58689592.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_58871257.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_62105946.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_8842241.dll": {},
+          "lib/net45/SAM Reuseable Components_Expressions_9208092.dll": {}
         },
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -12839,10 +12839,10 @@
         "restsharp.png"
       ]
     },
-    "SAM.Reuseable.Components/1.0.29": {
-      "sha512": "6XqpiHTOba62tyfyzUUuVMqGCizdkCWuid0/QqAGWqHiLMXXUHYuHYJ6L0En9yXgK61R7JzMIVkAYslVEpBQRg==",
+    "SAM.Reuseable.Components/1.0.30": {
+      "sha512": "P8xEWNTXv3B3JNo8e+g02VUyLi4wRfY9CPjIoEnoWIYjz0vKkeTzmvLThpBtpXhOTuJAbO2wM9ppKDjSgEwHtA==",
       "type": "package",
-      "path": "sam.reuseable.components/1.0.29",
+      "path": "sam.reuseable.components/1.0.30",
       "files": [
         ".nupkg.metadata",
         "contentFiles/any/any/.objects/.metadata",
@@ -12874,28 +12874,28 @@
         "lib/net45/Edge/Units/Assign Unit Location.xaml",
         "lib/net45/Edge/Units/Update Unit Status.xaml",
         "lib/net45/SAM Reuseable Components.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_1609828.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_17897264.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_17951228.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_22559431.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_22651576.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_24512769.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_2852789.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_30306654.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_307382.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_38841100.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_47912627.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_51377746.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_57203251.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_5760391.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_58264434.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_59610531.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_62259519.dll",
-        "lib/net45/SAM Reuseable Components_Expressions_8751622.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_10763911.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_11585328.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_1275386.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_17599455.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_21214116.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_21838560.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_32564813.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_40101120.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_41860447.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_47081317.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_48424613.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_49863335.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_55400036.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_58689592.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_58871257.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_62105946.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_8842241.dll",
+        "lib/net45/SAM Reuseable Components_Expressions_9208092.dll",
         "lib/net45/bindings.json",
         "lib/net45/bindings_v2.json",
         "lib/net45/project.json",
-        "sam.reuseable.components.1.0.29.nupkg.sha512",
+        "sam.reuseable.components.1.0.30.nupkg.sha512",
         "sam.reuseable.components.nuspec"
       ]
     },
@@ -20122,7 +20122,7 @@
       "IDP >= 1.0.17 <= 1.0.17",
       "Logging >= 1.0.16 <= 1.0.16",
       "Pop.Ups >= 1.0.3 <= 1.0.3",
-      "SAM.Reuseable.Components >= 1.0.29 <= 1.0.29",
+      "SAM.Reuseable.Components >= 1.0.30 <= 1.0.30",
       "UiPath.Excel.Activities >= 2.24.4 <= 2.24.4",
       "UiPath.Form.Activities >= 2.0.7 <= 2.0.7",
       "UiPath.FormActivityLibrary >= 2.0.7 <= 2.0.7",
@@ -20171,7 +20171,7 @@
           "SAM.Reuseable.Components": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.29, 1.0.29]"
+            "version": "[1.0.30, 1.0.30]"
           },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
