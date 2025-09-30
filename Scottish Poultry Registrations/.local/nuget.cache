@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Cd+kMOX7JnQw5QO7U8oUNuOYpV4S/5oZZJnvNISLqgUokJJkfOMgAwYBNx3jDbpoCCO6XlsR5gTVP6rKocZv+Q==",
+  "dgSpecHash": "vaV+kmbXSXFaCbbfRoa49Epvj3tfoaknz3B8uQAnSmVuq1ZkejfgY5bCiOhtz/L0Cz/uWCLGoMbR0Ie9VgQwnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\APHA-Scottish-Poultry-Registrations\\Scottish Poultry Registrations\\.local\\",
   "expectedPackageFiles": [
@@ -12,7 +12,7 @@
     "C:\\Users\\rm000121\\.nuget\\packages\\bouncycastle\\1.8.5\\bouncycastle.1.8.5.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\closedxml\\0.100.3\\closedxml.0.100.3.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\cph.viewer.reusable.components\\1.0.2\\cph.viewer.reusable.components.1.0.2.nupkg.sha512",
-    "C:\\Users\\rm000121\\.nuget\\packages\\cph.viewer.reusable.components.2025\\1.0.2\\cph.viewer.reusable.components.2025.1.0.2.nupkg.sha512",
+    "C:\\Users\\rm000121\\.nuget\\packages\\cph.viewer.reusable.components.2025\\1.0.3\\cph.viewer.reusable.components.2025.1.0.3.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\credentialmanagement\\1.0.2\\credentialmanagement.1.0.2.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\credentials\\1.0.2\\credentials.1.0.2.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",

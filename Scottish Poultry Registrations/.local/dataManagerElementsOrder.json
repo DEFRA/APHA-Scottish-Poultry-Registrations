@@ -54,6 +54,7 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strLongGridRef&Sequence_72",
         "browserSAM&Flowchart_1",
         "dtJSON&Flowchart_1",
         "dictKeeperDetails&Flowchart_1",
@@ -125,12 +126,7 @@
         "browserTemp&Sequence_68",
         "strAdditionalDetails&Sequence_69",
         "intColIndex&Sequence_69",
-        "intColIndexAdjusted&Sequence_69",
-        "strZscalerStatus&Sequence_94",
-        "boolNetworkOnline&Sequence_94",
-        "intResponseStatus&Sequence_94",
-        "strResponseContent&Sequence_94",
-        "strServiceStatus&Sequence_94"
+        "intColIndexAdjusted&Sequence_69"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_dtSAMMapping",
