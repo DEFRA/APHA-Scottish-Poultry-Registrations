@@ -137,7 +137,7 @@
           }
         }
       },
-      "CPH.Viewer.reusable.components.2025/1.0.4-alpha.1": {
+      "CPH.Viewer.reusable.components.2025/1.0.4": {
         "type": "package",
         "dependencies": {
           "Pop.Ups": "1.0.3",
@@ -149,8 +149,9 @@
         },
         "runtime": {
           "lib/net45/CPH Viewer reusable components 2025.dll": {},
-          "lib/net45/CPH Viewer reusable components 2025_Expressions_21436136.dll": {},
-          "lib/net45/CPH Viewer reusable components 2025_Expressions_33685753.dll": {}
+          "lib/net45/CPH Viewer reusable components 2025_Expressions_10326036.dll": {},
+          "lib/net45/CPH Viewer reusable components 2025_Expressions_26044600.dll": {},
+          "lib/net45/CPH Viewer reusable components 2025_Expressions_4086898.dll": {}
         },
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -5551,7 +5552,7 @@
           }
         }
       },
-      "CPH.Viewer.reusable.components.2025/1.0.4-alpha.1": {
+      "CPH.Viewer.reusable.components.2025/1.0.4": {
         "type": "package",
         "dependencies": {
           "Pop.Ups": "1.0.3",
@@ -5563,8 +5564,9 @@
         },
         "runtime": {
           "lib/net45/CPH Viewer reusable components 2025.dll": {},
-          "lib/net45/CPH Viewer reusable components 2025_Expressions_21436136.dll": {},
-          "lib/net45/CPH Viewer reusable components 2025_Expressions_33685753.dll": {}
+          "lib/net45/CPH Viewer reusable components 2025_Expressions_10326036.dll": {},
+          "lib/net45/CPH Viewer reusable components 2025_Expressions_26044600.dll": {},
+          "lib/net45/CPH Viewer reusable components 2025_Expressions_4086898.dll": {}
         },
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -10878,15 +10880,15 @@
         "lib/net45/project.json"
       ]
     },
-    "CPH.Viewer.reusable.components.2025/1.0.4-alpha.1": {
-      "sha512": "6sNhtcf7H7YFm2kPR9CBLiu2amTJykl793ktp2VI4NhWRt1XWDN1b4Y/QjsK9v2WTpdKUke+a18F0pqFMU5wKQ==",
+    "CPH.Viewer.reusable.components.2025/1.0.4": {
+      "sha512": "yAzuO3FwsnghUSl7fQsKr/SkAjDV8RQ0sNU6EOwafkIMCGotX/r2VjObbJgz4tFWdFNn2gBEtSDh6J38iJMmdA==",
       "type": "package",
-      "path": "cph.viewer.reusable.components.2025/1.0.4-alpha.1",
+      "path": "cph.viewer.reusable.components.2025/1.0.4",
       "files": [
         ".nupkg.metadata",
         "contentFiles/any/any/.objects/.metadata",
         "contentFiles/any/any/.objects/.type",
-        "cph.viewer.reusable.components.2025.1.0.4-alpha.1.nupkg.sha512",
+        "cph.viewer.reusable.components.2025.1.0.4.nupkg.sha512",
         "cph.viewer.reusable.components.2025.nuspec",
         "lib/net45/.project/PackageBindingsMetadata.json",
         "lib/net45/.project/design.json",
@@ -10901,10 +10903,12 @@
         "lib/net45/.settings/Release/settings-a1b2dac1.json",
         "lib/net45/.settings/Release/settings-afad0842.json",
         "lib/net45/CPH Viewer reusable components 2025.dll",
-        "lib/net45/CPH Viewer reusable components 2025_Expressions_21436136.dll",
-        "lib/net45/CPH Viewer reusable components 2025_Expressions_33685753.dll",
+        "lib/net45/CPH Viewer reusable components 2025_Expressions_10326036.dll",
+        "lib/net45/CPH Viewer reusable components 2025_Expressions_26044600.dll",
+        "lib/net45/CPH Viewer reusable components 2025_Expressions_4086898.dll",
         "lib/net45/Edge/Get CP number.xaml",
         "lib/net45/Edge/Get Grid Reference.xaml",
+        "lib/net45/Edge/Open CPH Viewer.xaml",
         "lib/net45/bindings.json",
         "lib/net45/bindings_v2.json",
         "lib/net45/project.json"
@@ -20875,7 +20879,7 @@
     "": [],
     ".NETFramework,Version=v4.6.1": [
       "CPH.Viewer.Reusable.Components >= 1.0.2 <= 1.0.2",
-      "CPH.Viewer.reusable.components.2025 >= 1.0.4-alpha.1 <= 1.0.4-alpha.1",
+      "CPH.Viewer.reusable.components.2025 >= 1.0.4 <= 1.0.4",
       "IDP >= 1.0.17 <= 1.0.17",
       "Logging >= 1.0.16 <= 1.0.16",
       "Pop.Ups >= 1.0.3 <= 1.0.3",
@@ -20913,7 +20917,7 @@
           "CPH.Viewer.reusable.components.2025": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.4-alpha.1, 1.0.4-alpha.1]"
+            "version": "[1.0.4, 1.0.4]"
           },
           "IDP": {
             "include": "Runtime",
