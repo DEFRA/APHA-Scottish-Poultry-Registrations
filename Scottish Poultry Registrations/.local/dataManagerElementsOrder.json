@@ -54,6 +54,7 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strGridReference&Sequence_72",
         "strLongGridRef&Sequence_72",
         "browserSAM&Flowchart_1",
         "dtJSON&Flowchart_1",
